@@ -1,17 +1,16 @@
 import React from 'react'
 import './NavHome.css'
+import NaacLogo from '../Components/Images/NaacLogo.png'
+import tgpcetLogo from '../Components/Images/tgpcetLogo.png'
 
 
 function NavHome() {
   return (
     <div >
-     <header>
-    <a class="navbar-brand" href="#">
-      <div id='navbar'>
-    <img src="http://www.tgpcet.com/assets/img/logo-light.png" alt="logo"></img>
-    </div>
-       </a>
-  </header>
+     <nav>
+      <img id='tgpcetlogo' src={tgpcetLogo} alt="tgpcetLogo" />
+      <img id='naaclogo' src={NaacLogo} alt="NaacLogo" />
+     </nav>
     </div>
   )
 }

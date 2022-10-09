@@ -1,17 +1,16 @@
-
-
-header{
-    height: 90px;
-    background-color: rgb(10, 10, 102);
-    padding: 8px;
-    right: 0;
-    left: 0;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
- }
- img{
-    height: 80px;
-    width: 495px;
- }
+nav{
+   display: flex;
+   justify-content: space-between;
+   height: 110px;
+   background-color: rgb(19, 19, 150);
+   padding: 20px;
+   align-items: center;
+}
+#tgpcetlogo{
+height: 110px;
+width: 600px;
+}
+#naaclogo{
+height: 110px;
+width: 130px;
+}
