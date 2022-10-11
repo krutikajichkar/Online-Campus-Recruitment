@@ -1,0 +1,39 @@
+
+.line{
+    border-right: 4px solid orange;
+    height: 188px;
+    position: absolute;
+    left: 12%;
+    margin-left: -4px;
+    top: 75px;
+}
+h1{
+font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-size: 60px;
+  margin-top: -20px;
+  margin-left: 172px;
+}
+p{
+padding: 0;
+  padding-left: 200px;
+  border-color: #ffb606;
+  border-width: 3px;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: justify;
+  margin-right: 100px;
+}
+
+.paragraph{
+color: #666666;
+line-height: 26px;
+margin: 0 0 15px;
+text-transform: none;
+font-weight: 400;
+margin-left: -30px;
+margin-top: 28px;
+font-size: 18px;
+margin-right: 100px;
+}
