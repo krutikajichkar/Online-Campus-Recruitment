@@ -1,0 +1,24 @@
+h4,p{
+    color: white;
+ }
+ footer{
+   font-family: sans-serif;
+   height:150px;
+   background-color: rgb(8, 8, 81);
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   position: fixed;
+   display: flex;
+   justify-content: space-between;
+   padding-top: 15px;
+ }
+ #contact{
+   padding-left: 34px;
+   padding-bottom: 34px;
+   width:23%;
+ }
+ #email{
+   color: white;
+   padding-right:50px;
+   }
