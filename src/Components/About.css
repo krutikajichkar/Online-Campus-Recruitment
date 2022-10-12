@@ -37,3 +37,34 @@ margin-top: 28px;
 font-size: 18px;
 margin-right: 100px;
 }
+
+@media screen and (max-width: 1404px) {
+
+    p {
+      padding: 0;
+    padding-left: 35px;
+    border-color: #ffb606;
+    border-width: 3px;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: justify;
+    margin-right: 25px;
+  }
+  h1 {
+    font-weight: 600;
+    line-height: 2.4;
+    margin-bottom: 20px;
+    font-size: 50px;
+    margin-top: -16px;
+    margin-left: 20px;
+     }
+     line {
+      border-right: 4px solid orange;
+      height: 590px;
+      position: absolute;
+      /* left: 12%; */
+      margin-left: -32px;
+      top: 110px;
+  }
+  }   
+  
