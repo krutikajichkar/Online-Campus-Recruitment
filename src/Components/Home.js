@@ -1,20 +1,21 @@
 import { height } from '@mui/system'
 import React from 'react'
-import Tgpcet from '../images/tgpcet img.jpg'
-import Alumni from '../images/Alumni image.webp'
+import tgpcetImg from '../Components/Images/tgpcetImg.png'
+import AlumnImg from '../Components/Images/AlumnImg.png'
+import tgpcetLogo from '../Components/Images/tgpcetLogo.png'
 function Home() {
   return (
-    <div id='main-div' style={{marginTop:'90px'}}>
+    <div id='main-div'>
 <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel" >
   <div className="carousel-inner">
     <div className="carousel-item active" data-bs-interval="5000">
-      <img style={{height:'440px'}} src={Tgpcet} className="d-block w-100 " alt="..."/>
+      <img style={{height:'440px'}} src={tgpcetImg} className="d-block w-100 " alt="..."/>
     </div>
     <div className="carousel-item" data-bs-interval="2000">
-      <img src={Alumni} className="d-block w-100 " alt="..."/>
+      <img src={AlumnImg} className="d-block w-100 " alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src='' className="d-block w-100  " alt="..."/>
+      <img src={tgpcetLogo} className="d-block w-100  " alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">

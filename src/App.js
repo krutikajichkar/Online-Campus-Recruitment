@@ -1,16 +1,25 @@
+import './App.css'
+import AboutUs from './Components/AboutUs';
 import React from 'react';
-
-import Home from './Components/Home';
-import NavHome from './Components/NavHome'
-import Footer from './Components/Footer'
+import Header from './Components/Header'
+import Navbar from './Components/Navbar'
+import Home  from './Components/Home'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Main from './Components/Main';
 
 function App() {
   return (
-    <div>
-   
-    <NavHome/>
-    <Home/>
-    <Footer/>
+    <div className='App'>
+     <BrowserRouter>
+     <Header/>
+     <Navbar/>
+     <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='about' element={<AboutUs/>}/>
+      
+     </Routes>
+     </BrowserRouter>
+     <Main/>
     </div>
   );
 }
