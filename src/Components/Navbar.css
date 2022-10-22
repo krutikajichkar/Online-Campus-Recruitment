@@ -1,0 +1,17 @@
+
+nav{
+    height: 60px;
+    background-color: aliceblue;
+    margin-top: 0px;
+    padding: 10px;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    
+}
+li{
+    font-size: 20px;
+}

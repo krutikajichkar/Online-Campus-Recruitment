@@ -1,18 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
-import AboutUs from './Components/AboutUs';
-
-
+import './App.css'
+//import AboutUs from './Components/AboutUs';
+import React from 'react';
+import Header from './Components/Header'
+import Navbar from './Components/Navbar'
+import About from './Components/About'
 
 function App() {
   return (
-    <div>
-      <AboutUs></AboutUs>
+    <div className='App'>
+      <Header />
+      <Navbar />
+      <About />
     </div>
   );
 }
