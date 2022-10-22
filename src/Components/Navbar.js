@@ -1,12 +1,13 @@
 import React from 'react'
 import './Navbar.css'
+import{Link} from 'react-router-dom'
 function Navbar() {
   return (
     <div>
        <nav>
        <ul type='none'>
-            <li>Home</li>
-            <li>About</li>
+            <Link to=''>Home</Link>
+            <Link to='/about'>About</Link>
             <li>Alumni Activities</li>
             <li>Alumni Committee</li>
             <li>Feedback</li>
