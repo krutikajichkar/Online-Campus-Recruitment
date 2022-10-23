@@ -9,17 +9,16 @@ import Main from './Components/Main';
 
 function App() {
   return (
-    <div className='App'>
+    <div >
      <BrowserRouter>
-     <Header/>
-     <Navbar/>
+     
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='about' element={<AboutUs/>}/>
       
      </Routes>
      </BrowserRouter>
-     <Main/>
+     
     </div>
   );
 }

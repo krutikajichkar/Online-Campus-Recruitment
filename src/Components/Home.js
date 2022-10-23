@@ -2,9 +2,14 @@ import React from "react";
 import tgpcetImg from "../Components/Images/tgpcetImg.png";
 import AlumnImg from "../Components/Images/AlumnImg.png";
 import tgpcetLogo from "../Components/Images/tgpcetLogo.png";
+import Header from "./Header";
+import Navbar from "./Navbar";
+import Main from "./Main";
 function Home() {
   return (
     <div id="main-div">
+      <Header/>
+      <Navbar/>
       <div
         id="carouselExampleInterval"
         className="carousel slide"
@@ -61,6 +66,7 @@ function Home() {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      <Main/>
     </div>
   );
 }

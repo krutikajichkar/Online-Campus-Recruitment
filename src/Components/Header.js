@@ -9,8 +9,7 @@ function Header() {
       <div id="header-div">
         <img id="tgpcetlogo" src={tgpcetLogo} alt="tgpcetLogo" />
         <img id="naaclogo" src={NaacLogo} alt="NaacLogo" />
-      </div>
-      
+      </div> 
     </div>
   );
 }

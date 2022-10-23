@@ -14,3 +14,12 @@ width: 600px;
 height: 110px;
 width: 130px;
 }
+
+
+
+@media(max-width:1023px){
+   #header-div{
+      display: none;
+   }
+   
+}
