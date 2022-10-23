@@ -1,9 +1,9 @@
 import React from "react";
-import "./Header.css";
+import'./Header.css';
 import NaacLogo from "../Components/Images/NaacLogo.png";
 import tgpcetLogo from "../Components/Images/tgpcetLogo.png";
 
-function NavHome() {
+function Header() {
   return (
     <div>
       <div id="header-div">
@@ -15,4 +15,4 @@ function NavHome() {
   );
 }
 
-export default NavHome;
+export default Header;
