@@ -5,7 +5,6 @@ import Header from './Components/Header'
 import Navbar from './Components/Navbar'
 import Home  from './Components/Home'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import Main from './Components/Main';
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
       
      </Routes>
      </BrowserRouter>
-     <Main/>
     </div>
   );
 }
