@@ -1,4 +1,4 @@
-// import { height } from '@mui/system'
+
 import React from 'react'
 import tgpcetImg from '../Components/Images/tgpcetImg.png'
 import AlumnImg from '../Components/Images/AlumnImg.png'
@@ -15,19 +15,20 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import HourglassFullIcon from '@mui/icons-material/HourglassFull';
 import './Home.css'
+
 function Home() {
   return (
     <div id='main-div'>
       <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel" >
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="5000">
-            <img style={{ height: '440px' }} src={tgpcetImg} className="d-block w-100 " alt="..." />
+            <img style={{ height: '440px' }} src="https://static.collegedekho.com/media/img/institute/crawled_images/None/24538_TGECPT_APP.jpg" className="d-block w-100 " alt="..." />
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img src={AlumnImg} className="d-block w-100 " alt="..." />
+            <img src="https://www.nagpurshiksha.com/wp-content/uploads/2021/08/download-3-1.jpg" className="d-block w-100 " alt="..." />
           </div>
           <div className="carousel-item">
-            <img src={tgpcetLogo} className="d-block w-100  " alt="..." />
+            <img src="https://www.vidyavision.com/CollegeUploads/Photos/2019-21-9-17-03-09_TGPC.jpg" className="d-block w-100  " alt="..." />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -45,7 +46,7 @@ function Home() {
         <div className='row'>
           <div className='card1 '>
             <div className='icons'>
-              <WifiIcon style={{ color: 'rgb(237, 20, 183)' }} sx={{ fontSize: 50 }} />
+              <WifiIcon style={{ color: 'rgb(237, 20, 183)' }} sx={{ fontSize: 50 ,"& : hover": {color:'white'}}} />
             </div>
             <div className='Info'>
               <h6>INFORMATION TECHNOLOGY</h6>
