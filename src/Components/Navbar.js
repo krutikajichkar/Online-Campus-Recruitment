@@ -8,18 +8,6 @@ function Navbar() {
   return (
     <div>
       <nav>
-<<<<<<< HEAD
-        <ul type='none'>
-          <li className='bg-red-500'>Home</li>
-          <li>About</li>
-          <li>Alumni Activities</li>
-          <li>Alumni Committee</li>
-          <li>Feedback</li>
-          <li>Register</li>
-          <li>Login</li>
-        </ul>
-      </nav>
-=======
         <ul type="none">
           <Link className="link" to="/">
             <li>Home</li>
@@ -136,14 +124,14 @@ function Navbar() {
               <li>Alumni Activities</li>
               <li>Feedback</li>
               <li>
-                
-              <div class="btn-group dropend">
+
+                <div class="btn-group dropend">
                   <button
                     type="button"
                     class=" dropdown-toggle"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    style={{backgroundColor:'transparent',fontSize:'20px'}}
+                    style={{ backgroundColor: 'transparent', fontSize: '20px' }}
                   >
                     Register
                   </button>
@@ -173,7 +161,7 @@ function Navbar() {
                     class=" dropdown-toggle"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    style={{backgroundColor:'transparent',fontSize:'20px'}}
+                    style={{ backgroundColor: 'transparent', fontSize: '20px' }}
                   >
                     Login
                   </button>
@@ -206,7 +194,6 @@ function Navbar() {
           </center>
         </span>
       </div>
->>>>>>> 84e5ab02dfb71d604b063bd6da9faca90c6c50b6
     </div>
   );
 }
