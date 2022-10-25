@@ -6,7 +6,7 @@ function About() {
         <div>
 
             <div>
-                <h1>Welcome !</h1>
+                <h1 id="about-header"> Welcome !</h1>
                 <div>
                     <div class="line"></div>
                     <div><p>Tulsiramji Gaikwad-Patil College of Engineering and Technology (TGPCET) was established in the year 2007 by Vidarbha Bahu-uddeshiya Shikshan Sanstha (VBSS), a registered society. It is a self financed Private Engineering College, which is affiliated to Rashtrasant Tukadoji Maharaj Nagpur University (RTMNU) Nagpur and is approved by All India Council for Technical Education, New Delhi. Also college is approved by Directorate of Technical Education (DTE), Mumbai, Maharashtra State. The Institute is Accredited with A+ (3.32 CGPA) by NATIONAL ASSESSMENT AND ACCREDITATION COUNCIL (NAAC). An Autonomous Institute affiliated to RTM Nagpur University, Nagpur.</p>

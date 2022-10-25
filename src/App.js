@@ -1,5 +1,5 @@
 import './App.css'
-//import AboutUs from './Components/AboutUs';
+import About from './Components/About';
 import React from 'react';
 import Header from './Components/Header'
 import Navbar from './Components/Navbar'
@@ -13,7 +13,7 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='about' element={<AboutUs />} />
+          <Route path='about' element={<About />} />
 
         </Routes>
       </BrowserRouter>
