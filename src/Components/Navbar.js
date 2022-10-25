@@ -124,14 +124,14 @@ function Navbar() {
               <li>Alumni Activities</li>
               <li>Feedback</li>
               <li>
-                
-              <div class="btn-group dropend">
+
+                <div class="btn-group dropend">
                   <button
                     type="button"
                     class=" dropdown-toggle"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    style={{backgroundColor:'transparent',fontSize:'20px'}}
+                    style={{ backgroundColor: 'transparent', fontSize: '20px' }}
                   >
                     Register
                   </button>
@@ -161,7 +161,7 @@ function Navbar() {
                     class=" dropdown-toggle"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    style={{backgroundColor:'transparent',fontSize:'20px'}}
+                    style={{ backgroundColor: 'transparent', fontSize: '20px' }}
                   >
                     Login
                   </button>
