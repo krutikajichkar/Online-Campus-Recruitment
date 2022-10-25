@@ -54,9 +54,6 @@ color: white;
     background: rgb(6, 180, 6);
     color: white;
 }
-.icons:hover{
-    color: aliceblue;
-}
 .row {
     display: flex;
     margin: 0% 11%;
