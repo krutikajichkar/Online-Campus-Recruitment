@@ -6,13 +6,13 @@ import Navbar from './Navbar'
 function About() {
     return (
         <div>
-            <Header/>
-            <Navbar/>
+            <Header />
+            <Navbar />
             <div>
                 <h1 id="about-header"> Welcome !</h1>
                 <div>
                     <div class="line"></div>
-                    <div><p>Tulsiramji Gaikwad-Patil College of Engineering and Technology (TGPCET) was established in the year 2007 by Vidarbha Bahu-uddeshiya Shikshan Sanstha (VBSS), a registered society. It is a self financed Private Engineering College, which is affiliated to Rashtrasant Tukadoji Maharaj Nagpur University (RTMNU) Nagpur and is approved by All India Council for Technical Education, New Delhi. Also college is approved by Directorate of Technical Education (DTE), Mumbai, Maharashtra State. The Institute is Accredited with A+ (3.32 CGPA) by NATIONAL ASSESSMENT AND ACCREDITATION COUNCIL (NAAC). An Autonomous Institute affiliated to RTM Nagpur University, Nagpur.</p>
+                    <div><p id="line-paragraph">Tulsiramji Gaikwad-Patil College of Engineering and Technology (TGPCET) was established in the year 2007 by Vidarbha Bahu-uddeshiya Shikshan Sanstha (VBSS), a registered society. It is a self financed Private Engineering College, which is affiliated to Rashtrasant Tukadoji Maharaj Nagpur University (RTMNU) Nagpur and is approved by All India Council for Technical Education, New Delhi. Also college is approved by Directorate of Technical Education (DTE), Mumbai, Maharashtra State. The Institute is Accredited with A+ (3.32 CGPA) by NATIONAL ASSESSMENT AND ACCREDITATION COUNCIL (NAAC). An Autonomous Institute affiliated to RTM Nagpur University, Nagpur.</p>
                         <p class="paragraph">The College offers four years UG programs in Eight disciplines of engineering viz. Bio-Technology (B.Tech), Aeronautical Engineering (AE), Computer Science and Engineering (CSE), Information Technology (IT), Electronics and Communication Engineering (ECE), Mechanical Engineering (ME), Civil Engineering (CE) and Electrical Engineering (EE).</p>
                         <p class="paragraph">TGPCET offers five PG programs in engineering viz. Computer Science and Engineering (CSE), Integrated Power System (IPS), Structural Engineering (SE), Electronics and Communication Engineering (ECE), Artificial Intelligence & Machine Learning (AIML) and also offers Two years PG programs in Master of Business Administration (MBA) as well as Two years Master in Computer Application (MCA).</p>
                         <p class="paragraph">In addition TGPCET conducts three years 2nd shift Diploma programs in four disciplines of engineering such as Civil Engineering (CE), Mechanical Engineering (ME), Computer Science and Engineering (CSE) and Electrical Engineering (EE).</p>
