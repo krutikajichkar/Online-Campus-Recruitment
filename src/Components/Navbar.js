@@ -16,7 +16,7 @@ function Navbar() {
             {" "}
             <li>About</li>
           </Link>
-          <li>Alumni Activities</li>
+          <Link className="link" to='/activities'><li>Alumni Activities</li></Link>
           <li>Alumni Committee</li>
           <li>Feedback</li>
         </ul>
