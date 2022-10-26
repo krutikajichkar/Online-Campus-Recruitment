@@ -1,17 +1,21 @@
-h4,p{
+#contact h4{
     color: white;
+ }
+
+ #contact p{
+  color: white;
  }
  footer{
    font-family: sans-serif;
-   height:150px;
+   
    background-color: rgb(8, 8, 81);
    bottom: 0;
    left: 0;
    width: 100%;
-   position: fixed;
    display: flex;
    justify-content: space-between;
-   padding-top: 15px;
+   margin-top: 25px;
+   padding: 30px;
  }
  #contact{
    padding-left: 34px;

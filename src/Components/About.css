@@ -38,7 +38,7 @@ font-size: 18px;
 margin-right: 150px;
 }
 
-@media(max-width:767px) {
+@media screen and (max-width: 767px) {
 
   #line-paragraph {
       padding: 8px;
