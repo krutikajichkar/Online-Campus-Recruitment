@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from './Header'
+import Navbar from './Navbar'
 
 function AlumniActivities() {
   return (
-    <div>AlumniActivities</div>
+    <div>
+        <Header/>
+        <Navbar/>
+    </div>
   )
 }
 
