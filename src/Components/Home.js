@@ -17,7 +17,7 @@ import HourglassFullIcon from '@mui/icons-material/HourglassFull';
 import './Home.css'
 import Header from './Header'
 import Navbar from './Navbar'
-
+import Footer from './Footer'
 function Home() {
   return (
     <div id='main-div'>
@@ -45,7 +45,7 @@ function Home() {
         </button>
       </div>
       <div>
-        <h2> PROGRAMS @ TGPCET</h2>
+      <center>  <h2> PROGRAMS @ TGPCET</h2>
         <p className='underline'></p>
         <div className='row'>
           <div className='card1 '>
@@ -60,7 +60,7 @@ function Home() {
             </div>
           </div>
           <div className='card2'>
-            <ImportantDevicesIcon style={{ color: 'rgb(19, 222, 222)' }} sx={{ fontSize: 50 }} />
+            <ImportantDevicesIcon className='icon' style={{ color: 'rgb(19, 222, 222)' }} sx={{ fontSize: 50 }} />
             <div>
               <h6>MASTER IN COMPUTER APPLICATION</h6>
               <p> Intake <span>| </span>120</p>
@@ -152,9 +152,11 @@ function Home() {
             </div>
           </div>
         </div>
+        </center>
       </div>
+      
       <div>
-        <h2>MANAGEMENT</h2>
+        <center><h2>MANAGEMENT</h2></center>
         <p className='underline'></p>
         <div style={{display:'flex', padding:'0% 10%'}}>
           <div class="card" style={{ width: "30rem"}}>
@@ -180,6 +182,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }
