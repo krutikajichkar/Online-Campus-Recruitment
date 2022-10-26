@@ -26,14 +26,15 @@ body {
 .card9,
 .card10,
 .card11 {
-    width: 270px;
+    width: 300px;
     border: 1px solid gainsboro;
-    padding: 60px 40px ;
-    text-align: end;
+    padding: 60px 50px ;
+    text-align: right;
     transition-property:background-color;
     transition: 0.5s ease-in-out;
     display: flex;
-    margin: 10px;
+    margin:5px 5px 5px 5px;
+
 }
 
 .card1:hover, .card9:hover {
@@ -57,10 +58,13 @@ color: white;
     color: white;
 }
 .row {
-    display: flex;
-    justify-content: center;
+    display: flex; 
+    width: 1300px; 
+    margin-left: auto;
+    margin-right: auto;
 }
-.branch-names{
+
+h6 {
     font-weight: bold;
 }
 .card-Info{
@@ -69,8 +73,11 @@ color: white;
 .vertical-line {
     color: gainsboro;
 }
-.management-card{
-    margin: 20px;
+p {
+    font-weight: bold;
+}
+.card{
+    margin-right: 30px;
     box-shadow:0px 5px 30px 0px gainsboro;
     text-align: center;
 }
