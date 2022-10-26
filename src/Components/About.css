@@ -1,5 +1,5 @@
 
-.line{
+ .line{
     border-right: 4px solid orange;
     height: 210px;
     position: absolute;
@@ -23,7 +23,7 @@ font-weight: 600;
   font-size: 20px;
   text-align: justify;
   margin-right: 150px;
-}
+} 
 
 .paragraph{
 color: #666666;
