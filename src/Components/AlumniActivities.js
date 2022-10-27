@@ -1,4 +1,3 @@
-// import { AccordionSummary } from '@mui/material';
 import React from 'react'
 import './AlumniActivities.css';
 import Header from './Header'
@@ -78,6 +77,9 @@ function AlumniActivities() {
               <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-Pune/3.jpg" class="panel2-img" alt="img" />
             </div>
           </div>
+        </div>
+
+        <div class="panel2-row">
           <div class="panel2-imgbox">
             <div class="thumbnail">
               <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-Pune/4.jpg" class="panel2-img" alt="img" />
@@ -93,10 +95,27 @@ function AlumniActivities() {
               <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-Pune/6.jpg" class="panel2-img" alt="img" />
             </div>
           </div>
+        </div>
+
+        <div class="panel2-row">
+          <div class="panel2-imgbox">
+            <div class="thumbnail">
+              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-Pune/7.jpg" class="panel2-img" alt="img" />
+            </div>
+          </div>
+          <div class="panel2-imgbox">
+            <div class="thumbnail">
+              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-Pune/8.jpg" class="panel2-img" alt="img" />
+            </div>
+          </div>
+          <div class="panel2-imgbox">
+            <div class="thumbnail">
+              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-Pune/9.jpg" class="panel2-img" alt="img" />
+            </div>
+          </div>
 
         </div>
       </details>
-
 
       <details class="Alumni-panel2">
         <summary>  Alumni Meet 2017 </summary>
@@ -117,7 +136,45 @@ function AlumniActivities() {
             </div>
           </div>
         </div>
+
+        <div class="panel2-row">
+          <div class="panel2-imgbox">
+            <div class="thumbnail">
+              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-2017/4.jpg" class="panel2-img" alt="img" />
+            </div>
+          </div>
+          <div class="panel2-imgbox">
+            <div class="thumbnail">
+              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-2017/5.jpg" class="panel2-img" alt="img" />
+            </div>
+          </div>
+          <div class="panel2-imgbox">
+            <div class="thumbnail">
+              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-2017/6.jpg" class="panel2-img" alt="img" />
+            </div>
+          </div>
+        </div>
+
+        <div class="panel2-row">
+          <div class="panel2-imgbox">
+            <div class="thumbnail">
+              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-2017/7.jpg" class="panel2-img" alt="img" />
+            </div>
+          </div>
+          <div class="panel2-imgbox">
+            <div class="thumbnail">
+              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-2017/8.jpg" class="panel2-img" alt="img" />
+            </div>
+          </div>
+          <div class="panel2-imgbox">
+            <div class="thumbnail">
+              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-2017/9.jpg" class="panel2-img" alt="img" />
+            </div>
+          </div>
+
+        </div>
       </details>
+
 
     </div>
   )
