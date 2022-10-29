@@ -51,6 +51,7 @@ nav ul li{
 .offcanvas-body ul li {
     margin-bottom: 30px;
     font-size: 20px;
+    
 }
 
 @media(max-width:1023px) {
