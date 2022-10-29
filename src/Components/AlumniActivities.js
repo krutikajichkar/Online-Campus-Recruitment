@@ -12,7 +12,7 @@ function AlumniActivities() {
       <div class="col-6">
         <div class="Th-1">
           <div class="Alumni-img">
-            <img src="http://tgpcet.com/assets/img/Faculty/Jayant_Rohankar.jpg" class="Jayantsir-img" alt="Alumni-Incharge" />
+            <center><img src="http://tgpcet.com/assets/img/Faculty/Jayant_Rohankar.jpg" class="Jayantsir-img" alt="Alumni-Incharge" /></center>
           </div>
           <h2 id="Incharge-Name">MR. JAYANT ROHANKAR</h2>
           <p id="Incharge">Amlumni Incharge</p>
