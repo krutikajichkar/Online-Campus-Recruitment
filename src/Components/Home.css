@@ -1,15 +1,15 @@
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 
 .heading{
-    text-align: center;
     margin-top: 3%;
-    font-weight: bold;
+    font-weight:bold;
+    font-family:'Poppins', sans-serif ;
 }
 .underline{
     width:50px;
-    border: 1px solid orange;
+    border: 1px solid rgb(234, 161, 14);
     background-color: orange;
     margin:5px auto ;
     border-radius: 2px ;
@@ -63,20 +63,18 @@ color: white;
     margin-left: auto;
     margin-right: auto;
 }
-
-h6 {
+.branch-names{
     font-weight: bold;
 }
 .card-Info{
-    padding-left: 15px;
+    padding-left: 25px;
+    text-align: left;
 }
+
 .vertical-line {
     color: gainsboro;
 }
-p {
-    font-weight: bold;
-}
-.card{
+.management-card{
     margin-right: 30px;
     box-shadow:0px 5px 30px 0px gainsboro;
     text-align: center;
