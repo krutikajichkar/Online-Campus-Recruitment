@@ -18,7 +18,10 @@ function Navbar() {
           </Link>
           <li>Alumni Activities</li>
           <li>Alumni Committee</li>
-          <li>Feedback</li>
+          <Link className="link" to='/feedback'>
+            {" "}
+            <li>Feedback</li>
+          </Link>
         </ul>
         <div style={{ display: "flex" }}>
           <div class="dropdown" style={{ paddingRight: "20px" }}>
@@ -85,7 +88,7 @@ function Navbar() {
       <div id="screen-visible-div">
         <span></span>
         <button
-          style={{ backgroundColor: "transparent" ,border:'none'}}
+          style={{ backgroundColor: "transparent", border: 'none' }}
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasWithBackdrop"
@@ -131,7 +134,7 @@ function Navbar() {
                     class=" dropdown-toggle"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    style={{ backgroundColor: 'transparent', fontSize: '20px',border:'none' }}
+                    style={{ backgroundColor: 'transparent', fontSize: '20px', border: 'none' }}
                   >
                     Register
                   </button>
@@ -161,7 +164,7 @@ function Navbar() {
                     class=" dropdown-toggle"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    style={{ backgroundColor: 'transparent', fontSize: '20px' ,border:'none'}}
+                    style={{ backgroundColor: 'transparent', fontSize: '20px', border: 'none' }}
                   >
                     Login
                   </button>

@@ -1,0 +1,10 @@
+
+.container{
+    margin: 4% auto;
+    display: flex;
+}
+.box{
+    width: 455px;
+    border: 2px solid black;
+    padding: 40px;
+}
