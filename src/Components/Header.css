@@ -5,6 +5,10 @@
    background-color: rgb(23, 23, 88);
    padding: 20px 20px;
    align-items: center;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
 }
 #tgpcetlogo{
 height: 110px;

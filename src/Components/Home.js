@@ -153,10 +153,12 @@ function Home() {
         </center>
       </div>
 
+      {/* Management */}
+
       <div>
         <center><h2>MANAGEMENT</h2></center>
         <p className='underline'></p>
-        <div style={{ display: 'flex', padding: '0% 10%' }}>
+        <div id='management-container'>
           <div className="management-card" style={{ width: "30rem" }}>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRguzK4-v3tucd7TCgsbnFxaYaYx4A7aho5XQ&usqp=CAU" className="card-img-top" alt="Chairman" />
             <div className="card-body" style={{ background: 'rgb(8, 8, 81)' }}>

@@ -5,7 +5,10 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 150px;
     background-color: aliceblue;
 }
 nav ul{
