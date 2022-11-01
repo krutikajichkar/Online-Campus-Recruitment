@@ -54,24 +54,7 @@ function AlumniActivities() {
 
       <div class="Alumni-panel2">
         <h2> Glimpses of Online Alumni Meet 2019-20 </h2>
-        {/* <div class="panel2-row">
-          <div class="panel2-imgbox">
-            <div class="thumbnail">
-              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-2019-20/1.jpg" class="panel2-img" alt="img" />
-            </div>
-          </div>
-          <div class="panel2-imgbox">
-            <div class="thumbnail">
-              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-2019-20/2.jpg" class="panel2-img" alt="img" />
-            </div>
-          </div>
-          <div class="panel2-imgbox">
-            <div class="thumbnail">
-              <img src="http://tgpcet.com/assets/img/ALUMNI/Alumni-Meet-2019-20/3.jpg" class="panel2-img" alt="img" />
-            </div>
-          </div>
-        </div> */}
-
+       
         <div id="panel2-row">
           <div class="panel2-img">
             <img id="Glimpses_1" src={Glimpses_1} alt="Glimpses_1" />

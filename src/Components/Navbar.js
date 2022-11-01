@@ -24,11 +24,42 @@ Modal.setAppElement("#root");
 function Navbar() {
   let subtitle;
 
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [StudentRegistrationmodalIsOpen, setStudentRegistrationIsOpen] =
+    React.useState(false);
+  const [AlumniRegistrationmodalIsOpen, setAlumniRegistrationIsOpen] =
+    React.useState(false);
+    const [AlumniLoginmodalIsOpen, setAlumniLoginIsOpen] =
+    React.useState(false);
+    const [HODLoginmodalIsOpen, setHODLoginIsOpen] =
+    React.useState(false);
+    const [StudentLoginmodalIsOpen, setStudentLoginIsOpen] =
+    React.useState(false);
+    const [AdminLoginmodalIsOpen, setAdminLoginIsOpen] =
+    React.useState(false);
 
-  function openModal() {
-    setIsOpen(true);
+  function openStudentRegistrationModal() {
+    setStudentRegistrationIsOpen(true);
   }
+
+  const openAlumniRegistrationModal = () => {
+    setAlumniRegistrationIsOpen(true);
+  };
+
+  const openAlumniLoginModal = () => {
+    setAlumniLoginIsOpen(true);
+  };
+
+  const openHODLoginModal = () => {
+    setHODLoginIsOpen(true);
+  };
+
+  const openStudentLoginModal = () => {
+    setStudentLoginIsOpen(true);
+  };
+
+  const openAdminLoginModal = () => {
+    setAdminLoginIsOpen(true);
+  };
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
@@ -36,7 +67,13 @@ function Navbar() {
   }
 
   function closeModal() {
-    setIsOpen(false);
+    setStudentRegistrationIsOpen(false);
+    setAlumniRegistrationIsOpen(false);
+    setAlumniLoginIsOpen(false);
+    setHODLoginIsOpen(false);
+    setAdminLoginIsOpen(false);
+    setAlumniLoginIsOpen(false);
+   
   }
   return (
     <div>
@@ -76,13 +113,17 @@ function Navbar() {
                 <button
                   className="dropdown-item"
                   type="button"
-                  onClick={openModal}
+                  onClick={openStudentRegistrationModal}
                 >
                   Student Registration
                 </button>
               </li>
               <li>
-                <button className="dropdown-item" type="button">
+                <button
+                  className="dropdown-item"
+                  type="button"
+                  onClick={openAlumniRegistrationModal}
+                >
                   Alumni Registration
                 </button>
               </li>
@@ -110,22 +151,22 @@ function Navbar() {
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
               <li>
-                <button className="dropdown-item" type="button">
+                <button className="dropdown-item" type="button" onClick={openAdminLoginModal}>
                   Admin Login
                 </button>
               </li>
               <li>
-                <button className="dropdown-item" type="button">
+                <button className="dropdown-item" type="button" onClick={openHODLoginModal}>
                   HOD Login
                 </button>
               </li>
               <li>
-                <button className="dropdown-item" type="button">
+                <button className="dropdown-item" type="button" onClick={openStudentLoginModal}>
                   Student Login
                 </button>
               </li>
               <li>
-                <button className="dropdown-item" type="button">
+                <button className="dropdown-item" type="button" onClick={openAlumniLoginModal}>
                   Alumni Login
                 </button>
               </li>
@@ -133,7 +174,6 @@ function Navbar() {
           </div>
         </div>
       </nav>
-
       <div id="screen-visible-div">
         <span></span>
         <button
@@ -258,11 +298,10 @@ function Navbar() {
           </center>
         </span>
       </div>
-
       {/* Modal */}
-
       <Modal
-        isOpen={modalIsOpen}
+        id="studentRegistrationModal"
+        isOpen={StudentRegistrationmodalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
@@ -325,7 +364,384 @@ function Navbar() {
             id="exampleFormControlInput1"
           />
         </div>
-        <center><button className="btn btn-primary">Submit</button></center>
+        <center>
+          <button className="btn btn-primary">Submit</button>
+        </center>
+      </Modal>
+      <Modal
+        id="AlumniRegistrationModal"
+        isOpen={AlumniRegistrationmodalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div
+          style={{ cursor: "pointer", textAlign: "right" }}
+          onClick={closeModal}
+        >
+          {" "}
+          <CloseIcon />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            UserName
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Email
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleFormControlInput1"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Department
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Session
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Currently Working At
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            LinkedIn Profile
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            required
+          />
+        </div>
+        <center>
+          <button className="btn btn-primary">Submit</button>
+        </center>
+      </Modal>
+      // Login
+      <Modal
+        id="AdminLoginModal"
+        isOpen={AdminLoginmodalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div
+          style={{ cursor: "pointer", textAlign: "right" }}
+          onClick={closeModal}
+        >
+          {" "}
+          <CloseIcon />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            UserName
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Email
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Department
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Session
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <center>
+          <button className="btn btn-primary">Submit</button>
+        </center>
+      </Modal>
+      // Login
+      <Modal
+        id="HODLoginModal"
+        isOpen={HODLoginmodalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div
+          style={{ cursor: "pointer", textAlign: "right" }}
+          onClick={closeModal}
+        >
+          {" "}
+          <CloseIcon />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            UserName
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Email
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Department
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Session
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <center>
+          <button className="btn btn-primary">Submit</button>
+        </center>
+      </Modal>
+      // Login
+      <Modal
+        id="StudentLoginModal"
+        isOpen={StudentLoginmodalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div
+          style={{ cursor: "pointer", textAlign: "right" }}
+          onClick={closeModal}
+        >
+          {" "}
+          <CloseIcon />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            UserName
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Email
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Department
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Session
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <center>
+          <button className="btn btn-primary">Submit</button>
+        </center>
+      </Modal>
+      <Modal
+        id="AlumniLoginModal"
+        isOpen={AlumniLoginmodalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div
+          style={{ cursor: "pointer", textAlign: "right" }}
+          onClick={closeModal}
+        >
+          {" "}
+          <CloseIcon />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            UserName
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Email
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Department
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">
+            Session
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <center>
+          <button className="btn btn-primary">Submit</button>
+        </center>
       </Modal>
     </div>
   );
