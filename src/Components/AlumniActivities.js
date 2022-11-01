@@ -24,6 +24,7 @@ import React from 'react'
 import './AlumniActivities.css';
 import Header from './Header'
 import Navbar from './Navbar'
+import Footer from "./Footer";
 
 function AlumniActivities() {
   return (
@@ -31,33 +32,25 @@ function AlumniActivities() {
       <Header />
       <Navbar />
 
-      <div class="col-6">
-        <div class="Th-1">
-          <div class="Alumni-img">
-            <img id="JayantSir" src={JayantSir} class="Jayantsir-img" alt="JayantSir" />
-          </div>
-          <h2 id="Incharge-Name">MR. JAYANT ROHANKAR</h2>
-          <p id="Incharge">Amlumni Incharge</p>
-          <p id="Incharge"> 85549 82302</p>
-          <p id="Incharge"> jayant.mtech@tgpcet.com </p>
-          <div class="Alumni-line"></div>
-          <ul class="AlumniSocial-Icons">
-            <li class="facebook">
-              <a><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li class="youtube">
-              <a><i class="fab fa-youtube"></i></a>
-            </li>
-          </ul>
-        </div>
+      <center>
+      <div id="jayant_sir">
+        <img src={JayantSir} alt="" />
+        <h3>MR.JAYANT ROHANKAR</h3>
+        <p>Alumni Incharge</p>
+        <p>8554982302</p>
+        <p>jayant.mtech@tgpcet.com</p>
       </div>
+      </center>
 
-      <div class="Alumni-panel">
-        <h2> Alumni Meet (Nostalgia)</h2>
+     <center>
+     <div id="Alumni-meet-wrapper">
+        <h2 className="alumni-header"> ALUMNI MEET </h2>
+        <p className="underline"></p>
         <h3 class="panel-heading">Tulsiramji Gaikwad-Patil College of Engineering & Technology Alumni Association Registration Number:- MAH 701/14(Nag)</h3>
         <p class="panel-detail"> Nostalgia is the flagship event of the Alumni association of TGPCET. It is the annual Alumni Meet - an evocative event that marks home coming, celebration and unparalleled joy of communion with the alma mater. It is an ideal opportunity to renew old bonds, foster new ties and relive the magical moments all over again. The Alumnus series is a new initiative launched, which provides an exciting platform for regular interaction between the current students & the alumni of TGPCET, facilitated by Guest Lectures, Technical Events, Workshops, etc.</p>
         <p class="panel-detail">TusiramjiGaikwad-Patil College of Engineering & Technology Alumni network brings together graduates of a variety of programs right from its inception. The collective strength of this alumni network is the backbone of TGPCET. The alumni association acts as a bridge between the illustrious alumni and their alma mater, giving the current students and the alumni a chance to develop positive synergies and grow together in this process. The strength of any institute is comprises the present students, who are the future leaders and the alumni of the college, who bring in accolades by virtue of their success and standing in the society. It gives an opportunity for the present, the past and the incoming batch to interact with each other and learn from shared experiences.</p>
       </div>
+     </center>
 
       <div class="Alumni-panel2">
         <h2> Glimpses of Online Alumni Meet 2019-20 </h2>
@@ -254,8 +247,7 @@ function AlumniActivities() {
         </div>
       </div>
 
-
-
+      <Footer/>
 
     </div>
   )

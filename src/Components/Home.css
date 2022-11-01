@@ -59,7 +59,7 @@ color: white;
 }
 .row {
     display: flex; 
-    width: 1300px; 
+    width: 1300px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -91,6 +91,15 @@ color: white;
 .management-name{
     color: white;
 }
-@media screen and (max-width: 768px) {
-    
+#management-container{
+display: flex;
+padding: 0% 10%;
+}
+@media screen and (max-width: 1023px) {
+    .row{
+        width:200px
+    }
+    #management-container{
+        flex-direction: column;
+    }
 }
