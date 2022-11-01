@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar'
 import Home from './Components/Home'
 import Feedback from './Components/Feedback';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AlumniActivities from './Components/AlumniActivities';
 
 
 function App() {

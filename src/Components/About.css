@@ -1,7 +1,7 @@
 
-.line{
+ .line{
     border-right: 4px solid orange;
-    height: 210px;
+    height: 200px;
     position: absolute;
     left: 220px;
     margin-left: -50px;
@@ -23,7 +23,7 @@ font-weight: 600;
   font-size: 20px;
   text-align: justify;
   margin-right: 150px;
-}
+} 
 
 .paragraph{
 color: #666666;
@@ -106,7 +106,7 @@ margin-right: 150px;
        }
        .line {
         border-right: 4px solid orange;
-        height: 770px;
+        height: 350px;
         position: absolute;
         left: 8%;
         margin-left: 4px;

@@ -1,8 +1,8 @@
 
 import React from 'react'
+import Alumni_2017_img_6 from '../Components/Images/Alumni_2017_img_6.jpg'
 import tgpcetImg from '../Components/Images/tgpcetImg.png'
-import AlumnImg from '../Components/Images/AlumnImg.png'
-import tgpcetLogo from '../Components/Images/tgpcetLogo.png'
+import Alumni_2017_img_1 from '../Components/Images/Alumni_2017_img_1.jpg'
 import WifiIcon from '@mui/icons-material/Wifi';
 import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices';
 import ApartmentIcon from '@mui/icons-material/Apartment';
@@ -26,13 +26,13 @@ function Home() {
       <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel" >
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="5000">
-            <img style={{ height: '440px' }} src="https://static.collegedekho.com/media/img/institute/crawled_images/None/24538_TGECPT_APP.jpg" className="d-block w-100 " alt="..." />
+            <img style={{ height: '450px' }} src={tgpcetImg} className="d-block w-100 " alt="..." />
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img src="https://www.nagpurshiksha.com/wp-content/uploads/2021/08/download-3-1.jpg" className="d-block w-100 " alt="..." />
+            <img style={{ height: '450px' }} src={Alumni_2017_img_1} className="d-block w-100 " alt="..." />
           </div>
           <div className="carousel-item">
-            <img src="https://www.vidyavision.com/CollegeUploads/Photos/2019-21-9-17-03-09_TGPC.jpg" className="d-block w-100  " alt="..." />
+            <img  style={{ height: '450px' }} src={Alumni_2017_img_6}  className="d-block w-100  " alt="..." />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -58,7 +58,7 @@ function Home() {
             </div>
           </div>
           <div className='card2'>
-            <ImportantDevicesIcon className='icon' style={{ color: 'rgb(19, 222, 222)' }} sx={{ fontSize: 50 }} />
+            <ImportantDevicesIcon style={{ color: 'rgb(19, 222, 222)' }} sx={{ fontSize: 50 }} />
             <div className='card-Info'>
               <h6 className='branch-names'>MASTER IN COMPUTER APPLICATION</h6>
               <p > Intake <span className='vertical-line'>| </span>120</p>
@@ -157,24 +157,24 @@ function Home() {
         <center><h3 className='heading'>MANAGEMENT</h3></center>
         <p className='underline'></p>
         <div style={{ display: 'flex', padding: '0% 10%' }}>
-          <div class="management-card" style={{ width: "30rem" }}>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRguzK4-v3tucd7TCgsbnFxaYaYx4A7aho5XQ&usqp=CAU" class="card-img-top" alt="Chairman" />
-            <div class="card-body" style={{ background: 'rgb(8, 8, 81)' }}>
-              <p class="card-text">CHAIRMAN, GPG</p>
+          <div className="management-card" style={{ width: "30rem" }}>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRguzK4-v3tucd7TCgsbnFxaYaYx4A7aho5XQ&usqp=CAU" className="card-img-top" alt="Chairman" />
+            <div className="card-body" style={{ background: 'rgb(8, 8, 81)' }}>
+              <p className="card-text">CHAIRMAN, GPG</p>
               <h4 className='management-name'>Dr. Mohan Gaikwad-Patil</h4>
             </div>
           </div>
-          <div class="management-card" style={{ width: "30rem" }}>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN5k6wryvQnguQYbXREOCcJ1FItbeNndxIGhK5zy6hsDbjIWN1NZR4HqSDqYBEoXi8PDU&usqp=CAU" class="card-img-top" alt="President" />
-            <div class="card-body" style={{ background: 'rgb(8, 8, 81)' }}>
-              <p class="card-text">PRESIDENT, GPGI</p>
+          <div className="management-card" style={{ width: "30rem" }}>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN5k6wryvQnguQYbXREOCcJ1FItbeNndxIGhK5zy6hsDbjIWN1NZR4HqSDqYBEoXi8PDU&usqp=CAU" className="card-img-top" alt="President" />
+            <div className="card-body" style={{ background: 'rgb(8, 8, 81)' }}>
+              <p className="card-text">PRESIDENT, GPGI</p>
               <h4 className='management-name'>Dr. Anjali Patil-Gaikwad</h4>
             </div>
           </div>
-          <div class="management-card" style={{ width: "30rem" }}>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSurMaUofzj6WFPlGcdH-9bEhhI0xpj3kBrGg&usqp=CAU" class="card-img-top" alt="Treasurer" />
-            <div class="card-body" style={{ background: 'rgb(8, 8, 81)' }}>
-              <p class="card-text">TREASURER, GPGI</p>
+          <div className="management-card" style={{ width: "30rem" }}>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSurMaUofzj6WFPlGcdH-9bEhhI0xpj3kBrGg&usqp=CAU" className="card-img-top" alt="Treasurer" />
+            <div className="card-body" style={{ background: 'rgb(8, 8, 81)' }}>
+              <p className="card-text">TREASURER, GPGI</p>
               <h4 className='management-name'>Prof. Sandeep Gaikwad</h4>
             </div>
           </div>
