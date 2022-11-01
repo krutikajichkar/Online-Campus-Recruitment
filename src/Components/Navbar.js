@@ -53,7 +53,10 @@ function Navbar() {
             <li>Alumni Activities</li>
           </Link>
           <li>Alumni Committee</li>
-          <li>Feedback</li>
+          <Link className="link" to='/feedback'>
+            {" "}
+            <li>Feedback</li>
+          </Link>
         </ul>
         <div style={{ display: "flex" }}>
           <div className="dropdown" style={{ paddingRight: "20px" }}>
@@ -137,7 +140,7 @@ function Navbar() {
       <div id="screen-visible-div">
         <span></span>
         <button
-          style={{ backgroundColor: "transparent", border: "none" }}
+          style={{ backgroundColor: "transparent", border: 'none' }}
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasWithBackdrop"
