@@ -87,6 +87,7 @@ function Navbar() {
             <li>About</li>
           </Link>
           <Link className="link" to="/activities">
+            {" "}
             <li>Alumni Activities</li>
           </Link>
           <li>Alumni Committee</li>
