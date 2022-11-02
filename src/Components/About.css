@@ -1,8 +1,10 @@
-
+#about-div{
+  margin-top: 260px;
+}
  .line{
     border-right: 4px solid orange;
     height: 200px;
-    position: absolute;
+   position: absolute;
     left: 220px;
     margin-left: -50px;
     top: 346px;
