@@ -1,24 +1,51 @@
 
 .container{
-    margin: 4%;
+    margin: 4% auto;
     justify-content: center;
     display: flex;
+}
+.headline{
+    margin-top: 230px;
+    font-weight: bold;
+    text-align: center;
+    /* font-family: cursive; */
+    color: rgb(8, 8, 116);
+}
+.headline2{
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    /* font-family: cursive; */
+    color:rgb(8, 8, 116);
+}
+.underline{
+    width:50px;
+    border: 1px solid rgb(234, 161, 14);
+    background-color: orange;
+    margin:5px auto ;
+    border-radius: 2px ;
+    margin-bottom: 4%;
 }
 .box{
     width: 455px;
     box-shadow: 2px 5px 5px 2px rgb(199, 199, 175);
-    padding: 0px 0px 40px 40px;
-    margin: 12px;   
-    /* background:rgb(244, 241, 161); */
-    background: rgb(228, 250, 246);
+    padding: 0px 45px 40px 45px;
+    margin: 2px 12px;
+    background: rgb(236, 251, 248);
     border-radius: 10px;
+    
 }
 .horizontal-underline{
     border: 0.5px solid rgb(229, 228, 228);
    background:rgb(221, 219, 219) ;
-   border-radius: 2px ;
    width: 170px;
    border-radius: 5px;
+}
+.para{
+    font-family: 'Marck Script';
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
 }
 .name{
     font-weight:bold;
@@ -28,9 +55,15 @@
 }
 .icon{
     width: 70px;
-    text-align: center;
     font-size:40px;
-    /* background:linear-gradient(to bottom left,white,yellow); */
-    transform: rotate(45deg);
     margin-left: 350px;
+}
+
+@media screen and (max-width:1019px) {
+    .headline{
+        margin-top:19px;
+    }
+}
+@media screen and (max-width : 960px) {
+   
 }

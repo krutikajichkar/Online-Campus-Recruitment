@@ -96,10 +96,15 @@ display: flex;
 padding: 0% 10%;
 }
 @media screen and (max-width: 1023px) {
-    .row{
-        width:200px
-    }
+ .row{
+    width: 100%;
+   justify-content: center;
+ }
+}
+
+@media screen and (max-width:780px){
     #management-container{
-        flex-direction: column;
-    }
+        display: block;
+     justify-content: center;
+    } 
 }
