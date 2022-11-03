@@ -87,6 +87,7 @@ function Navbar() {
             <li>About</li>
           </Link>
           <Link className="link" to="/activities">
+            {" "}
             <li>Alumni Activities</li>
           </Link>
           <li>Alumni Committee</li>
@@ -467,7 +468,7 @@ function Navbar() {
           <button className="btn btn-primary">Submit</button>
         </center>
       </Modal>
-      // Login
+      
       <Modal
         id="AdminLoginModal"
         isOpen={AdminLoginmodalIsOpen}
@@ -537,7 +538,7 @@ function Navbar() {
           <button className="btn btn-primary">Submit</button>
         </center>
       </Modal>
-      // Login
+      
       <Modal
         id="HODLoginModal"
         isOpen={HODLoginmodalIsOpen}
@@ -607,7 +608,7 @@ function Navbar() {
           <button className="btn btn-primary">Submit</button>
         </center>
       </Modal>
-      // Login
+      
       <Modal
         id="StudentLoginModal"
         isOpen={StudentLoginmodalIsOpen}

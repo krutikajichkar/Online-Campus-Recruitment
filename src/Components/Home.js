@@ -150,7 +150,10 @@ function Home() {
 
       {/* Management */}
 
-      <div>
+
+      {/* Management */}
+
+      < div >
         <center><h3 className='heading'>MANAGEMENT</h3></center>
         <p className='underline'></p>
         <div id='management-container'>
@@ -176,9 +179,9 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div >
       <Footer />
-    </div>
+    </div >
   )
 }
 

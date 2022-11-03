@@ -5,7 +5,6 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import Modal from 'react-modal';
 import CloseIcon from "@mui/icons-material/Close";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 const customStyles = {
@@ -81,7 +80,7 @@ function Feedback() {
                     onRequestClose={closeModal}
                     style={customStyles}
                     contentLabel="Example Modal"
-
+                    id='modal'
                 >
                     <div
                         style={{ cursor: "pointer", textAlign: "right" }}
