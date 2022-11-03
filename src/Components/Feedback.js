@@ -42,7 +42,7 @@ function Feedback() {
             <Navbar />
             <h3 className='headline'>What students said about college !</h3>
             <p className='underline'></p>
-            <div className='container'>
+            <center><div className='container'>
                 <div className='box'>
                     <div className='icon'>
                         <FontAwesomeIcon icon={faQuoteLeft} />
@@ -51,8 +51,8 @@ function Feedback() {
                         <p className='para'>College is located in the midst of Multimodal International Cargo Hub and Airport (MIHAN) and also in the vicinity of Butibori Industrial area, Nagpur.
                         </p>
                         <center><div className='horizontal-underline'></div>
-                        <h4 className='name'>Bharti Nagpure</h4>
-                        <p>Information Technology, 2021-2022 Batch</p></center>
+                            <h4 className='name'>Bharti Nagpure</h4>
+                            <p>Information Technology, 2021-2022 Batch</p></center>
                     </div>
                 </div>
                 <div className='box'>
@@ -60,19 +60,19 @@ function Feedback() {
                         <FontAwesomeIcon icon={faQuoteLeft} />
                     </div>
                     <div className='content'>
-                         <p className='para'>College is located in the midst of Multimodal International Cargo Hub and Airport (MIHAN) and also in the vicinity of Butibori Industrial area, Nagpur.
+                        <p className='para'>College is located in the midst of Multimodal International Cargo Hub and Airport (MIHAN) and also in the vicinity of Butibori Industrial area, Nagpur.
                         </p>
-                         <center> <div className='horizontal-underline'></div>
+                        <center> <div className='horizontal-underline'></div>
                             <h4 className='name'>Bharti Nagpure</h4>
                             <p>Information Technology, 2021-2022 Batch</p></center>
                     </div>
                 </div>
-            </div>
-            <h3 className='headline2'> Want to write something about College ?</h3>
-            <p className='underline'></p>
+            </div></center>
+           <center> <h3 className='headline2'> Want to write something about College ?</h3>
+            <p className='underline'></p></center>
             <center>
                 <div>
-                    <button style={{marginTop:'-30px'}} onClick={openModal} className='btn btn-success'>WRITE HERE</button>
+                    <button style={{ marginTop: '-30px' }} onClick={openModal} className='btn btn-success'>WRITE HERE</button>
                 </div>
                 <Modal
                     isOpen={modalIsOpen}
@@ -105,7 +105,7 @@ function Feedback() {
                         <label for="exampleFormControlTextarea1" class="form-label">Your Feedback</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                   <center><button className='btn-primary btn'>Submit</button></center> 
+                    <center><button className='btn-primary btn'>Submit</button></center>
 
                 </Modal>
 

@@ -64,8 +64,35 @@
         margin-top:19px;
     }
 }
-@media screen and (max-width : 960px) {
-   #modal{
-    width: 200px;
+
+@media screen and (max-width :960px) {
+   .container{
+    display: block;
+   }
+   .box{
+    margin-top:20px;
+   }
+   .btn{
+    margin-top: 10px;
    }
 }
+
+
+@media screen  and (max-width:500px){
+    .box{
+        width: 360px;
+    }
+    .icon{
+        width: 50px;
+        margin-left: 268px;
+    }
+}
+
+@media screen  and (max-width:500px){
+    .box{
+        width: 250px;
+    }
+    .icon{
+        margin-left: 160px;
+    }
+    }
