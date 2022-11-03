@@ -23,7 +23,7 @@ function Home() {
     <div id='main-div'>
       <Header />
       <Navbar />
-      <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel" >
+      <div id="carouselExampleInterval" style={{ marginTop: '190px' }} className="carousel slide" data-bs-ride="carousel" >
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="5000">
             <img style={{ height: '450px' }} src={tgpcetImg} className="d-block w-100 " alt="..." />
@@ -32,7 +32,7 @@ function Home() {
             <img style={{ height: '450px' }} src={Alumni_2017_img_1} className="d-block w-100 " alt="..." />
           </div>
           <div className="carousel-item">
-            <img  style={{ height: '450px' }} src={Alumni_2017_img_6}  className="d-block w-100  " alt="..." />
+            <img style={{ height: '450px' }} src={Alumni_2017_img_6} className="d-block w-100  " alt="..." />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -45,117 +45,118 @@ function Home() {
         </button>
       </div>
       <div>
-      <center>  <h3 className='heading'> PROGRAMS @ TGPCET</h3>
-        <p className='underline'></p>
-        <div className='row'>
-          <div className='card1 '>
+        <center>  <h3 className='heading'> PROGRAMS @ TGPCET</h3>
+          <p className='underline'></p>
+          <div className='row'>
+            <div className='card1 '>
               <WifiIcon style={{ color: 'rgb(237, 20, 183)' }} sx={{ fontSize: 50 }} />
-            <div className='card-Info'>
-              <h6 className='branch-names'>INFORMATION TECHNOLOGY</h6>
-              <p > Intake <span className='vertical-line'>| </span> 60</p>
-              <p ><span  className='vertical-line'>|  </span>Choice Code:</p>
-              <p >415124610</p>
+              <div className='card-Info'>
+                <h6 className='branch-names'>INFORMATION TECHNOLOGY</h6>
+                <p > Intake <span className='vertical-line'>| </span> 60</p>
+                <p ><span className='vertical-line'>|  </span>Choice Code:</p>
+                <p >415124610</p>
+              </div>
             </div>
-          </div>
-          <div className='card2'>
-            <ImportantDevicesIcon style={{ color: 'rgb(19, 222, 222)' }} sx={{ fontSize: 50 }} />
-            <div className='card-Info'>
-              <h6 className='branch-names'>MASTER IN COMPUTER APPLICATION</h6>
-              <p > Intake <span className='vertical-line'>| </span>120</p>
-              <p ><span className='vertical-line'>|  </span>Choice Code:</p>
-              <p >415124110</p>
+            <div className='card2'>
+              <ImportantDevicesIcon style={{ color: 'rgb(19, 222, 222)' }} sx={{ fontSize: 50 }} />
+              <div className='card-Info'>
+                <h6 className='branch-names'>MASTER IN COMPUTER APPLICATION</h6>
+                <p > Intake <span className='vertical-line'>| </span>120</p>
+                <p ><span className='vertical-line'>|  </span>Choice Code:</p>
+                <p >415124110</p>
+              </div>
             </div>
-          </div>
-          <div className='card3'>
+            <div className='card3'>
               <ApartmentIcon color='primary' sx={{ fontSize: 50 }} />
-            <div className='card-Info'>
-              <h6 className='branch-names'>CIVIL ENGINEERING</h6>
-              <p > Intake <span  className='vertical-line'>| </span>120</p>
-              <p ><span  className='vertical-line'>|  </span>Choice Code:</p>
-              <p >415119110</p>
+              <div className='card-Info'>
+                <h6 className='branch-names'>CIVIL ENGINEERING</h6>
+                <p > Intake <span className='vertical-line'>| </span>120</p>
+                <p ><span className='vertical-line'>|  </span>Choice Code:</p>
+                <p >415119110</p>
+              </div>
             </div>
-          </div>
-          <div className='card4'>
+            <div className='card4'>
               <AdbIcon style={{ color: 'rgb(6, 180, 6)' }} sx={{ fontSize: 50 }} />
-            <div className='card-Info'>
-              <h6 className='branch-names'>COMPUTER SCIENCE AND ENGINEERING</h6>
-              <p > Intake <span  className='vertical-line'>| </span> 120</p>
-              <p ><span  className='vertical-line'>|  </span>Choice Code:</p>
-              <p >415124210</p>
+              <div className='card-Info'>
+                <h6 className='branch-names'>COMPUTER SCIENCE AND ENGINEERING</h6>
+                <p > Intake <span className='vertical-line'>| </span> 120</p>
+                <p ><span className='vertical-line'>|  </span>Choice Code:</p>
+                <p >415124210</p>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='card5'>
+            <div className='card5'>
               <EngineeringIcon color='primary' sx={{ fontSize: 50 }} />
-            <div className='card-Info'>
-              <h6 className='branch-names'>MECHANICAL ENGINEERING</h6>
-              <p > Intake <span  className='vertical-line'>| </span> 120</p>
-              <p ><span  className='vertical-line'>|  </span>Choice Code:</p>
-              <p >415161210</p>
+              <div className='card-Info'>
+                <h6 className='branch-names'>MECHANICAL ENGINEERING</h6>
+                <p > Intake <span className='vertical-line'>| </span> 120</p>
+                <p ><span className='vertical-line'>|  </span>Choice Code:</p>
+                <p >415161210</p>
+              </div>
             </div>
-          </div>
-          <div className='card6'>
+            <div className='card6'>
               <CellTowerIcon style={{ color: 'orange' }} sx={{ fontSize: 50 }} />
-            <div className='card-Info'>
-              <h6 className='branch-names'>ELECTRONICS & COMMUNICATION ENGINEERING</h6>
-              <p > Intake <span  className='vertical-line'>| </span> 60</p>
-              <p ><span  className='vertical-line'>|  </span>Choice Code:</p>
-              <p >415137010</p>
+              <div className='card-Info'>
+                <h6 className='branch-names'>ELECTRONICS & COMMUNICATION ENGINEERING</h6>
+                <p > Intake <span className='vertical-line'>| </span> 60</p>
+                <p ><span className='vertical-line'>|  </span>Choice Code:</p>
+                <p >415137010</p>
+              </div>
             </div>
-          </div>
-          <div className='card7'>
+            <div className='card7'>
               <ViewDayIcon style={{ color: "rgb(19, 222, 222)" }} sx={{ fontSize: 50 }} />
-            <div className='card-Info'>
-              <h6 className='branch-names'>COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)</h6>
-              <p > Intake <span  className='vertical-line'>| </span>60 </p>
-              <p ><span  className='vertical-line'>| </span>Choice Code:</p>
-              <p >415191210</p>
+              <div className='card-Info'>
+                <h6 className='branch-names'>COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)</h6>
+                <p > Intake <span className='vertical-line'>| </span>60 </p>
+                <p ><span className='vertical-line'>| </span>Choice Code:</p>
+                <p >415191210</p>
+              </div>
             </div>
-          </div>
-          <div className='card8'>
+            <div className='card8'>
               <WbIncandescentIcon style={{ color: 'orange' }} sx={{ fontSize: 50 }} />
-            <div className='card-Info'>
-              <h6 className='branch-names'>ELECTRICAL ENGINEERING</h6>
-              <p > Intake <span  className='vertical-line'>| </span> 120</p>
-              <p ><span  className='vertical-line'>|  </span>Choice Code:</p>
-              <p >415129310</p>
+              <div className='card-Info'>
+                <h6 className='branch-names'>ELECTRICAL ENGINEERING</h6>
+                <p > Intake <span className='vertical-line'>| </span> 120</p>
+                <p ><span className='vertical-line'>|  </span>Choice Code:</p>
+                <p >415129310</p>
+              </div>
             </div>
-          </div>
-          <div className='card9'>
+            <div className='card9'>
               <AccountBoxIcon style={{ color: 'rgb(237, 20, 183)' }} sx={{ fontSize: 50 }} />
-            <div className='card-Info'>
-              <h6 className='branch-names'>MASTER OF BUSINESS ADMINISTRATION</h6>
-              <p > Intake <span  className='vertical-line'>| </span>120</p>
-              <p ><span  className='vertical-line'>|  </span>Choice Code:</p>
-              <p >415110110</p>
+              <div className='card-Info'>
+                <h6 className='branch-names'>MASTER OF BUSINESS ADMINISTRATION</h6>
+                <p > Intake <span className='vertical-line'>| </span>120</p>
+                <p ><span className='vertical-line'>|  </span>Choice Code:</p>
+                <p >415110110</p>
+              </div>
             </div>
-          </div>
-          <div className='card10'>
+            <div className='card10'>
               <AirplanemodeActiveIcon color="primary" sx={{ fontSize: 50 }} />
-            <div className='card-Info'>
-              <h6 className='branch-names'>AERONOTICAL ENGINEERING</h6>
-              <p > Intake <span  className='vertical-line'>| </span>60</p>
-              <p ><span  className='vertical-line'>|  </span>Choice Code:</p>
-              <p >415100210</p>
+              <div className='card-Info'>
+                <h6 className='branch-names'>AERONOTICAL ENGINEERING</h6>
+                <p > Intake <span className='vertical-line'>| </span>60</p>
+                <p ><span className='vertical-line'>|  </span>Choice Code:</p>
+                <p >415100210</p>
+              </div>
             </div>
-          </div>
-          <div className='card11'>
+            <div className='card11'>
               <HourglassFullIcon style={{ color: ' rgb(6, 180, 6)' }} sx={{ fontSize: 50 }} />
-            <div className='card-Info'>
-              <h6 className='branch-names'>B.TECH BIO-TECHNOLOGY</h6>
-              <p > Intake <span  className='vertical-line'>| </span> 60</p>
-              <p ><span  className='vertical-line'>|  </span>Choice Code:</p>
-              <p >415108210</p>
+              <div className='card-Info'>
+                <h6 className='branch-names'>B.TECH BIO-TECHNOLOGY</h6>
+                <p > Intake <span className='vertical-line'>| </span> 60</p>
+                <p ><span className='vertical-line'>|  </span>Choice Code:</p>
+                <p >415108210</p>
+              </div>
             </div>
           </div>
-        </div>
         </center>
       </div>
-      
+
       {/* Management */}
 
-      <div>
+
+      {/* Management */}
+
+      < div >
         <center><h3 className='heading'>MANAGEMENT</h3></center>
         <p className='underline'></p>
         <div id='management-container'>
@@ -181,9 +182,9 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
-      <Footer/>
-    </div>
+      </div >
+      <Footer />
+    </div >
   )
 }
 
