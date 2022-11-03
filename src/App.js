@@ -18,6 +18,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='feedback' element={<Feedback/>} />
+          <Route path='activities' element={<AlumniActivities/>} />
         </Routes>
       </BrowserRouter>
     </div>

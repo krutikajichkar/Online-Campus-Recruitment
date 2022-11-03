@@ -1,8 +1,5 @@
 
 import React from 'react'
-import Alumni_2017_img_6 from '../Components/Images/Alumni_2017_img_6.jpg'
-import tgpcetImg from '../Components/Images/tgpcetImg.png'
-import Alumni_2017_img_1 from '../Components/Images/Alumni_2017_img_1.jpg'
 import WifiIcon from '@mui/icons-material/Wifi';
 import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices';
 import ApartmentIcon from '@mui/icons-material/Apartment';
@@ -26,13 +23,13 @@ function Home() {
       <div id="carouselExampleInterval" style={{ marginTop: '190px' }} className="carousel slide" data-bs-ride="carousel" >
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="5000">
-            <img style={{ height: '450px' }} src={tgpcetImg} className="d-block w-100 " alt="..." />
+            <img style={{ height: '500px' }} src='http://tgpcet.com/assets/img/banner/19.jpg' className="d-block w-100 " alt="..." />
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img style={{ height: '450px' }} src={Alumni_2017_img_1} className="d-block w-100 " alt="..." />
+            <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/5.jpg' className="d-block w-100 " alt="..." />
           </div>
           <div className="carousel-item">
-            <img style={{ height: '450px' }} src={Alumni_2017_img_6} className="d-block w-100  " alt="..." />
+            <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/6.jpg' className="d-block w-100  " alt="..." />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
