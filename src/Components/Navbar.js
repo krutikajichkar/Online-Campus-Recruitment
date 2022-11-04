@@ -72,6 +72,7 @@ function Navbar() {
     setAlumniLoginIsOpen(false);
     setHODLoginIsOpen(false);
     setAdminLoginIsOpen(false);
+    setStudentLoginIsOpen(false);
     setAlumniLoginIsOpen(false);
    
   }
@@ -216,9 +217,9 @@ function Navbar() {
                 {" "}
                 <li>About</li>
               </Link>
-              <li>Alumni Comitte</li>
-              <li>Alumni Activities</li>
-              <li>Feedback</li>
+              <li>Alumni Comittee</li>
+             <Link className="link" to='/activities'> <li>Alumni Activities</li></Link>
+              <Link className="link" to='/feedback'><li>Feedback</li></Link>
               <li>
                 <div className="btn-group dropend">
                   <button
@@ -236,12 +237,12 @@ function Navbar() {
                   </button>
                   <ul className="dropdown-menu">
                     <li>
-                      <button className="dropdown-item" type="button">
+                      <button className="dropdown-item" type="button" onClick={openAlumniRegistrationModal}>
                         Alumni Register
                       </button>
                     </li>
                     <li>
-                      <button className="dropdown-item" type="button">
+                      <button className="dropdown-item" type="button" onClick={openStudentRegistrationModal}>
                         Student Register
                       </button>
                     </li>
@@ -270,22 +271,22 @@ function Navbar() {
                   </button>
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <li>
-                      <button className="dropdown-item" type="button">
+                      <button className="dropdown-item" type="button" onClick={openAdminLoginModal}>
                         Admin Login
                       </button>
                     </li>
                     <li>
-                      <button className="dropdown-item" type="button">
+                      <button className="dropdown-item" type="button" onClick={openHODLoginModal}>
                         HOD Login
                       </button>
                     </li>
                     <li>
-                      <button className="dropdown-item" type="button">
+                      <button className="dropdown-item" type="button" onClick={openStudentLoginModal}>
                         Student Login
                       </button>
                     </li>
                     <li>
-                      <button className="dropdown-item" type="button">
+                      <button className="dropdown-item" type="button" onClick={openAlumniLoginModal}>
                         Alumni Login
                       </button>
                     </li>

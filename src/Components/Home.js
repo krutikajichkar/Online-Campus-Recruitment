@@ -20,16 +20,16 @@ function Home() {
     <div id='main-div'>
       <Header />
       <Navbar />
-      <div id="carouselExampleInterval" style={{ marginTop: '190px' }} className="carousel slide" data-bs-ride="carousel" >
+      <div id="carouselExampleInterval" style={{ marginTop: '210px' ,width:'100%'}} className="carousel slide" data-bs-ride="carousel" >
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="5000">
-            <img style={{ height: '500px' }} src='http://tgpcet.com/assets/img/banner/19.jpg' className="d-block w-100 " alt="..." />
+            <img style={{ height: '560px' ,width:'100%'}} src='http://tgpcet.com/assets/img/banner/19.jpg' className="d-block w-100 " alt="..." />
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/5.jpg' className="d-block w-100 " alt="..." />
+            <img style={{ height: '560px' , width:'100%'}} src='http://tgpcet.com/assets/img/banner/5.jpg' className="d-block w-100  " alt="..." />
           </div>
           <div className="carousel-item">
-            <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/6.jpg' className="d-block w-100  " alt="..." />
+            <img style={{ height: '560px' , width:'100%'}} src='http://tgpcet.com/assets/img/banner/6.jpg' className="d-block w-100 " alt="..." />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">

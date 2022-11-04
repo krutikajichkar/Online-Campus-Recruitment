@@ -22,7 +22,7 @@ import Footer from "./Footer";
 
 function AlumniActivities() {
   return (
-    <div>
+    <div id="activities-container">
       <Header />
       <Navbar />
 
