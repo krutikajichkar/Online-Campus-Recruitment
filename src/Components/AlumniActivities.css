@@ -130,7 +130,7 @@
 
 #panel2-row{
         width: 100%;
-        max-width: 1140px;
+        max-width: 1200px;
         display: flex;
         flex-direction: row;
         text-align: center;
@@ -143,12 +143,10 @@
        /* background-color:lightcoral; */
        margin: 16px;
        padding: 40px 30px;
-
-       /* border-top-left-radius: 45px; */
-       /* border-bottom-left-radius: 20px;
-       border-bottom-right-radius: 20px; */
-       border-radius: 20px;
+       margin: 22px;
+       border-radius: 10px;
        transition: box-shadow 0.3s;
+       box-shadow: 0px 5px 5px 5px rgb(202, 199, 199);
     }
     .panel2-img:hover{
         box-shadow: 0px 12px 16px 0px lightblue;
