@@ -68,8 +68,8 @@ function Feedback() {
                     </div>
                 </div>
             </div></center>
-           <center> <h3 className='headline2'> Want to write something about College ?</h3>
-            <p className='underline'></p></center>
+            <center> <h3 className='headline2'> Want to write something about College ?</h3>
+                <p className='underline'></p></center>
             <center>
                 <div>
                     <button style={{ marginTop: '-30px' }} onClick={openModal} className='btn btn-success'>WRITE HERE</button>
