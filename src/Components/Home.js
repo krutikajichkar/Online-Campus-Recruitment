@@ -15,20 +15,21 @@ import './Home.css'
 import Header from './Header'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { color } from '@mui/system';
 function Home() {
   return (
     <div id='main-div'>
       <Header />
       <Navbar />
-      <div id="carouselExampleInterval" style={{ marginTop: '190px' }} className="carousel slide" data-bs-ride="carousel" >
+      <div id="carouselExampleInterval" style={{ marginTop: '220px' }} className="carousel slide" data-bs-ride="carousel" >
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="5000">
-            <img style={{ height: '500px' }} src='http://tgpcet.com/assets/img/banner/19.jpg' className="d-block w-100 " alt="..." />
+            <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/19.jpg' className="d-block w-100 " alt="..." />
           </div>
           <div className="carousel-item" data-bs-interval="2000">
             <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/5.jpg' className="d-block w-100 " alt="..." />
           </div>
-          <div className="carousel-item">
+          <div className="carousel-item" data-bs-interval="2000">
             <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/6.jpg' className="d-block w-100  " alt="..." />
           </div>
         </div>
@@ -159,21 +160,21 @@ function Home() {
         <div id='management-container'>
           <div className="management-card" style={{ width: "30rem" }}>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRguzK4-v3tucd7TCgsbnFxaYaYx4A7aho5XQ&usqp=CAU" className="card-img-top" alt="Chairman" />
-            <div className="card-body" style={{ background: 'rgb(8, 8, 81)' }}>
+            <div className="card-body" >
               <p className="card-text">CHAIRMAN, GPG</p>
               <h4 className='management-name'>Dr. Mohan Gaikwad-Patil</h4>
             </div>
           </div>
           <div className="management-card" style={{ width: "30rem" }}>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN5k6wryvQnguQYbXREOCcJ1FItbeNndxIGhK5zy6hsDbjIWN1NZR4HqSDqYBEoXi8PDU&usqp=CAU" className="card-img-top" alt="President" />
-            <div className="card-body" style={{ background: 'rgb(8, 8, 81)' }}>
+            <div className="card-body" >
               <p className="card-text">PRESIDENT, GPGI</p>
               <h4 className='management-name'>Dr. Anjali Patil-Gaikwad</h4>
             </div>
           </div>
           <div className="management-card" style={{ width: "30rem" }}>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSurMaUofzj6WFPlGcdH-9bEhhI0xpj3kBrGg&usqp=CAU" className="card-img-top" alt="Treasurer" />
-            <div className="card-body" style={{ background: 'rgb(8, 8, 81)' }}>
+            <div className="card-body" >
               <p className="card-text">TREASURER, GPGI</p>
               <h4 className='management-name'>Prof. Sandeep Gaikwad</h4>
             </div>
