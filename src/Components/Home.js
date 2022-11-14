@@ -15,32 +15,16 @@ import './Home.css'
 import Header from './Header'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { color } from '@mui/system';
+// import { color } from '@mui/system';
+
+
 function Home() {
   return (
     <div id='main-div'>
       <Header />
       <Navbar />
-      <div id="carouselExampleInterval" style={{ marginTop: '220px' }} className="carousel slide" data-bs-ride="carousel" >
-        <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval="5000">
-            <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/19.jpg' className="d-block w-100 " alt="..." />
-          </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/5.jpg' className="d-block w-100 " alt="..." />
-          </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/6.jpg' className="d-block w-100  " alt="..." />
-          </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+      <div >
+        <img style={{ height: '560px', width: '100%', marginTop: '150px' }} src='http://tgpcet.com/assets/img/banner/19.jpg' alt="..." />
       </div>
       <div>
         <center>  <h3 className='heading'> PROGRAMS @ TGPCET</h3>
@@ -82,6 +66,8 @@ function Home() {
                 <p >415124210</p>
               </div>
             </div>
+          </div>
+          <div className='row'>
             <div className='card5'>
               <EngineeringIcon color='primary' sx={{ fontSize: 50 }} />
               <div className='card-Info'>
@@ -118,6 +104,8 @@ function Home() {
                 <p >415129310</p>
               </div>
             </div>
+          </div>
+          <div className='row'>
             <div className='card9'>
               <AccountBoxIcon style={{ color: 'rgb(237, 20, 183)' }} sx={{ fontSize: 50 }} />
               <div className='card-Info'>
@@ -146,13 +134,13 @@ function Home() {
               </div>
             </div>
           </div>
-        </center>
-      </div>
+    </center>
+      </div >
 
-      {/* Management */}
+    {/* Management */ }
 
 
-      {/* Management */}
+  {/* Management */ }
 
       < div >
         <center><h3 className='heading'>MANAGEMENT</h3></center>
