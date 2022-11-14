@@ -20,7 +20,7 @@ function PlacedStudents() {
                         <th scope="row">1</th>
                         <td>Ritik Gaikwad</td>
                         <td>IT</td>
-                        <td>Google</td>
+                        <td>TCS</td>
                         <td>12Lakhs</td>
                         <td><a href='https://www.linkedin.com/in/ritik-gaikwad-645957219'>View Profile</a></td>
                     </tr>
