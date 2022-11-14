@@ -323,53 +323,53 @@ function Navbar() {
           {" "}
           <CloseIcon />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             UserName
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Email
           </label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Password
           </label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Department
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Session
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
@@ -392,79 +392,79 @@ function Navbar() {
           {" "}
           <CloseIcon />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             UserName
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Email
           </label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Password
           </label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Department
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Session
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Currently Working At
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             LinkedIn Profile
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
             required
           />
@@ -489,53 +489,53 @@ function Navbar() {
           {" "}
           <CloseIcon />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             UserName
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Password
           </label>
           <input
             type="Password"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        {/* <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        {/* <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Password
           </label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Department
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Session
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div> */}
@@ -559,53 +559,53 @@ function Navbar() {
           {" "}
           <CloseIcon />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             UserName
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Email
           </label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Password
           </label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Department
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Session
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
@@ -629,53 +629,53 @@ function Navbar() {
           {" "}
           <CloseIcon />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             UserName
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Email
           </label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Password
           </label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Department
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Session
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
@@ -698,53 +698,53 @@ function Navbar() {
           {" "}
           <CloseIcon />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             UserName
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Email
           </label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Password
           </label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Department
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Session
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
           />
         </div>
