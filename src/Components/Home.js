@@ -15,32 +15,16 @@ import './Home.css'
 import Header from './Header'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { color } from '@mui/system';
+// import { color } from '@mui/system';
+
+
 function Home() {
   return (
     <div id='main-div'>
       <Header />
       <Navbar />
-      <div id="carouselExampleInterval" style={{ marginTop: '220px' }} className="carousel slide" data-bs-ride="carousel" >
-        <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval="5000">
-            <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/19.jpg' className="d-block w-100 " alt="..." />
-          </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/5.jpg' className="d-block w-100 " alt="..." />
-          </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img style={{ height: '560px' }} src='http://tgpcet.com/assets/img/banner/6.jpg' className="d-block w-100  " alt="..." />
-          </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+      <div >
+        <img style={{ height: '560px', width:'100%', marginTop:'150px'}} src='http://tgpcet.com/assets/img/banner/19.jpg' alt="..." />
       </div>
       <div>
         <center>  <h3 className='heading'> PROGRAMS @ TGPCET</h3>
