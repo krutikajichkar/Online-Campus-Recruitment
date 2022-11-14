@@ -1,5 +1,5 @@
 body {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .heading{
@@ -28,35 +28,14 @@ body {
 .card11 {
     width: 300px;
     border: 1px solid gainsboro;
-    padding: 60px 50px ;
+    padding: 40px 50px ;
     text-align: right;
-    transition-property:background-color;
-    transition: 0.5s ease-in-out;
     display: flex;
-    margin:5px 5px 5px 5px;
-
+    margin:5px 10px 10px 5px;
+ border-radius: 5px;
+ box-shadow: 2px 3px 3px 2px grey;
 }
 
-.card1:hover, .card9:hover {
-    background-color:rgb(237, 20, 183);
-    color: white;
-}
-.card2:hover, .card7:hover{
-background-color: rgb(19, 222, 222);
-color: white;
-}
-.card6:hover, .card8:hover{
-    background: orange;
-    color: white;
-}
-.card3:hover, .card5:hover, .card10:hover{
-    background:blue;
-    color: white;
-}
-.card11:hover, .card4:hover{
-    background: rgb(6, 180, 6);
-    color: white;
-}
 .row {
     display: flex; 
     width: 1300px;
@@ -91,7 +70,10 @@ color: white;
     color: orange;   
 }
 .management-name{
-    color: white;
+    color:white;
+}
+.card-body{
+    background-color:rgb(8, 8, 81) ;
 }
 #management-container{
 display: flex;

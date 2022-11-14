@@ -497,15 +497,15 @@ function Navbar() {
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">
-            Email
+            Password
           </label>
           <input
-            type="email"
+            type="Password"
             class="form-control"
             id="exampleFormControlInput1"
           />
         </div>
-        <div class="mb-3">
+        {/* <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">
             Password
           </label>
@@ -534,7 +534,7 @@ function Navbar() {
             class="form-control"
             id="exampleFormControlInput1"
           />
-        </div>
+        </div> */}
         <center>
           <button className="btn btn-primary">Submit</button>
         </center>
