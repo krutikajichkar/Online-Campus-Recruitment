@@ -20,12 +20,12 @@ import Footer from './Footer'
 
 function Home() {
   return (
-    <div id='main-div'>
+    < div id='main-div'>
       <Header />
       <Navbar />
-      <div >
-        <img style={{ height: '560px', width: '100%', marginTop: '150px' }} src='http://tgpcet.com/assets/img/banner/19.jpg' alt="..." />
-      </div>
+      
+        <img style={{ height: '560px', width: '100vw', marginTop: '150px' }} src='http://tgpcet.com/assets/img/banner/19.jpg' alt="..." />
+      
       <div>
         <center>  <h3 className='heading'> PROGRAMS @ TGPCET</h3>
           <p className='underline'></p>

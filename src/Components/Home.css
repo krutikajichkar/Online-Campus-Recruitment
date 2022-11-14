@@ -31,13 +31,15 @@ body {
     padding: 40px 50px ;
     text-align: right;
     display: flex;
+    
     margin:5px 10px 10px 5px;
- border-radius: 5px;
- box-shadow: 2px 3px 3px 2px grey;
+    border-radius: 5px;
+    box-shadow: 2px 3px 3px 2px grey;
 }
 
 .row {
     display: flex; 
+    
     width: 1300px;
     margin-left: auto;
     margin-right: auto;
