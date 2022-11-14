@@ -3,8 +3,8 @@ import './PlacedStudents.css';
 
 function PlacedStudents() {
     return (
-        <div class="placedStudent">
-            <table class="table table-striped">
+        <div className="placedStudent">
+            <table className="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Sr. No.</th>

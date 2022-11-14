@@ -24,7 +24,7 @@ function Home() {
       <Header />
       <Navbar />
       <div >
-        <img style={{ height: '560px', width:'100%', marginTop:'150px'}} src='http://tgpcet.com/assets/img/banner/19.jpg' alt="..." />
+        <img style={{ height: '560px', width: '100%', marginTop: '150px' }} src='http://tgpcet.com/assets/img/banner/19.jpg' alt="..." />
       </div>
       <div>
         <center>  <h3 className='heading'> PROGRAMS @ TGPCET</h3>
@@ -66,6 +66,8 @@ function Home() {
                 <p >415124210</p>
               </div>
             </div>
+          </div>
+          <div className='row'>
             <div className='card5'>
               <EngineeringIcon color='primary' sx={{ fontSize: 50 }} />
               <div className='card-Info'>
@@ -102,6 +104,8 @@ function Home() {
                 <p >415129310</p>
               </div>
             </div>
+          </div>
+          <div className='row'>
             <div className='card9'>
               <AccountBoxIcon style={{ color: 'rgb(237, 20, 183)' }} sx={{ fontSize: 50 }} />
               <div className='card-Info'>
@@ -130,13 +134,13 @@ function Home() {
               </div>
             </div>
           </div>
-        </center>
-      </div>
+    </center>
+      </div >
 
-      {/* Management */}
+    {/* Management */ }
 
 
-      {/* Management */}
+  {/* Management */ }
 
       < div >
         <center><h3 className='heading'>MANAGEMENT</h3></center>
