@@ -132,7 +132,7 @@
     .panel2-img{
        width: 32%;
        text-align: center;
-       background-color:#f5f6fb;
+       background-color:#dadef1;
        /* background-color:lightcoral; */
        margin: 16px;
        padding: 40px 30px;
@@ -155,7 +155,7 @@
         font-size: 14px;
         font-style: italic;
         letter-spacing: 0.5px;
-        color: #8b8b99;
+        color: #6e6e7a;
         margin: 10px;
         text-align: left;
     }
