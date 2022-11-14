@@ -95,6 +95,10 @@ function Navbar() {
             {" "}
             <li>Feedback</li>
           </Link>
+          <Link className="link" to='/placedstudents'>
+            {" "}
+            <li>PlacedStudents</li>
+          </Link>
         </ul>
         <div style={{ display: "flex" }}>
           <div className="dropdown" style={{ paddingRight: "20px" }}>
