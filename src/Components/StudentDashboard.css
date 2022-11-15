@@ -1,0 +1,73 @@
+.bar {
+  margin: 10px;
+
+}
+
+.student {
+    display: flex;
+    background-color: rgb(236, 234, 234);
+    height: 94vh;
+
+}
+
+.sidebar {
+    padding: 50px 80px;
+    font-size: 18px;
+    width: 24%;
+}
+
+.sidebar div {
+    padding-top: 15px;
+}
+
+.detail-card {
+    width: 80%;
+}
+
+.student-box {
+    background-color: white;
+    border-radius: none;
+    width: 90%;
+    height: 70%;
+    margin-top: 45px;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 10px 20px;
+    
+}
+
+.profile-head {
+    font-weight: 600;
+}
+
+.profile-btn {
+    width: 170px;
+    padding: 2px;
+    border-radius: 25px;
+    font-size: 15px;
+}
+.photo-detail {
+    display: flex;
+    padding: 44px;
+}
+.photo {
+    /* border: 1px solid black; */
+    width: 200px;
+    height: 200px;
+}
+.detail{
+    padding-left: 20px;
+}
+.main-content{
+    display: flex;
+}
+.student-heading{
+    font-weight: 600;
+    width: 100px;
+}
+.student-sub-heading{
+    padding-left: 44px;
+}
