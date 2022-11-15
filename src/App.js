@@ -8,7 +8,7 @@ import Feedback from './Components/Feedback';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AlumniActivities from './Components/AlumniActivities';
 import PlacedStudents from './Components/PlacedStudents';
-
+import StudentDashboard from './Components/StudentDashboard';
 
 function App() {
   return (
@@ -22,9 +22,10 @@ function App() {
           <Route path='feedback' element={<Feedback />} />
           <Route path='activities' element={<AlumniActivities />} />
           <Route path='placedstudents' element={<PlacedStudents />} />
+          <Route path='studentdashboard' element={<StudentDashboard />} />
         </Routes>
       </BrowserRouter>
-    </div>
+            </div>
   );
 }
 

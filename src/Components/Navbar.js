@@ -100,7 +100,7 @@ function Navbar() {
             {" "}
             <li>PlacedStudents</li>
           </Link>
-          <Link className="link" to='/StudentDashboard'>
+          <Link className="link" to='/Studentdashboard'>
             {" "}
             <li>StudentDashboard</li>
           </Link>
