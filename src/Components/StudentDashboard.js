@@ -5,11 +5,12 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import { Link } from "react-router-dom";
 function StudentDashboard() {
   return (
     <div>
       <div className='bar'>
-        <ArrowBackIcon />
+      <Link to='/'> <ArrowBackIcon /></Link>
       </div>
       <div className='student'>
         <div className='sidebar'>
