@@ -9,6 +9,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AlumniActivities from './Components/AlumniActivities';
 import PlacedStudents from './Components/PlacedStudents';
 import StudentDashboard from './Components/StudentDashboard';
+import Registration from './Components/Registration';
+import Login from './Components/Login';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path='activities' element={<AlumniActivities />} />
           <Route path='placedstudents' element={<PlacedStudents />} />
           <Route path='studentdashboard' element={<StudentDashboard />} />
+          <Route path='register' element={<Registration/>} />
+          <Route path='login' element={<Login/>} />
         </Routes>
       </BrowserRouter>
       
