@@ -1,13 +1,16 @@
 import React from 'react'
 import './Register.css';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
+import { useNavigate, } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
 function Registration() {
+  const navigate = useNavigate();
   return (
-    <div>
+    <div class="signup">
       <div class="signup-form">
         <form action="/examples/actions/confirmation.php" method="post">
           <h2>Student Registration</h2>
@@ -39,6 +42,9 @@ function Registration() {
             <button type="submit" class="btn btn-success btn-lg btn-block">
               Register Now
             </button>
+            <div class="btnback">
+              <button class="backbtn" onClick={() => navigate(-1)}><ArrowBackIcon></ArrowBackIcon>Go back</button>
+            </div>
           </div>
         </form>
       </div>
