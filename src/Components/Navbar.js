@@ -128,17 +128,17 @@ function Navbar() {
                   </button>
                 </li>
               </Link>
-             <Link to='alumniregister'>
-             <li>
-                <button
-                  className="dropdown-item"
-                  type="button"
-                  onClick={openAlumniRegistrationModal}
-                >
-                  Alumni Registration
-                </button>
-              </li>
-             </Link>
+              <Link to='alumniregister'>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={openAlumniRegistrationModal}
+                  >
+                    Alumni Registration
+                  </button>
+                </li>
+              </Link>
               {/* <li>
                 <button className="dropdown-item" type="button">
                   Something else here
@@ -169,11 +169,14 @@ function Navbar() {
                   </button>
                 </li>
               </Link>
-              <li>
-                <button className="dropdown-item" type="button" onClick={openHODLoginModal}>
-                  HOD Login
-                </button>
-              </li>
+              <Link to=".hodlogin">
+                <li>
+                  <button className="dropdown-item" type="button" onClick={openHODLoginModal}>
+                    HOD Login
+                  </button>
+                </li>
+              </Link>
+
               <li>
                 <button className="dropdown-item" type="button" onClick={openStudentLoginModal}>
                   Student Login
