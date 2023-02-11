@@ -13,6 +13,8 @@ import Registration from './Components/Registration';
 import Login from './Components/Login';
 import AlumniRegistration from './Components/AlumniRegistration';
 import HodLogin from './Components/HodLogin';
+import StudentLogin from './Components/StudentLogin';
+import AlumniLogin from './Components/AlumniLogin';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Route path='login' element={<Login />} />
           <Route path='alumniregister' element={<AlumniRegistration />} />
           <Route path='hodlogin' element={<HodLogin />} />
+          <Route path='studentlogin' element={<StudentLogin />} />
+          <Route path='alumnilogin' element={<AlumniLogin/>} />
         </Routes>
       </BrowserRouter>
 

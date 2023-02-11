@@ -7,74 +7,13 @@ import { Link } from "react-router-dom";
 import Modal from "react-modal";
 import CloseIcon from "@mui/icons-material/Close";
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    width: "500px",
-  },
-};
 
-Modal.setAppElement("#root");
+
+
 
 function Navbar() {
-  let subtitle;
-
-  const [StudentRegistrationmodalIsOpen, setStudentRegistrationIsOpen] =
-    React.useState(false);
-  const [AlumniRegistrationmodalIsOpen, setAlumniRegistrationIsOpen] =
-    React.useState(false);
-  const [AlumniLoginmodalIsOpen, setAlumniLoginIsOpen] =
-    React.useState(false);
-  const [HODLoginmodalIsOpen, setHODLoginIsOpen] =
-    React.useState(false);
-  const [StudentLoginmodalIsOpen, setStudentLoginIsOpen] =
-    React.useState(false);
-  const [AdminLoginmodalIsOpen, setAdminLoginIsOpen] =
-    React.useState(false);
-
-  function openStudentRegistrationModal() {
-    setStudentRegistrationIsOpen(true);
-  }
-
-  const openAlumniRegistrationModal = () => {
-    setAlumniRegistrationIsOpen(true);
-  };
-
-  const openAlumniLoginModal = () => {
-    setAlumniLoginIsOpen(true);
-  };
-
-  const openHODLoginModal = () => {
-    setHODLoginIsOpen(true);
-  };
-
-  const openStudentLoginModal = () => {
-    setStudentLoginIsOpen(true);
-  };
-
-  const openAdminLoginModal = () => {
-    setAdminLoginIsOpen(true);
-  };
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = "#f00";
-  }
-
-  function closeModal() {
-    setStudentRegistrationIsOpen(false);
-    setAlumniRegistrationIsOpen(false);
-    setAlumniLoginIsOpen(false);
-    setHODLoginIsOpen(false);
-    setAdminLoginIsOpen(false);
-    setAlumniLoginIsOpen(false);
-
-  }
+  
+  
   return (
     <div>
       <nav>
@@ -117,23 +56,24 @@ function Navbar() {
               Register
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <Link to='/register'>
-                <li>
+              <Link to='/register' className="link">
+                <li >
                   <button
-                    className="dropdown-item"
+                    className="dropdown-item link"
                     type="button"
-                    onClick={openStudentRegistrationModal}
+                   
+                    
                   >
                     Student Registration
                   </button>
                 </li>
               </Link>
-              <Link to='alumniregister'>
+              <Link to='alumniregister' className="link">
                 <li>
                   <button
                     className="dropdown-item"
                     type="button"
-                    onClick={openAlumniRegistrationModal}
+                   
                   >
                     Alumni Registration
                   </button>
@@ -162,31 +102,35 @@ function Navbar() {
               Login
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <Link to='/login'>
+              <Link to='/login' className="link">
                 <li>
-                  <button className="dropdown-item" type="button" onClick={openAdminLoginModal}>
+                  <button className="dropdown-item" type="button" >
                     Admin Login
                   </button>
                 </li>
               </Link>
-              <Link to=".hodlogin">
+              <Link to="hodlogin" className="link">
                 <li>
-                  <button className="dropdown-item" type="button" onClick={openHODLoginModal}>
+                  <button className="dropdown-item" type="button" >
                     HOD Login
                   </button>
                 </li>
               </Link>
 
-              <li>
-                <button className="dropdown-item" type="button" onClick={openStudentLoginModal}>
+             <Link to='studentlogin' className="link">
+             <li>
+                <button className="dropdown-item" type="button" >
                   Student Login
                 </button>
               </li>
+             </Link>
+              <Link to='alumnilogin' className="link">
               <li>
-                <button className="dropdown-item" type="button" onClick={openAlumniLoginModal}>
+                <button className="dropdown-item" type="button" >
                   Alumni Login
                 </button>
               </li>
+              </Link>
             </ul>
           </div>
         </div>
