@@ -42,8 +42,8 @@ function Registration() {
             <button type="submit" class="btn btn-success btn-lg btn-block">
               Register Now
             </button>
-            <div class="btnback">
-              <button class="backbtn" onClick={() => navigate(-1)}><ArrowBackIcon></ArrowBackIcon>Go back</button>
+            <div class="btn_back">
+              <button class="backbtn" onClick={() => navigate(-1)}><ArrowBackIcon></ArrowBackIcon>Go Back</button>
             </div>
           </div>
         </form>

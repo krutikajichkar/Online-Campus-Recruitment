@@ -10,6 +10,9 @@
 .btn {
     border-radius: 10px;
 }
+.signup{
+    background-color: azure;
+}
 .signup-form {
     width: 400px;
     margin: 0 auto;
@@ -82,4 +85,18 @@
 }
 .btn {
     margin-left: 100px;
+}
+#btnback{
+    position: absolute;
+    left: 530px;
+    width: 100px;
+    top: 435px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.backbtn{
+    border-color: white;
+    padding-left: 0 12 0 12px;
+}
+.backbtn:hover{
+    color:blue;
 }

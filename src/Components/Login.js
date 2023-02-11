@@ -6,14 +6,18 @@ import TextField from '@mui/material/TextField';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import LockIcon from '@mui/icons-material/Lock';
 
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useNavigate, } from 'react-router-dom';
+
 function Login() {
+  const navigate = useNavigate();
   return (
-    <div>
+    <div class="signup">
       <div>
 
         <div class="signup-form">
           <form action="/examples/actions/confirmation.php" method="post">
-            <h2>Student Login</h2>
+            <h2>Admin Login</h2>
             <center><p>Please Login into your account!</p></center>
             <hr />
             <div class="form-group">
@@ -51,6 +55,9 @@ function Login() {
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-primary btn-lg">Login</button>
+            </div>
+            <div id="btnback">
+              <button class="backbtn" onClick={() => navigate(-1)}><ArrowBackIcon></ArrowBackIcon>Go Back</button>
             </div>
           </form>
         </div>

@@ -10,7 +10,7 @@
 .btn {
     border-radius: 3px;
 }
-.signup{
+.signupback{
     background-color: azure;
 }
 .signup-form {
@@ -87,11 +87,11 @@
 #fullWidth{
     height: 8px;
 }
-.btn_back{
+.btnback{
     position: absolute;
-    left: 530px;
+    left: 520px;
     width: 100px;
-    top: 565px;
+    top: 685px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .backbtn{

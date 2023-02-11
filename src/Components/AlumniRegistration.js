@@ -1,5 +1,5 @@
 import React from 'react'
-import './Register.css';
+import './AlumniRegistration.css';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import { useNavigate, } from 'react-router-dom';
@@ -10,10 +10,10 @@ import TextField from '@mui/material/TextField';
 function AlumniRegistration() {
     const navigate = useNavigate();
     return (
-        <div class="signup">
+        <div class="signupback">
             <div class="signup-form">
                 <form action="/examples/actions/confirmation.php" method="post">
-                    <h2>Student Registration</h2>
+                    <h2>Alumni Registration</h2>
                     <p class="hint-text">
                         Create your account. It's free and only takes a minute.
                     </p>
@@ -49,7 +49,7 @@ function AlumniRegistration() {
                             Register Now
                         </button>
                         <div class="btnback">
-                            <button class="backbtn" onClick={() => navigate(-1)}><ArrowBackIcon></ArrowBackIcon></button>
+                            <button class="backbtn" onClick={() => navigate(-1)}><ArrowBackIcon></ArrowBackIcon> Go Back</button>
                         </div>
                     </div>
                 </form>

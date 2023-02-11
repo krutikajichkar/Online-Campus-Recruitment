@@ -12,6 +12,7 @@ import StudentDashboard from './Components/StudentDashboard';
 import Registration from './Components/Registration';
 import Login from './Components/Login';
 import AlumniRegistration from './Components/AlumniRegistration';
+import HodLogin from './Components/HodLogin';
 
 function App() {
   return (
@@ -26,13 +27,14 @@ function App() {
           <Route path='activities' element={<AlumniActivities />} />
           <Route path='placedstudents' element={<PlacedStudents />} />
           <Route path='studentdashboard' element={<StudentDashboard />} />
-          <Route path='register' element={<Registration/>} />
-          <Route path='login' element={<Login/>} />
-          <Route path='alumniregister' element={<AlumniRegistration/>} />
+          <Route path='register' element={<Registration />} />
+          <Route path='login' element={<Login />} />
+          <Route path='alumniregister' element={<AlumniRegistration />} />
+          <Route path='hodlogin' element={<HodLogin />} />
         </Routes>
       </BrowserRouter>
-      
-            </div>
+
+    </div>
   );
 }
 
