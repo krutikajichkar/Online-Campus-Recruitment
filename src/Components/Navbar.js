@@ -128,7 +128,8 @@ function Navbar() {
                   </button>
                 </li>
               </Link>
-              <li>
+             <Link to='alumniregister'>
+             <li>
                 <button
                   className="dropdown-item"
                   type="button"
@@ -137,6 +138,7 @@ function Navbar() {
                   Alumni Registration
                 </button>
               </li>
+             </Link>
               {/* <li>
                 <button className="dropdown-item" type="button">
                   Something else here

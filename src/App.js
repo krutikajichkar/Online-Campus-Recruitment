@@ -11,6 +11,7 @@ import PlacedStudents from './Components/PlacedStudents';
 import StudentDashboard from './Components/StudentDashboard';
 import Registration from './Components/Registration';
 import Login from './Components/Login';
+import AlumniRegistration from './Components/AlumniRegistration';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path='studentdashboard' element={<StudentDashboard />} />
           <Route path='register' element={<Registration/>} />
           <Route path='login' element={<Login/>} />
+          <Route path='alumniregister' element={<AlumniRegistration/>} />
         </Routes>
       </BrowserRouter>
       
