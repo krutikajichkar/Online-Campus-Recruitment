@@ -53,6 +53,7 @@
     background: #f2f3f7;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     padding: 30px;
+    box-shadow: 0px 2px 3px 4px gray;
 }
 .signup-form .form-group {
     margin-bottom: 20px;
@@ -89,14 +90,17 @@
 }
 .btn_back{
     position: absolute;
-    left: 530px;
+    left: 710px;
     width: 100px;
-    top: 565px;
+    top: 567px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .backbtn{
-    border-color: white;
     padding-left: 0 12 0 12px;
+    display: inline-block;
+    text-align: center;
+    background-color:lightgreen;
+    border-radius: 10px;
 }
 .backbtn:hover{
     color:blue;
