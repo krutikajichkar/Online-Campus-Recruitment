@@ -6,7 +6,6 @@ import TextField from '@mui/material/TextField';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import LockIcon from '@mui/icons-material/Lock';
 
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useNavigate, } from 'react-router-dom';
 
 function StudentLogin() {
@@ -57,7 +56,7 @@ function StudentLogin() {
                             <button type="submit" class="btn btn-primary btn-lg">Login</button>
                         </div>
                         <div id="btnback">
-                            <button class="backbtn" onClick={() => navigate(-1)}><ArrowBackIcon></ArrowBackIcon>Go Back</button>
+                            <button class="backbtn" onClick={() => navigate(-1)}>Go Back</button>
                         </div>
                     </form>
                 </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import './Register.css';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import { useNavigate, } from 'react-router-dom';
 
@@ -43,7 +42,7 @@ function Registration() {
               Register Now
             </button>
             <div class="btn_back">
-              <button class="backbtn" onClick={() => navigate(-1)}><ArrowBackIcon></ArrowBackIcon>Go Back</button>
+              <button class="backbtn" onClick={() => navigate(-1)}>Go Back</button>
             </div>
           </div>
         </form>
