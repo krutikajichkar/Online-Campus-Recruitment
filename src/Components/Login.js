@@ -8,8 +8,9 @@ import LockIcon from '@mui/icons-material/Lock';
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useNavigate, } from 'react-router-dom';
+import { PropaneSharp } from '@mui/icons-material';
 
-function Login() {
+function Login(props) {
   const navigate = useNavigate();
   return (
     <div class="signup">
@@ -17,7 +18,7 @@ function Login() {
 
         <div class="signup-form">
           <form action="/examples/actions/confirmation.php" method="post">
-            <h2>Admin Login</h2>
+            <h2>{props.person} Login</h2>
             <center><p>Please Login into your account!</p></center>
             <hr />
             <div class="form-group">
