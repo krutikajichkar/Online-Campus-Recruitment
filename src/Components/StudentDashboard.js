@@ -5,7 +5,9 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import { Link } from "react-router-dom";
+
 function StudentDashboard() {
   return (
     <div>
@@ -14,18 +16,21 @@ function StudentDashboard() {
       </div>
       <div className='student'>
         <div className='sidebar'>
-          <h4>DashBoard</h4>
+          <h4 style={{color:'darkcyan'}}>DashBoard</h4>
           <div>
-            < PermIdentityIcon /> &nbsp; &nbsp;&nbsp;Student Details
+           <Link className='link' to=''> < PermIdentityIcon /> &nbsp; &nbsp;&nbsp;Student Details </Link>
           </div>
           <div>
-            <CalendarMonthIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Full Calendar
+          <Link className='link' to='/fullCalender'><CalendarMonthIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Full Calendar</Link> 
           </div>
           <div>
-            <ContentPasteIcon /> &nbsp; &nbsp;&nbsp;Exams
+           <Link  className='link' to='/exams'> <ContentPasteIcon/> &nbsp; &nbsp;&nbsp;Exams </Link>
           </div>
           <div>
-            <HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives
+           <Link className='link' to='/drives'><HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives </Link> 
+          </div>
+          <div>
+            <Link className='link' to='/test'><ContentPasteSearchIcon /> &nbsp; &nbsp;&nbsp;Test </Link> 
           </div>
         </div>
 

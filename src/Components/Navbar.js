@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import fullSizeLogo from "../Components/Images/fullSizeLogo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Modal from "react-modal";
 import CloseIcon from "@mui/icons-material/Close";
+import { red } from "@mui/material/colors";
 
 const customStyles = {
   content: {
@@ -22,19 +23,20 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 function Navbar() {
+
   let subtitle;
 
   const [StudentRegistrationmodalIsOpen, setStudentRegistrationIsOpen] =
     React.useState(false);
   const [AlumniRegistrationmodalIsOpen, setAlumniRegistrationIsOpen] =
     React.useState(false);
-    const [AlumniLoginmodalIsOpen, setAlumniLoginIsOpen] =
+  const [AlumniLoginmodalIsOpen, setAlumniLoginIsOpen] =
     React.useState(false);
-    const [HODLoginmodalIsOpen, setHODLoginIsOpen] =
+  const [HODLoginmodalIsOpen, setHODLoginIsOpen] =
     React.useState(false);
-    const [StudentLoginmodalIsOpen, setStudentLoginIsOpen] =
+  const [StudentLoginmodalIsOpen, setStudentLoginIsOpen] =
     React.useState(false);
-    const [AdminLoginmodalIsOpen, setAdminLoginIsOpen] =
+  const [AdminLoginmodalIsOpen, setAdminLoginIsOpen] =
     React.useState(false);
 
   function openStudentRegistrationModal() {
@@ -74,37 +76,40 @@ function Navbar() {
     setAdminLoginIsOpen(false);
     setStudentLoginIsOpen(false);
     setAlumniLoginIsOpen(false);
-   
+
   }
+  
+//  const handleClick = event =>{
+//   event.currentTarget.classList.toggle('bg-red');
+//  }
   return (
     <div>
       <nav>
         <ul type="none">
-          <Link className="link" to="/">
+          <NavLink className='link' to="/">
             <li>Home</li>
-          </Link>
-          <Link className="link" to="/about">
+          </NavLink>
+          <NavLink className='link' to="/about">
             {" "}
             <li>About</li>
-          </Link>
-          <Link className="link" to="/activities">
+          </NavLink>
+          <NavLink className='link' to="/activities">
             {" "}
             <li>Alumni Activities</li>
-          </Link>
+          </NavLink>
           <li>Alumni Committee</li>
-          <Link className="link" to='/feedback'>
+          <NavLink className='link' to='/feedback'>
             {" "}
             <li>Feedback</li>
-          </Link>
-          <Link className="link" to='/placedstudents'>
+          </NavLink>
+          <NavLink className="link" to='/placedstudents'>
             {" "}
             <li>PlacedStudents</li>
-          </Link>
-          <Link className="link" to='/Studentdashboard'>
+          </NavLink>
+          <NavLink className='link' to='/Studentdashboard'>
             {" "}
             <li>StudentDashboard</li>
-          </Link>
-
+          </NavLink>
         </ul>
         <div style={{ display: "flex" }}>
           <div className="dropdown" style={{ paddingRight: "20px" }}>
@@ -219,16 +224,16 @@ function Navbar() {
           </div>
           <div className="offcanvas-body">
             <ul type="none">
-              <Link className="link" to="/">
+              <NavLink className="link " to="/" >
                 <li>Home</li>
-              </Link>
-              <Link className="link" to="/about">
+              </NavLink>
+              <NavLink className="link" to="/about">
                 {" "}
                 <li>About</li>
-              </Link>
+              </NavLink>
               <li>Alumni Comittee</li>
-             <Link className="link" to='/activities'> <li>Alumni Activities</li></Link>
-              <Link className="link" to='/feedback'><li>Feedback</li></Link>
+              <NavLink className="link" to='/activities'> <li>Alumni Activities</li></NavLink>
+              <NavLink className="link" to='/feedback'><li>Feedback</li></NavLink>
               <li>
                 <div className="btn-group dropend">
                   <button
@@ -478,7 +483,7 @@ function Navbar() {
           <button className="btn btn-primary">Submit</button>
         </center>
       </Modal>
-      
+
       <Modal
         id="AdminLoginModal"
         isOpen={AdminLoginmodalIsOpen}
@@ -548,7 +553,7 @@ function Navbar() {
           <button className="btn btn-primary">Submit</button>
         </center>
       </Modal>
-      
+
       <Modal
         id="HODLoginModal"
         isOpen={HODLoginmodalIsOpen}
@@ -618,7 +623,7 @@ function Navbar() {
           <button className="btn btn-primary">Submit</button>
         </center>
       </Modal>
-      
+
       <Modal
         id="StudentLoginModal"
         isOpen={StudentLoginmodalIsOpen}
@@ -760,5 +765,6 @@ function Navbar() {
     </div>
   );
 }
+
 
 export default Navbar;

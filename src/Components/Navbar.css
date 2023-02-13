@@ -1,4 +1,5 @@
 
+
 nav{
     height: 70px;
     margin-top: 0px;
@@ -13,7 +14,6 @@ nav{
      font-family: 'Merriweather', serif ;
 }
 nav ul{
-   
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
@@ -28,6 +28,9 @@ nav ul li{
     color:black;
     text-decoration: none;
 }
+.active{
+    color: brown;
+}
 .dropdown-menu li {
     padding: 0px;
    
@@ -36,9 +39,6 @@ nav ul li{
 .dropdown-menu li button {
     font-size: 20px;
 }
-
-
-
 #screen-visible-div{
     display: none;
     height: 110px;
@@ -109,3 +109,4 @@ nav ul li{
     }
    
 }
+ 
