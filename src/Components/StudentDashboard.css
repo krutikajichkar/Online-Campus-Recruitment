@@ -84,10 +84,16 @@
 }
 .test-box{
     display: flex;
-    height: 100vh;
     background-color:  rgb(236, 234, 234);
 }
 .next-btn{
   margin-top: 10px;
-  width: 300px;
+  width: 100px;
+  margin-left: 750px;
+}
+.show-btn{
+  width: 170px;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 15px;
 }

@@ -40,7 +40,7 @@ function Test() {
             C. Retesting <br></br>
             d. Sanity testing
             <div>
-              <button className='btn-success btn profile-btn'>Show Answer</button>
+              <button className='btn-success  show-btn'>Show Answer</button>
             </div>
           </div>
           <div className='que-box'>
@@ -51,7 +51,7 @@ function Test() {
             c. Additional tests that emphasize software functions, which are likely to be affected by the change.<br></br>
             d. A representative sample of tests, which will exercise all software functions.
             <div>
-              <button className='btn-success btn profile-btn'>Show Answer</button>
+              <button className='btn-success  show-btn'>Show Answer</button>
             </div>
           </div>
           <div className='que-box'>
@@ -62,12 +62,10 @@ function Test() {
             c. Regression Testing<br></br>
             d. Smoke testing
             <div>
-              <button className='btn-success btn profile-btn'>Show Answer</button>
+              <button className='btn-success show-btn'>Show Answer</button>
             </div>
           </div>
-          <div className='next-btn'>
-            <button className='btn-success btn '>Next</button>
-          </div>
+          <button className='btn-success next-btn '>Next</button>
         </div>
 
       </div>

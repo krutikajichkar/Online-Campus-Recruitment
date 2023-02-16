@@ -3,85 +3,18 @@ import "./Navbar.css";
 import fullSizeLogo from "../Components/Images/fullSizeLogo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./Header.css";
-import { NavLink } from "react-router-dom";
+import { NavLink , Link} from "react-router-dom";
 import Modal from "react-modal";
 import CloseIcon from "@mui/icons-material/Close";
 import { red } from "@mui/material/colors";
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    width: "500px",
-  },
-};
 
-Modal.setAppElement("#root");
+
+
 
 function Navbar() {
-
-  let subtitle;
-
-  const [StudentRegistrationmodalIsOpen, setStudentRegistrationIsOpen] =
-    React.useState(false);
-  const [AlumniRegistrationmodalIsOpen, setAlumniRegistrationIsOpen] =
-    React.useState(false);
-  const [AlumniLoginmodalIsOpen, setAlumniLoginIsOpen] =
-    React.useState(false);
-  const [HODLoginmodalIsOpen, setHODLoginIsOpen] =
-    React.useState(false);
-  const [StudentLoginmodalIsOpen, setStudentLoginIsOpen] =
-    React.useState(false);
-  const [AdminLoginmodalIsOpen, setAdminLoginIsOpen] =
-    React.useState(false);
-
-  function openStudentRegistrationModal() {
-    setStudentRegistrationIsOpen(true);
-  }
-
-  const openAlumniRegistrationModal = () => {
-    setAlumniRegistrationIsOpen(true);
-  };
-
-  const openAlumniLoginModal = () => {
-    setAlumniLoginIsOpen(true);
-  };
-
-  const openHODLoginModal = () => {
-    setHODLoginIsOpen(true);
-  };
-
-  const openStudentLoginModal = () => {
-    setStudentLoginIsOpen(true);
-  };
-
-  const openAdminLoginModal = () => {
-    setAdminLoginIsOpen(true);
-  };
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = "#f00";
-  }
-
-  function closeModal() {
-    setStudentRegistrationIsOpen(false);
-    setAlumniRegistrationIsOpen(false);
-    setAlumniLoginIsOpen(false);
-    setHODLoginIsOpen(false);
-    setAdminLoginIsOpen(false);
-    setStudentLoginIsOpen(false);
-    setAlumniLoginIsOpen(false);
-
-  }
   
-//  const handleClick = event =>{
-//   event.currentTarget.classList.toggle('bg-red');
-//  }
+  
   return (
     <div>
       <nav>
@@ -106,10 +39,18 @@ function Navbar() {
             {" "}
             <li>PlacedStudents</li>
           </NavLink>
-          <NavLink className='link' to='/Studentdashboard'>
+          {/* <NavLink className="link" to='/studentdashboard'>
             {" "}
             <li>StudentDashboard</li>
-          </NavLink>
+          </NavLink> */}
+          {/* <NavLink className="link" to='/admindashboard'>
+            {" "}
+            <li>AdminDashboard</li>
+          </NavLink> */}
+           <NavLink className="link" to='/hoddashboard'>
+            {" "}
+            <li>HodDashboard</li>
+          </NavLink> 
         </ul>
         <div style={{ display: "flex" }}>
           <div className="dropdown" style={{ paddingRight: "20px" }}>
@@ -128,24 +69,29 @@ function Navbar() {
               Register
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <li>
-                <button
-                  className="dropdown-item"
-                  type="button"
-                  onClick={openStudentRegistrationModal}
-                >
-                  Student Registration
-                </button>
-              </li>
-              <li>
-                <button
-                  className="dropdown-item"
-                  type="button"
-                  onClick={openAlumniRegistrationModal}
-                >
-                  Alumni Registration
-                </button>
-              </li>
+              <Link to='/register' className="link">
+                <li >
+                  <button
+                    className="dropdown-item link"
+                    type="button"
+                   
+                    
+                  >
+                    Student Registration
+                  </button>
+                </li>
+              </Link>
+              <Link to='alumniregister' className="link">
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                   
+                  >
+                    Alumni Registration
+                  </button>
+                </li>
+              </Link>
               {/* <li>
                 <button className="dropdown-item" type="button">
                   Something else here
@@ -169,26 +115,35 @@ function Navbar() {
               Login
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <li>
-                <button className="dropdown-item" type="button" onClick={openAdminLoginModal}>
-                  Admin Login
-                </button>
-              </li>
-              <li>
-                <button className="dropdown-item" type="button" onClick={openHODLoginModal}>
-                  HOD Login
-                </button>
-              </li>
-              <li>
-                <button className="dropdown-item" type="button" onClick={openStudentLoginModal}>
+              <Link to='/login' className="link">
+                <li>
+                  <button className="dropdown-item" type="button" >
+                    Admin Login
+                  </button>
+                </li>
+              </Link>
+              <Link to="hodlogin" className="link">
+                <li>
+                  <button className="dropdown-item" type="button" >
+                    HOD Login
+                  </button>
+                </li>
+              </Link>
+
+             <Link to='studentlogin' className="link">
+             <li>
+                <button className="dropdown-item" type="button" >
                   Student Login
                 </button>
               </li>
+             </Link>
+              <Link to='alumnilogin' className="link">
               <li>
-                <button className="dropdown-item" type="button" onClick={openAlumniLoginModal}>
+                <button className="dropdown-item" type="button" >
                   Alumni Login
                 </button>
               </li>
+              </Link>
             </ul>
           </div>
         </div>
@@ -231,9 +186,9 @@ function Navbar() {
                 {" "}
                 <li>About</li>
               </NavLink>
-              <li>Alumni Comittee</li>
-              <NavLink className="link" to='/activities'> <li>Alumni Activities</li></NavLink>
-              <NavLink className="link" to='/feedback'><li>Feedback</li></NavLink>
+              <li>Alumni Comitte</li>
+              <li>Alumni Activities</li>
+              <li>Feedback</li>
               <li>
                 <div className="btn-group dropend">
                   <button
@@ -251,12 +206,12 @@ function Navbar() {
                   </button>
                   <ul className="dropdown-menu">
                     <li>
-                      <button className="dropdown-item" type="button" onClick={openAlumniRegistrationModal}>
+                      <button className="dropdown-item" type="button">
                         Alumni Register
                       </button>
                     </li>
                     <li>
-                      <button className="dropdown-item" type="button" onClick={openStudentRegistrationModal}>
+                      <button className="dropdown-item" type="button">
                         Student Register
                       </button>
                     </li>
@@ -285,22 +240,22 @@ function Navbar() {
                   </button>
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <li>
-                      <button className="dropdown-item" type="button" onClick={openAdminLoginModal}>
+                      <button className="dropdown-item" type="button">
                         Admin Login
                       </button>
                     </li>
                     <li>
-                      <button className="dropdown-item" type="button" onClick={openHODLoginModal}>
+                      <button className="dropdown-item" type="button">
                         HOD Login
                       </button>
                     </li>
                     <li>
-                      <button className="dropdown-item" type="button" onClick={openStudentLoginModal}>
+                      <button className="dropdown-item" type="button">
                         Student Login
                       </button>
                     </li>
                     <li>
-                      <button className="dropdown-item" type="button" onClick={openAlumniLoginModal}>
+                      <button className="dropdown-item" type="button">
                         Alumni Login
                       </button>
                     </li>
@@ -317,451 +272,8 @@ function Navbar() {
           </center>
         </span>
       </div>
-      {/* Modal */}
-      <Modal
-        id="studentRegistrationModal"
-        isOpen={StudentRegistrationmodalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <div
-          style={{ cursor: "pointer", textAlign: "right" }}
-          onClick={closeModal}
-        >
-          {" "}
-          <CloseIcon />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            UserName
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Department
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Session
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <center>
-          <button className="btn btn-primary">Submit</button>
-        </center>
-      </Modal>
-      <Modal
-        id="AlumniRegistrationModal"
-        isOpen={AlumniRegistrationmodalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <div
-          style={{ cursor: "pointer", textAlign: "right" }}
-          onClick={closeModal}
-        >
-          {" "}
-          <CloseIcon />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            UserName
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleFormControlInput1"
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleFormControlInput1"
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Department
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Session
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Currently Working At
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            LinkedIn Profile
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-            required
-          />
-        </div>
-        <center>
-          <button className="btn btn-primary">Submit</button>
-        </center>
-      </Modal>
 
-      <Modal
-        id="AdminLoginModal"
-        isOpen={AdminLoginmodalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <div
-          style={{ cursor: "pointer", textAlign: "right" }}
-          onClick={closeModal}
-        >
-          {" "}
-          <CloseIcon />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            UserName
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Password
-          </label>
-          <input
-            type="Password"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        {/* <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Department
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Session
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div> */}
-        <center>
-          <button className="btn btn-primary">Submit</button>
-        </center>
-      </Modal>
 
-      <Modal
-        id="HODLoginModal"
-        isOpen={HODLoginmodalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <div
-          style={{ cursor: "pointer", textAlign: "right" }}
-          onClick={closeModal}
-        >
-          {" "}
-          <CloseIcon />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            UserName
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Department
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Session
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <center>
-          <button className="btn btn-primary">Submit</button>
-        </center>
-      </Modal>
-
-      <Modal
-        id="StudentLoginModal"
-        isOpen={StudentLoginmodalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <div
-          style={{ cursor: "pointer", textAlign: "right" }}
-          onClick={closeModal}
-        >
-          {" "}
-          <CloseIcon />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            UserName
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Department
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Session
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <center>
-          <button className="btn btn-primary">Submit</button>
-        </center>
-      </Modal>
-      <Modal
-        id="AlumniLoginModal"
-        isOpen={AlumniLoginmodalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <div
-          style={{ cursor: "pointer", textAlign: "right" }}
-          onClick={closeModal}
-        >
-          {" "}
-          <CloseIcon />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            UserName
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Department
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
-            Session
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-        <center>
-          <button className="btn btn-primary">Submit</button>
-        </center>
-      </Modal>
     </div>
   );
 }
