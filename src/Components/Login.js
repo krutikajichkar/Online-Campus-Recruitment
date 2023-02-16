@@ -72,7 +72,7 @@ function Login(props) {
         <div id="forms">
           <div class="form-login">
             <form action="/examples/actions/confirmation.php" method="post">
-              <h2 id="h2">{props.person}Admin Login</h2>
+              <h2 id="h2">{props.person} Login</h2>
               <center><p>Please Login into your account!</p></center>
               <hr />
               <div class="form-group">
