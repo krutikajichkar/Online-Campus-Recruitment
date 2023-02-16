@@ -12,7 +12,7 @@ function Registration() {
     <div id="box">
       <div class="container1">
         <div class="forms">
-          <div class="form-login">
+          <div class="form-login2">
             <form action="#">
 
               <h2>Student Registration</h2>
@@ -20,19 +20,19 @@ function Registration() {
                 Create your account. It's free and only takes a minute.
               </p>
               <div class="form-groups">
-                <TextField fullWidth label="Username" id="fullWidth" type="text" required="required" />
+                <TextField fullWidth label="Username" id="fullWidth" size="small" type="text" required="required" />
               </div>
               <div class="form-groups">
-                <TextField fullWidth label="Email" id="fullWidth" type="email" required="required" />
+                <TextField fullWidth label="Email" id="fullWidth" size="small" type="email" required="required" />
               </div>
               <div class="form-groups">
-                <TextField fullWidth label="Password" id="fullWidth" type="password" required="required" />
+                <TextField fullWidth label="Password" id="fullWidth" size="small" type="password" required="required" />
               </div>
               <div class="form-groups">
-                <TextField fullWidth label="Department" id="fullWidth" type="department" required="required" />
+                <TextField fullWidth label="Department" id="fullWidth" size="small" type="department" required="required" />
               </div>
               <div class="form-groups">
-                <TextField fullWidth label="Session" id="fullWidth" required="required" />
+                <TextField fullWidth label="Session" id="fullWidth" size="small" required="required" />
               </div>
 
               <div class="form-groups">
@@ -40,13 +40,16 @@ function Registration() {
                 <input type="checkbox" required="required" /> Remember me
 
               </div>
-              <div class="form-groups">
-                <button type="submit" class="btn1 btn-success btn-lg btn-block">
-                  Register Now
-                </button>
-                {/* <div class="btnback">
-                  <button class="backbtn" onClick={() => navigate(-1)}>Go Back</button>
-                </div> */}
+              <div class="btn-group">
+                <div class="left-btn">
+                  <button class="btn1 btn btn-primary btn-sm" onClick={() => navigate(-1)}>Go Back</button>
+                </div>
+                <div class="right-btn">
+                  <button type="submit" class="btn1 btn btn-primary btn-sm">
+                    Register Now
+                  </button>
+                </div>
+
               </div>
             </form>
           </div>

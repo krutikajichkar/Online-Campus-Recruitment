@@ -1,20 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 .form-groups{
-    width: 430px;
-    margin-bottom: 20px;
+    width: 396px;
+    margin-bottom: 16px;
+    margin-left:15px ;
 }
-.form-login h2{    
-    margin-top: 160px;
+h2{    
+    margin-top: 110px;
     text-align: center;
 }
-form{
-    margin-left: 28px;
+.form-login2{
+    margin-left: -20px;
 }
 .btn1{
     background-color: #4070f4;
-    border-radius: 10px;
-    margin-left: 40px;
-    padding:10px 100px 10px 100px;
+    border-radius: 20px;
+    color: white;
+    font-size: 18px;
+}
+.btn-group{
+    color: white; 
+  padding: 0 24px 0 24px; 
+  cursor: pointer; 
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.left-btn{
+    margin-left: -40px;
 }
 #box{
     height: 100vh;
@@ -32,7 +44,7 @@ form{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin: 0 20px;
-    height: 610px;
+    height: 560px;
 }
 
 .container1 .forms{
@@ -88,7 +100,7 @@ form{
 
 .form .input-field{
     position: relative;
-    height: 50px;
+    height: 30px;
     width: 100%;
     margin-top: 30px;
 }
