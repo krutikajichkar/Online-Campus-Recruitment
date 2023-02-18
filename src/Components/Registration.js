@@ -1,6 +1,5 @@
 import React from 'react'
 import './Register.css';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import { useNavigate, } from 'react-router-dom';
 
@@ -10,43 +9,51 @@ import TextField from '@mui/material/TextField';
 function Registration() {
   const navigate = useNavigate();
   return (
-    <div class="signup">
-      <div class="signup-form">
-        <form action="/examples/actions/confirmation.php" method="post">
-          <h2>Student Registration</h2>
-          <p class="hint-text">
-            Create your account. It's free and only takes a minute.
-          </p>
-          <div class="form-group">
-            <TextField fullWidth label="Username" id="fullWidth" type="text" required="required" />
-          </div>
-          <div class="form-group">
-            <TextField fullWidth label="Email" id="fullWidth" type="email" required="required" />
-          </div>
-          <div class="form-group">
-            <TextField fullWidth label="Password" id="fullWidth" type="password" required="required" />
-          </div>
-          <div class="form-group">
-            <TextField fullWidth label="Department" id="fullWidth" type="department" required="required" />
-          </div>
-          <div class="form-group">
-            <TextField fullWidth label="Session" id="fullWidth" required="required" />
-          </div>
+    <div id="box">
+      <div class="container1">
+        <div class="forms">
+          <div class="form-login2">
+            <form action="#">
 
-          <div class="form-group">
-            <label class="form-check-label" ></label>
-            <input type="checkbox" required="required" /> Remember me
+              <h2>Student Registration</h2>
+              <p class="hint-text">
+                Create your account. It's free and only takes a minute.
+              </p>
+              <div class="form-groups">
+                <TextField fullWidth label="Username" id="fullWidth" size="small" type="text" required="required" />
+              </div>
+              <div class="form-groups">
+                <TextField fullWidth label="Email" id="fullWidth" size="small" type="email" required="required" />
+              </div>
+              <div class="form-groups">
+                <TextField fullWidth label="Password" id="fullWidth" size="small" type="password" required="required" />
+              </div>
+              <div class="form-groups">
+                <TextField fullWidth label="Department" id="fullWidth" size="small" type="department" required="required" />
+              </div>
+              <div class="form-groups">
+                <TextField fullWidth label="Session" id="fullWidth" size="small" required="required" />
+              </div>
 
+              <div class="form-groups">
+                <label class="form-check-label" ></label>
+                <input type="checkbox" required="required" /> Remember me
+
+              </div>
+              <div class="btn-group">
+                <div class="left-btn">
+                  <button class="btn1 btn btn-primary btn-sm" onClick={() => navigate(-1)}>Go Back</button>
+                </div>
+                <div class="right-btn">
+                  <button type="submit" class="btn1 btn btn-primary btn-sm">
+                    Register Now
+                  </button>
+                </div>
+
+              </div>
+            </form>
           </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block">
-              Register Now
-            </button>
-            <div class="btn_back">
-              <button class="backbtn" onClick={() => navigate(-1)}><ArrowBackIcon></ArrowBackIcon>Go Back</button>
-            </div>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   )
