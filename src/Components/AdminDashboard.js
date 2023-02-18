@@ -1,5 +1,5 @@
 import React from 'react'
-import './StudentDashboard.css'
+import './StudentDashboard.css';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -8,7 +8,8 @@ import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import { Link } from "react-router-dom";
 
-function StudentDashboard() {
+
+function Admindashboard() {
   return (
     <div>
       <div className='bar'>
@@ -18,7 +19,7 @@ function StudentDashboard() {
         <div className='sidebar'>
           <h4 style={{color:'darkcyan'}}>DashBoard</h4>
           <div>
-           <Link className='link' to=''> < PermIdentityIcon /> &nbsp; &nbsp;&nbsp;Student Details </Link>
+           <Link className='link' to=''> < PermIdentityIcon /> &nbsp; &nbsp;&nbsp;Admin Details </Link>
           </div>
           <div>
           <Link className='link' to='/fullCalender'><CalendarMonthIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Full Calendar</Link> 
@@ -38,11 +39,11 @@ function StudentDashboard() {
           <div className='student-box' >
             <div className='photo-detail'>
               <div className='photo'>
-                <img src="https://i.pinimg.com/236x/c5/3a/a6/c53aa684465bc61455fd0d21537752fb.jpg" alt='student' />
+                <img src="" alt='admin' />
               </div>
               <div className='detail'>
                 <h3 style={{ fontWeight: '600' }}>AJAY  SHRIVASTAV</h3>
-                <p>student</p>
+                <p>Admin</p>
                 <div className='main-content'>
                   <p className='student-heading'>Department</p>
                   <p className='student-sub-heading'>Information Technology</p>
@@ -81,4 +82,4 @@ function StudentDashboard() {
   )
 }
 
-export default StudentDashboard
+export default Admindashboard

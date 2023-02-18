@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import fullSizeLogo from "../Components/Images/fullSizeLogo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { NavLink , Link} from "react-router-dom";
 import Modal from "react-modal";
 import CloseIcon from "@mui/icons-material/Close";
+import { red } from "@mui/material/colors";
 
 
 
@@ -18,26 +19,38 @@ function Navbar() {
     <div>
       <nav>
         <ul type="none">
-          <Link className="link" to="/">
+          <NavLink className='link' to="/">
             <li>Home</li>
-          </Link>
-          <Link className="link" to="/about">
+          </NavLink>
+          <NavLink className='link' to="/about">
             {" "}
             <li>About</li>
-          </Link>
-          <Link className="link" to="/activities">
+          </NavLink>
+          <NavLink className='link' to="/activities">
             {" "}
             <li>Alumni Activities</li>
-          </Link>
+          </NavLink>
           <li>Alumni Committee</li>
-          <Link className="link" to='/feedback'>
+          <NavLink className='link' to='/feedback'>
             {" "}
             <li>Feedback</li>
-          </Link>
-          <Link className="link" to='/placedstudents'>
+          </NavLink>
+          <NavLink className="link" to='/placedstudents'>
             {" "}
             <li>PlacedStudents</li>
-          </Link>
+          </NavLink>
+          {/* <NavLink className="link" to='/studentdashboard'>
+            {" "}
+            <li>StudentDashboard</li>
+          </NavLink> */}
+          {/* <NavLink className="link" to='/admindashboard'>
+            {" "}
+            <li>AdminDashboard</li>
+          </NavLink> */}
+           <NavLink className="link" to='/hoddashboard'>
+            {" "}
+            <li>HodDashboard</li>
+          </NavLink> 
         </ul>
         <div style={{ display: "flex" }}>
           <div className="dropdown" style={{ paddingRight: "20px" }}>
@@ -166,13 +179,13 @@ function Navbar() {
           </div>
           <div className="offcanvas-body">
             <ul type="none">
-              <Link className="link" to="/">
+              <NavLink className="link " to="/" >
                 <li>Home</li>
-              </Link>
-              <Link className="link" to="/about">
+              </NavLink>
+              <NavLink className="link" to="/about">
                 {" "}
                 <li>About</li>
-              </Link>
+              </NavLink>
               <li>Alumni Comitte</li>
               <li>Alumni Activities</li>
               <li>Feedback</li>
@@ -264,5 +277,6 @@ function Navbar() {
     </div>
   );
 }
+
 
 export default Navbar;

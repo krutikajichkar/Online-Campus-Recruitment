@@ -7,13 +7,13 @@
     display: flex;
     background-color: rgb(236, 234, 234);
     height: 94vh;
-
 }
 
 .sidebar {
     padding: 50px 80px;
     font-size: 18px;
     width: 24%;
+    cursor: pointer;
 }
 
 .sidebar div {
@@ -70,4 +70,30 @@
 }
 .student-sub-heading{
     padding-left: 44px;
+}
+.mcq-test{
+    color: blue;
+    margin: 30px 0px;
+}
+.que-box{
+    width: 80%;
+   background-color: white;
+   padding: 10px 20px;
+   border-radius: 10px;
+   margin-top: 10px;
+}
+.test-box{
+    display: flex;
+    background-color:  rgb(236, 234, 234);
+}
+.next-btn{
+  margin-top: 10px;
+  width: 100px;
+  margin-left: 750px;
+}
+.show-btn{
+  width: 170px;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 15px;
 }
