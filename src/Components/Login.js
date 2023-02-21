@@ -13,16 +13,16 @@ function Login(props) {
   const navigate = useNavigate();
   return (
     <div id="box">
-      <div class="containers">
+      <div className="containers">
         <div id="forms">
-          <div class="form-login">
+          <div className="form-login">
             <form action="/examples/actions/confirmation.php" method="post">
               <h2 id="h2">{props.person} Login</h2>
               <center><p>Please Login into your account!</p></center>
               <hr />
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
+              <div className="form-group">
+                <div className="input-group">
+                  <div className="input-group-prepend">
                   </div>
                   <Box sx={{ '& > :not(style)': { m: 1 } }}>
 
@@ -33,9 +33,9 @@ function Login(props) {
                   </Box>
                 </div>
               </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
+              <div className="form-group">
+                <div className="input-group">
+                  <div className="input-group-prepend">
 
                   </div>
                   <Box sx={{ '& > :not(style)': { m: 1 } }}>
@@ -48,16 +48,16 @@ function Login(props) {
                 </div>
               </div>
 
-              <div class="form-group">
-                <label class="form-check-label"
+              <div className="form-group">
+                <label className="form-check-label"
                 ><input type="checkbox" required="required" /> Remember me</label>
               </div>
               <div id="btn-group">
                 <div id="leftBtn">
-                  <button class="btn btn-primary btn-sm" onClick={() => navigate(-1)}>Go Back</button>
+                  <button className="btn btn-primary btn-sm" onClick={() => navigate(-1)}>Go Back</button>
                 </div>
                 <div id="right-btn">
-                  <button type="submit" class="btn btn-primary btn-sm">
+                  <button type="submit" className="btn btn-primary btn-sm">
                     Login
                   </button>
                 </div>
@@ -67,12 +67,6 @@ function Login(props) {
         </div>
       </div>
     </div>
-
-
-
-
-
-
 
 
   )
