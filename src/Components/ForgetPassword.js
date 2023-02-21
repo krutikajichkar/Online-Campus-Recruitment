@@ -18,7 +18,7 @@ function ForgetPassword(props) {
                             <h2 id="forget_name">{props.person} Forget Password</h2>
                             <div class="form-group1">
                                 <div class="input-group1">
-                                    <TextField
+                                    <TextField style={{ width: '400px' }}
                                         label="Email"
                                         id="outlined-size-small"
                                         size="small"
@@ -27,8 +27,8 @@ function ForgetPassword(props) {
                             </div>
 
                             <div style={{ display: 'flex', justifyContent: 'right' }}>
-                                <button style={{ borderRadius: '20px', width: '100px', fontWeight: '400' }} type="submit" class=" btn btn-primary ">
-                                    Login
+                                <button style={{ borderRadius: '20px', width: '100px', fontWeight: '600' }} type="submit" class=" btn btn-primary ">
+                                    Verify
                                 </button>
                             </div>
                         </form>
