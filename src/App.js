@@ -21,11 +21,12 @@ import StudentLogin from './Components/StudentLogin';
 import AlumniLogin from './Components/AlumniLogin';
 import AdminDashboard from './Components/AdminDashboard';
 import HodDashboard from './Components/HodDashboard';
+import ForgetPassword from './Components/ForgetPassword';
 
 function App() {
   return (
     <div >
-  
+
       <BrowserRouter>
 
         <Routes>
@@ -38,16 +39,17 @@ function App() {
           <Route path='studentdashboard' element={<StudentDashboard />} />
           <Route path='admindashboard' element={<AdminDashboard />} />
           <Route path='hoddashboard' element={<HodDashboard />} />
-          <Route path='fullcalender' element={<FullCalender/>}/>
-          <Route path='exams' element={<Exams/>}/>
-          <Route path='drives' element={<Drives/>}/>
-          <Route path='test' element={<Test/>}/>
+          <Route path='fullcalender' element={<FullCalender />} />
+          <Route path='exams' element={<Exams />} />
+          <Route path='drives' element={<Drives />} />
+          <Route path='test' element={<Test />} />
           <Route path='register' element={<Registration />} />
           <Route path='login' element={<Login />} />
           <Route path='alumniregister' element={<AlumniRegistration />} />
           <Route path='hodlogin' element={<HodLogin />} />
           <Route path='studentlogin' element={<StudentLogin />} />
-          <Route path='alumnilogin' element={<AlumniLogin/>} />
+          <Route path='alumnilogin' element={<AlumniLogin />} />
+          <Route path='forgetpass' element={<ForgetPassword />} />
         </Routes>
       </BrowserRouter>
 

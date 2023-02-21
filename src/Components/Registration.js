@@ -37,19 +37,15 @@ function Registration() {
 
               <div class="form-groups">
                 <label class="form-check-label" ></label>
-                <input type="checkbox" required="required" /> Remember me
+                <input class="chekbox" type="checkbox" required="required" /> Remember me
 
               </div>
-              <div class="btn-group">
-                <div class="left-btn">
-                  <button class="btn1 btn btn-primary btn-sm" onClick={() => navigate(-1)}>Go Back</button>
-                </div>
-                <div class="right-btn">
-                  <button type="submit" class="btn1 btn btn-primary btn-sm">
-                    Register Now
-                  </button>
-                </div>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <button style={{ marginRight: '20px', borderRadius: '20px', width: '100px', fontWeight: '400' }} class="btn btn-primary" onClick={() => navigate(-1)}> Back</button>
 
+                <button style={{ marginLeft: '20px', borderRadius: '20px', width: '150px', fontWeight: '400' }} type="submit" class=" btn btn-primary ">
+                  Register Now
+                </button>
               </div>
             </form>
           </div>
