@@ -4,8 +4,11 @@
     margin-bottom: 16px;
     margin-left:15px ;
 }
-h2{    
+.reg_name{    
     margin-top: 110px;
+    text-align: center;
+}
+.hint-text{
     text-align: center;
 }
 .form-login2{
@@ -27,6 +30,9 @@ h2{
 }
 .left-btn{
     margin-left: -40px;
+}
+.right-btn{
+    margin-right: -26px;
 }
 #box{
     height: 100vh;

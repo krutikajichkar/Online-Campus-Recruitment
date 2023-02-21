@@ -6,17 +6,17 @@
     width: 346px;
     margin-bottom: 15px;
 }
-.form-login #h2{    
+.form-login #login_name{    
     margin-top: 150px;
     text-align: center;
     font-size: 40px;
     font-weight: 200;
 }
-hr{
+.hori-line{
     max-width:100%;
     margin-left: -6px;
 }
-p{
+.login_para{
     font-size: 20px;
 }
 form{
@@ -55,7 +55,7 @@ form{
     width: 100%;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px gray;
     overflow: hidden;
     margin: 0 20px;
     height: 450px;

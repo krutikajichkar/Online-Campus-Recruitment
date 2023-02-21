@@ -15,7 +15,7 @@ function Registration() {
           <div class="form-login2">
             <form action="#">
 
-              <h2>Student Registration</h2>
+              <h2 class="reg_name">Student Registration</h2>
               <p class="hint-text">
                 Create your account. It's free and only takes a minute.
               </p>
