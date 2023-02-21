@@ -17,18 +17,18 @@ function Login(props) {
         <div id="forms">
           <div className="form-login">
             <form action="/examples/actions/confirmation.php" method="post">
-              <h2 id="h2">{props.person} Login</h2>
-              <center><p>Please Login into your account!</p></center>
-              <hr />
-              <div className="form-group">
-                <div className="input-group">
-                  <div className="input-group-prepend">
+              <h2 id="login_name">{props.person} Login</h2>
+              <center><p class="login_para">Please Login into your account!</p></center>
+              <hr class="hori-line" />
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
                   </div>
-                  <Box sx={{ '& > :not(style)': { m: 1 } }}>
+                  <Box sx={{ '& > :not(style)': { m: 1 } }} >
 
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                       <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                      <TextField id="input-with-sx" label="Username" variant="standard" />
+                      <TextField style={{ width: '250px' }} id="input-with-sx" label="Email" variant="standard" />
                     </Box>
                   </Box>
                 </div>
@@ -42,7 +42,7 @@ function Login(props) {
 
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                       <LockIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                      <TextField id="input-with-sx" label="Password" variant="standard" />
+                      <TextField style={{ width: '250px' }} id="input-with-sx" label="Password" variant="standard" />
                     </Box>
                   </Box>
                 </div>
