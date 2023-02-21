@@ -1,0 +1,63 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+.form-group1{
+    width: 400px;
+    margin-bottom: 15px;
+}
+.form-login #forget_name{    
+    text-align: center;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+.hori-line{
+    max-width:100%;
+    margin-left: -6px;
+}
+#box{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:beige;
+}
+.container_f{
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px gray;
+    overflow: hidden;
+    margin: 0 20px;
+    height: 230px;
+}
+
+#form1{
+    display: flex;
+    align-items: center;
+    height: 210px;
+    width: 200px;
+    transition: height 0.2s ease;
+}
+#outlined{
+    width:100px;
+}
+.input-group1{
+    margin-bottom: 35px;
+}
+.form a.text{
+    color: #4070f4;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+.form .button{
+    margin-top: 35px;
+}
+.button input:hover{
+    background-color: #265df2;
+}

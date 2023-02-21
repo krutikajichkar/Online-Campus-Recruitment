@@ -16,6 +16,9 @@
     max-width:100%;
     margin-left: -6px;
 }
+.forget{
+    margin-bottom: 30px;
+}
 .login_para{
     font-size: 20px;
 }
@@ -24,30 +27,29 @@ form{
 }
 #btn-group{
     color: white; 
-  padding: 0 2px 0 10px; 
+  padding: 0 85px 0 85px; 
   cursor: pointer; 
   display: flex;
   justify-content: space-between;
 }
 #leftBtn{
-    margin-left: -50px;
+    margin-left: -15px;
 }
-.btn{
+/* .btn{
     margin-top:30px;
     background-color: #4070f4;
-    border-radius: 10px;
-    padding:10px 40px 10px 40px;
+    border-radius: 20px;
+    padding:5px 25px 5px 25px;
     text-align: center;
     font-size: 18px;
     width:100%;
-    margin-left: 15px;
-}
+} */
 #box{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #4070f4;
+    background-color:beige;
 }
 .containers{
     position: relative;
