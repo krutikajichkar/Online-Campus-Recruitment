@@ -5,6 +5,7 @@ import { useNavigate, } from 'react-router-dom';
 import { useRef } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import Container from '@mui/material/Container';
 
 function Registration() {
   const navigate = useNavigate();
@@ -25,7 +26,9 @@ function Registration() {
     }
   
   return (
+
     <div id="box">
+
       <div class="container1">
         <div class="forms">
           <div class="form-login2">
