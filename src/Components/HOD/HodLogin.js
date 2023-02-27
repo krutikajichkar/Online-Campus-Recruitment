@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Login from '../HOD/Login';
+import Login from '../Login/Login';
 
 function HodLogin() {
 
