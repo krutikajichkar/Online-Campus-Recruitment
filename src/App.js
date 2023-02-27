@@ -21,6 +21,8 @@ import StudentLogin from './Components/StudentLogin';
 import AlumniLogin from './Components/AlumniLogin';
 import AdminDashboard from './Components/AdminDashboard';
 import HodDashboard from './Components/HodDashboard';
+import AddDrive from './Components/AddDrive';
+import StudentDrive from './Components/StudentDrive';
 
 function App() {
   return (
@@ -48,6 +50,8 @@ function App() {
           <Route path='hodlogin' element={<HodLogin />} />
           <Route path='studentlogin' element={<StudentLogin />} />
           <Route path='alumnilogin' element={<AlumniLogin/>} />
+          <Route path='adddrive' element={<AddDrive/>}/>
+          <Route path='studentdrive' element={<StudentDrive/>}/>
         </Routes>
       </BrowserRouter>
 
