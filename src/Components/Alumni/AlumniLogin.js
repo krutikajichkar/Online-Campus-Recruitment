@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Login from '../Alumni/Login';
+import Login from '../Login/Login';
 
 function AlumniLogin() {
 
