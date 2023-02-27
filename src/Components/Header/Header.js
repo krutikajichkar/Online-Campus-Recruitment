@@ -1,7 +1,7 @@
 import React from "react";
 import './Header.css';
-import NaacLogo from "../Components/Images/NaacLogo.png";
-import tgpcetLogo from "../Components/Images/tgpcetLogo.png";
+import NaacLogo from '../Images/NaacLogo';
+import tgpcetLogo from "../Images/tgpcetLogo.png";
 
 function Header() {
   return (

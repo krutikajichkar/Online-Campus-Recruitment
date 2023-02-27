@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Register.css';
 import { signup } from '../Firebase';
 import { useNavigate, } from 'react-router-dom';
@@ -8,22 +8,20 @@ import TextField from '@mui/material/TextField';
 
 function Registration() {
   const navigate = useNavigate();
-
+//  const  [email, setEmail] = useState();
+//  const  [password, setPassword] = useState();
 
 
     const emailRef= useRef();
     const passwordRef= useRef();
 
     const handleSignup = async()=>{
-      try{
+      
         await signup(emailRef.current.value, passwordRef.current.value)
       alert('Registered Succesfully!!');
-      navigate('/dashboard')
-      }
-      catch(error){
-        alert(error.message);
-      }
+      navigate('/')
       
+     
     }
   
   return (
@@ -41,33 +39,24 @@ function Registration() {
                 <TextField fullWidth label="Username" id="fullWidth" size="small" type="text" required="required" />
               </div> */}
               <div class="form-groups">
-                <TextField forwardRef={emailRef} fullWidth label="Email" id="fullWidth" size="small" type="email" required="required" />
+                <TextField  inputRef={emailRef} fullWidth label="Email" id="fullWidth1" size="small" type="email" required="required" />
               </div>
               <div class="form-groups">
-                <TextField forwardRef={passwordRef} fullWidth label="Password" id="fullWidth" size="small" type="password" required="required" />
+                <TextField  inputRef={passwordRef} fullWidth label="Password" id="fullWidth2" size="small" type="password" required="required" />
               </div>
-              {/* <div class="form-groups">
+              <div class="form-groups">
                 <TextField fullWidth label="Department" id="fullWidth" size="small" type="department" required="required" />
               </div>
               <div class="form-groups">
                 <TextField fullWidth label="Session" id="fullWidth" size="small" required="required" />
-              </div>
+              </div> 
 
-              <div class="form-groups">
-                <label class="form-check-label" ></label>
-                <input type="checkbox" required="required" /> Remember me
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <button style={{ marginRight: '20px', borderRadius: '20px', width: '100px', fontWeight: '400' }} class="btn btn-primary" onClick={() => navigate(-1)}> Back</button>
 
-              </div> */}
-              <div class="btn-group">
-                <div class="left-btn">
-                  <button class="btn1 btn btn-primary btn-sm" onClick={() => navigate(-1)}>Go Back</button>
-                </div>
-                <div class="right-btn">
-                <button onClick ={handleSignup} type="submit" class="btn1 btn btn-primary btn-sm">
-                    Register Now
-                  </button>
-                </div>
-
+                <button onClick={handleSignup} style={{ marginLeft: '20px', borderRadius: '20px', width: '150px', fontWeight: '400' }} type="submit" class=" btn btn-primary ">
+                  Register Now
+                </button>
               </div>
             </form>
           </div>

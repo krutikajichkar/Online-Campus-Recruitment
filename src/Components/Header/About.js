@@ -2,8 +2,8 @@ import React from 'react'
 // import { Link } from 'react-router-dom'
 import './About.css';
 import Header from './Header'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Navbar from '../Navbar'
+import Footer from '../Footer'
 function About() {
     return (
         <div>
