@@ -1,24 +1,25 @@
-import Glimpses_1 from "../Components/Images/Glimpses_1.jpg";
-import Glimpses_2 from "../Components/Images/Glimpses_2.jpg";
-import Glimpses_3 from "../Components/Images/Glimpses_3.jpg";
-import JayantSir from "../Components/Images/JayantSir.jpg";
-import Pune_img_1 from "../Components/Images/Pune_img_1.jpg";
-import Pune_img_2 from "../Components/Images/Pune_img_2.jpg";
-import Pune_img_3 from "../Components/Images/Pune_img_3.jpg";
-import Pune_img_4 from "../Components/Images/Pune_img_4.jpg";
-import Pune_img_5 from "../Components/Images/Pune_img_5.jpg";
-import Pune_img_8 from "../Components/Images/Pune_img_8.jpg";
-import Alumni_2017_img_1 from "../Components/Images/Alumni_2017_img_1.jpg";
-import Alumni_2017_img_2 from "../Components/Images/Alumni_2017_img_2.jpg";
-import Alumni_2017_img_3 from "../Components/Images/Alumni_2017_img_3.jpg";
-import Alumni_2017_img_4 from "../Components/Images/Alumni_2017_img_4.jpg";
-import Alumni_2017_img_5 from "../Components/Images/Alumni_2017_img_5.jpg";
-import Alumni_2017_img_9 from "../Components/Images/Alumni_2017_img_9.jpg";
+
+import Glimpses_1 from "../Images/Glimpses_1";
+import Glimpses_2 from "../Images/Glimpses_2.jpg";
+import Glimpses_3 from "../Images/Glimpses_3.jpg";
+import JayantSir from "../Images/JayantSir.jpg";
+import Pune_img_1 from "../Images/Pune_img_1.jpg";
+import Pune_img_2 from "../Images/Pune_img_2.jpg";
+import Pune_img_3 from "../Images/Pune_img_3.jpg";
+import Pune_img_4 from "../Images/Pune_img_4.jpg";
+import Pune_img_5 from "../Images/Pune_img_5.jpg";
+import Pune_img_8 from "../Images/Pune_img_8.jpg";
+import Alumni_2017_img_1 from "../Images/Alumni_2017_img_1.jpg";
+import Alumni_2017_img_2 from "../Images/Alumni_2017_img_2.jpg";
+import Alumni_2017_img_3 from "../Images/Alumni_2017_img_3.jpg";
+import Alumni_2017_img_4 from "../Images/Alumni_2017_img_4.jpg";
+import Alumni_2017_img_5 from "../Images/Alumni_2017_img_5.jpg";
+import Alumni_2017_img_9 from "../Images/Alumni_2017_img_9.jpg";
 import React from 'react'
 import './AlumniActivities.css';
 import Header from './Header'
-import Navbar from './Navbar'
-import Footer from "./Footer";
+import Navbar from '../Navbar'
+import Footer from "../Footer";
 
 function AlumniActivities() {
   return (

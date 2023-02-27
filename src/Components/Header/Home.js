@@ -13,8 +13,8 @@ import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import HourglassFullIcon from '@mui/icons-material/HourglassFull';
 import './Home.css'
 import Header from './Header'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Navbar from '../Navbar'
+import Footer from '../Footer'
 // import { color } from '@mui/system';
 
 

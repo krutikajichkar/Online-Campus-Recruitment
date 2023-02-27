@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import fullSizeLogo from "../Components/Images/fullSizeLogo.png";
 import MenuIcon from "@mui/icons-material/Menu";
-import "./Header.css";
+
 import { NavLink , Link} from "react-router-dom";
-import Modal from "react-modal";
-import CloseIcon from "@mui/icons-material/Close";
-import { red } from "@mui/material/colors";
 
 
 

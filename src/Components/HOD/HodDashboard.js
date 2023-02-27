@@ -67,8 +67,7 @@ function HodDashboard() {
               </div>
             </div>
             <div className='profile'>
-              <h6 className='profile-head'>PROFILE</h6>
-              <button className='btn-primary btn profile-btn'>Edit Profile</button>
+            <button className='btn-primary btn'>Edit Profile</button>
             </div>
             <div className='profile'>
               <h6 className='profile-head'>PROFILE</h6>
