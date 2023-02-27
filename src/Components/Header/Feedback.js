@@ -1,8 +1,8 @@
 import React from 'react'
 import './Feedback.css'
-import Header from './Header'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Header from '../Header'
+import Navbar from '../Navbar'
+import Footer from '../Footer'
 import Modal from 'react-modal';
 import CloseIcon from "@mui/icons-material/Close";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

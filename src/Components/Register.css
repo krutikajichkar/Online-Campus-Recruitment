@@ -4,8 +4,11 @@
     margin-bottom: 16px;
     margin-left:15px ;
 }
-h2{    
+.reg_name{    
     margin-top: 110px;
+    text-align: center;
+}
+.hint-text{
     text-align: center;
 }
 .form-login2{
@@ -16,6 +19,7 @@ h2{
     border-radius: 20px;
     color: white;
     font-size: 18px;
+    width: 100px;
 }
 .btn-group{
     color: white; 
@@ -25,9 +29,7 @@ h2{
   display: flex;
   justify-content: space-between;
 }
-.left-btn{
-    margin-left: -40px;
-}
+
 #box{
     height: 100vh;
     display: flex;
@@ -41,7 +43,7 @@ h2{
     width: 100%;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px gray;
     overflow: hidden;
     margin: 0 20px;
     height: 560px;
@@ -116,7 +118,9 @@ h2{
 .form a:hover{
     text-decoration: underline;
 }
-
+.chekbox{
+    margin-bottom: 30px;
+}
 .form .button{
     margin-top: 35px;
 }

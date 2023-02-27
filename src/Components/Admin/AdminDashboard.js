@@ -1,5 +1,5 @@
 import React from 'react'
-import './StudentDashboard.css';
+import './AdminDashboard.css';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';

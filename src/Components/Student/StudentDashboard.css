@@ -43,16 +43,12 @@
     font-weight: 600;
 }
 
-.profile-btn {
+/* .profile-btn {
     width: 170px;
     padding:7px 2px;
     border-radius: 25px;
     font-size: 15px;
-    outline: none;
-    border: none;
-   margin-left: 30px;
-   font-weight: 700;
-}
+} */
 .photo-detail {
     display: flex;
     padding: 44px;
