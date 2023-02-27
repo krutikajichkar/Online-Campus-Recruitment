@@ -29,7 +29,7 @@ nav ul li{
     text-decoration: none;
 }
 .active{
-    color: brown;
+    color:rgb(23, 53, 247);
 }
 .dropdown-menu li {
     padding: 0px;

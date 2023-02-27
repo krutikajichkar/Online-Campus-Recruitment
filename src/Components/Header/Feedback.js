@@ -1,6 +1,6 @@
 import React from 'react'
 import './Feedback.css'
-import Header from '../Header'
+import Header from '../Header/Header'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Modal from 'react-modal';

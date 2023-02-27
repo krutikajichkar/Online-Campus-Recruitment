@@ -7,9 +7,9 @@ import Home from './Components/Header/Home'
 import Feedback from './Components/Header/Feedback';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AlumniActivities from './Components/Header/AlumniActivities';
-import PlacedStudents from './Components/PlacedStudents';
-import StudentDashboard from './Components/StudentDashboard';
-import FullCalender from './Components/FullCalender';
+import PlacedStudents from './Components/Header/PlacedStudents';
+import StudentDashboard from './Components/Student/StudentDashboard';
+import FullCalender from './Components/HOD/FullCalender';
 import Exams from './Components/HOD/Exams';
 import Drives from './Components/HOD/Drives';
 import Test from './Components/HOD/Test';

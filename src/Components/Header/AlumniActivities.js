@@ -1,5 +1,5 @@
 
-import Glimpses_1 from "../Images/Glimpses_1";
+import Glimpses_1 from "../Images/Glimpses_1.jpg";
 import Glimpses_2 from "../Images/Glimpses_2.jpg";
 import Glimpses_3 from "../Images/Glimpses_3.jpg";
 import JayantSir from "../Images/JayantSir.jpg";
