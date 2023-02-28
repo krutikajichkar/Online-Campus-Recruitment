@@ -13,15 +13,15 @@ import FullCalender from './Components/HOD/FullCalender';
 import Exams from './Components/HOD/Exams';
 import Drives from './Components/HOD/Drives';
 import Test from './Components/HOD/Test';
-import Registration from './Components/Registration';
+import Registration from './Components/Student/StudentRegistration';
 import Login from './Components/Login/Login'
-import AlumniRegistration from './Components/Alumni/AlumniRegistration';
+import HODRegistration from './Components/HOD/HODregistration';
 import HodLogin from './Components/HOD/HodLogin';
 import StudentLogin from './Components/Student/StudentLogin';
-import AlumniLogin from './Components/Alumni/AlumniLogin';
 import AdminDashboard from './Components/Admin/AdminDashboard';
 import HodDashboard from './Components/HOD/HodDashboard';
 import ForgetPassword from './Components/Password/ForgetPassword';
+import AdminRegistration from './Components/Admin/AdminRegistration';
 
 function App() {
   return (
@@ -45,10 +45,10 @@ function App() {
           <Route path='test' element={<Test />} />
           <Route path='register' element={<Registration />} />
           <Route path='login' element={<Login />} />
-          <Route path='alumniregister' element={<AlumniRegistration />} />
+          <Route path='hodregister' element={<HODRegistration />} />
           <Route path='hodlogin' element={<HodLogin />} />
           <Route path='studentlogin' element={<StudentLogin />} />
-          <Route path='alumnilogin' element={<AlumniLogin />} />
+          <Route path='adminregister' element={<AdminRegistration />} />
           <Route path='forgetpass' element={<ForgetPassword />} />
         </Routes>
       </BrowserRouter>

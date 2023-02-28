@@ -5,7 +5,7 @@ import Login from '../Login/Login';
 
 function StudentLogin() {
     return (
-        <Login person='Student' />
+        <Login person='Student' collection="StudentData"/>
     )
 }
 

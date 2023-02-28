@@ -6,23 +6,28 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import LockIcon from '@mui/icons-material/Lock';
-
+import { db,useAuth } from '../../Firebase';
+import { addDoc ,collection} from 'firebase/firestore';
 import { useNavigate, } from 'react-router-dom';
-import { PropaneSharp } from '@mui/icons-material';
+
 
 function Login(props) {
   const emailRef = useRef();
   const passRef = useRef();
   const navigate = useNavigate();
+  const currentUser = useAuth();
 
-
+const loginData = async() => {
+await addDoc(collection(db,`${props.collection}`),{
+  uid:currentUser.uid
+})
+}
  
   const handleLogIn = async() => {
     try{
       await signIn(emailRef.current.value , passRef.current.value);
-      
+      loginData();
       alert('Logged In sucessfully!!');
-      //  <Navigate to='' replace={true}/>
       navigate('/studentdashboard');
      
      

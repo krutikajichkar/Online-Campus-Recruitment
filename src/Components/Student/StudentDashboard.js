@@ -7,9 +7,22 @@ import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import EqualizerOutlinedIcon from '@mui/icons-material/EqualizerOutlined';
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { logOut } from '../../Firebase';
 
 function StudentDashboard() {
+  const navigate = useNavigate();
+  const handleLogout = async() => {
+
+    try{
+      await logOut();
+    alert("Logged Out Successfully");
+    navigate('/');
+    }
+    catch(error){
+      alert(error.message)
+    }
+  }
   return (
     <div>
       {/* <div className='bar'>
@@ -72,6 +85,7 @@ function StudentDashboard() {
             < div className='profile'>
               <button className='btn-primary  profile-btn'>Edit Profile</button>
               <button className='btn-primary  profile-btn'>Complete your Profile</button>
+              <button className='btn-primary  profile-btn' onClick={handleLogout}>Logout</button>
             </div>
           </div>
         </div>
