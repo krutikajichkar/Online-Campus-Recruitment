@@ -3,7 +3,7 @@ import "./StudentRegistration.css";
 import { signup, useAuth } from "../../Firebase";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
-import TextField from "@mui/material/TextField";
+//import input from "@mui/material/input";
 import { db } from "../../Firebase";
 import { collection, addDoc } from "firebase/firestore";
 import Container from "@mui/material/Container";
@@ -37,6 +37,7 @@ function Registration() {
       
       alert("Registered Succesfully!!");
       navigate("/studentdashboard");
+      StudentData();
     } catch (error) {
       alert(error.message);
     }
@@ -54,27 +55,27 @@ function Registration() {
                 Create your account. It's free and only takes a minute.
               </p>
               <div className="form-groups">
-                <TextField
-                  fullWidth
-                  defaultValue={name}
+                <input
+                 
+                  value={name}
                   onChange={(e) => {
                     setName(e.target.value);
                   }}
-                  label="Name"
+                  placeholder="Name"
                   size="small"
                   type="text"
                   required
                 />
               </div>
               <div className="form-groups">
-                <TextField
-                  inputRef={emailRef}
+                <input
+                  ref={emailRef}
                 
                   onChange={(e) => {
                     setEmail(e.target.value);
                   }}
-                  fullWidth
-                  label="Email"
+                 
+                  placeholder="Email"
                   id="fullWidth1"
                   size="small"
                   type="email"
@@ -82,25 +83,25 @@ function Registration() {
                 />
               </div>
               <div className="form-groups">
-                <TextField
-                  inputRef={passwordRef}
+                <input
+                  ref={passwordRef}
                  
                   onChange={(e) => {
                     setPassword(e.target.value);
                   }}
-                  fullWidth
-                  label="Password"
-                  id="fullWidth2"
+                 
+                  placeholder="Password"
+                  
                   size="small"
                   type="password"
                   required
                 />
               </div>
               <div className="form-groups">
-                <TextField
-                  fullWidth
-                  label="Department"
-                  defaultValue={department}
+                <input
+                  
+                  placeholder="Department"
+                  value={department}
                   onChange={(e) => {
                     setdepartment(e.target.value);
                   }}
@@ -110,10 +111,10 @@ function Registration() {
                 />
               </div>
               <div className="form-groups">
-                <TextField
-                  fullWidth
-                  label="Session"
-                  defaultValue={session}
+                <input
+                 
+                  placeholder="Session"
+                  value={session}
                   onChange={(e) => {
                     setsession(e.target.value);
                   }}
