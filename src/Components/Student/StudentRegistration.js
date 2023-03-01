@@ -12,16 +12,16 @@ function Registration() {
   const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [name, setName] = useState();
-  const [department, setdepartment] = useState();
-  const [session, setsession] = useState();
+  const [name, setName] = useState("");
+  const [department, setdepartment] = useState("");
+  const [session, setsession] = useState("");
   const currentUser = useAuth();
 
   const emailRef = useRef();
   const passwordRef = useRef();
 
   const StudentData = async () => {
-    await addDoc(collection(db, "StudentData"), {
+    await addDoc(collection(db, 'StudentData'), {
       Name: name,
       session: session,
       email: email,
@@ -37,11 +37,11 @@ function Registration() {
       
       alert("Registered Succesfully!!");
       navigate("/studentdashboard");
-      StudentData();
+      
     } catch (error) {
       alert(error.message);
     }
-   
+    StudentData();
   };
 
   return (
@@ -49,7 +49,7 @@ function Registration() {
       <div className="container1">
         <div className="forms">
           <div className="form-login2">
-            <form >
+            
               <h2 className="reg_name">Student Registration</h2>
               <p className="hint-text">
                 Create your account. It's free and only takes a minute.
@@ -57,7 +57,7 @@ function Registration() {
               <div className="form-groups">
                 <input
                  
-                  value={name}
+                  defaultValue={name}
                   onChange={(e) => {
                     setName(e.target.value);
                   }}
@@ -101,7 +101,7 @@ function Registration() {
                 <input
                   
                   placeholder="Department"
-                  value={department}
+                  defaultValue={department}
                   onChange={(e) => {
                     setdepartment(e.target.value);
                   }}
@@ -114,7 +114,7 @@ function Registration() {
                 <input
                  
                   placeholder="Session"
-                  value={session}
+                  defaultValue={session}
                   onChange={(e) => {
                     setsession(e.target.value);
                   }}
@@ -152,7 +152,7 @@ function Registration() {
                   Register Now
                 </button>
               </div>
-            </form>
+            
           </div>
         </div>
       </div>

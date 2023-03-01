@@ -23,7 +23,7 @@ function Test() {
             <NavLink className='link' to='/exams'> <ContentPasteIcon /> &nbsp; &nbsp;&nbsp;Exams </NavLink>
           </div>
           <div>
-            <NavLink className='link' to='/drives'><HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives </NavLink>
+            <NavLink className='link' to='/studentdrive'><HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives </NavLink>
           </div>
           <div>
             <NavLink className='link' to='/test'><ContentPasteSearchIcon /> &nbsp; &nbsp;&nbsp;Test </NavLink>
@@ -58,3 +58,4 @@ function Test() {
 }
 
 export default Test
+

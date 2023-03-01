@@ -9,13 +9,12 @@ import { useEffect, useState } from "react";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDr86WHpbF5Yf6HfdAS0D8PYfOIYG4e5vo",
-  authDomain: "online-campus-recruitment.firebaseapp.com",
-  projectId: "online-campus-recruitment",
-  storageBucket: "online-campus-recruitment.appspot.com",
-  messagingSenderId: "250915031861",
-  appId: "1:250915031861:web:bf91898890710c8aee9a7c",
-  measurementId: "G-FHDR8S7B7Z"
+  apiKey: "AIzaSyAh1je07AYrPiakSMuwNi2HnDYvcClkV_g",
+  authDomain: "online-campus-recruitmen-fedf9.firebaseapp.com",
+  projectId: "online-campus-recruitmen-fedf9",
+  storageBucket: "online-campus-recruitmen-fedf9.appspot.com",
+  messagingSenderId: "961623874948",
+  appId: "1:961623874948:web:c6c90c174722321c50d1d1"
 };
 
 // Initialize Firebase

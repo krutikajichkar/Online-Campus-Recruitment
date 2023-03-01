@@ -13,25 +13,25 @@ function HodDashboard() {
   return (
     <div>
       <div className='bar'>
-      <Link to='/'> <ArrowBackIcon /></Link>
+        <Link to='/'> <ArrowBackIcon /></Link>
       </div>
       <div className='student'>
         <div className='sidebar'>
-          <h4 style={{color:'darkcyan'}}>DashBoard</h4>
+          <h4 style={{ color: 'darkcyan' }}>DashBoard</h4>
           <div>
-           <NavLink className='link' to=''> < PermIdentityIcon /> &nbsp; &nbsp;&nbsp;HOD Details </NavLink>
+            <NavLink className='link' to=''> < PermIdentityIcon /> &nbsp; &nbsp;&nbsp;HOD Details </NavLink>
           </div>
           <div>
-          <NavLink className='link' to='/fullCalender'><CalendarMonthIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Full Calendar</NavLink> 
+            <NavLink className='link' to='/fullCalender'><CalendarMonthIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Full Calendar</NavLink>
           </div>
           <div>
-           <NavLink  className='link' to='/exams'> <ContentPasteIcon/> &nbsp; &nbsp;&nbsp;Exams </NavLink>
+            <NavLink className='link' to='/exams'> <ContentPasteIcon /> &nbsp; &nbsp;&nbsp;Exams </NavLink>
           </div>
           <div>
-           <NavLink className='link' to='/studentdrive'><HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives </NavLink> 
+            <NavLink className='link' to='/studentdrive'><HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives </NavLink>
           </div>
           <div>
-            <NavLink className='link' to='/test'><ContentPasteSearchIcon /> &nbsp; &nbsp;&nbsp;Test </NavLink> 
+            <NavLink className='link' to='/test'><ContentPasteSearchIcon /> &nbsp; &nbsp;&nbsp;Test </NavLink>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ function HodDashboard() {
           <div className='student-box' >
             <div className='photo-detail'>
               <div className='photo'>
-                <img className='photo' src="https://i.stack.imgur.com/l60Hf.png"  alt='admin' />
+                <img className='photo' src="https://i.stack.imgur.com/l60Hf.png" alt='admin' />
               </div>
               <div className='detail'>
                 <h3 style={{ fontWeight: '600' }}>AJAY  SHRIVASTAV</h3>
@@ -67,11 +67,8 @@ function HodDashboard() {
               </div>
             </div>
             <div className='profile'>
-            <button className='btn-primary btn'>Edit Profile</button>
-            </div>
-            <div className='profile'>
-              <h6 className='profile-head'>PROFILE</h6>
-              <button className='btn-primary btn profile-btn'>Complete your Profile</button>
+              <button className='btn-primary  profile-btn'>Edit Profile</button>
+              <button className='btn-primary profile-btn'>Complete your Profile</button>
             </div>
           </div>
         </div>
