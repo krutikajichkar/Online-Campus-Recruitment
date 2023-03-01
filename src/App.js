@@ -22,6 +22,8 @@ import AlumniLogin from './Components/Alumni/AlumniLogin';
 import AdminDashboard from './Components/Admin/AdminDashboard';
 import HodDashboard from './Components/HOD/HodDashboard';
 import ForgetPassword from './Components/Password/ForgetPassword';
+import StudentDrive from './Components/Student/StudentDrive';
+import AddDrive from './Components/AddDrive'
 
 function App() {
   return (
@@ -30,7 +32,7 @@ function App() {
       <BrowserRouter>
 
         <Routes>
-          <Route path='/' className='active' element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='activities' element={<AlumniActivities />} />
           <Route path='feedback' element={<Feedback />} />
@@ -42,7 +44,9 @@ function App() {
           <Route path='fullcalender' element={<FullCalender />} />
           <Route path='exams' element={<Exams />} />
           <Route path='drives' element={<Drives />} />
-          <Route path='test' element={<Test />} />
+          <Route path='studentdrive' element={<StudentDrive/>}/>
+          <Route path='adddrive' element={<AddDrive/>}/>
+           <Route path='test' element={<Test />} />
           <Route path='register' element={<Registration />} />
           <Route path='login' element={<Login />} />
           <Route path='alumniregister' element={<AlumniRegistration />} />
