@@ -4,7 +4,7 @@ import Login from './Login'
 export default function AdminLogin() {
     return (
         <div>
-            <Login person='Alumni' />
+            <Login person='Admin'  collection="AdminData" />
         </div>
     )
 }

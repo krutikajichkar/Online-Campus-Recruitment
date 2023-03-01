@@ -27,7 +27,7 @@ function Navbar() {
             {" "}
             <li>Alumni Activities</li>
           </NavLink>
-          <li>Alumni Committee</li>
+         
           <NavLink className='link' to='/feedback'>
             {" "}
             <li>Feedback</li>
@@ -36,10 +36,10 @@ function Navbar() {
             {" "}
             <li>PlacedStudents</li>
           </NavLink>
-          {/* <NavLink className="link" to='/studentdashboard'>
+          <NavLink className="link" to='/studentdashboard'>
             {" "}
             <li>StudentDashboard</li>
-          </NavLink> */}
+          </NavLink>
           {/* <NavLink className="link" to='/admindashboard'>
             {" "}
             <li>AdminDashboard</li>
@@ -78,14 +78,25 @@ function Navbar() {
                   </button>
                 </li>
               </Link>
-              <Link to='alumniregister' className="link">
+              <Link to='hodregister' className="link">
                 <li>
                   <button
                     className="dropdown-item"
                     type="button"
                    
                   >
-                    Alumni Registration
+                    HOD Registration
+                  </button>
+                </li>
+              </Link>
+              <Link to='adminregister' className="link">
+                <li>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                   
+                  >
+                    Admin Registration
                   </button>
                 </li>
               </Link>
