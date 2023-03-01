@@ -8,31 +8,32 @@ import TextField from "@mui/material/TextField";
 function AdminRegistration() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [name, setName] = useState();
-  const [department, setdepartment] = useState();
+  const [name, setName] = useState('');
+  const [department, setdepartment] = useState('');
   const currentUser = useAuth();
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
-  const HODData = async () => {
-    await addDoc(collection(db, "Admindata"), {
+
+
+  const adminData = async () => {
+    await addDoc(collection(db, "AdminData"), {
       Name: name,
       email: email,
       user: "Admin",
       password: password,
-      uid: currentUser.uid,
+    
     });
   };
 
   const handleRegistration = async () => {
     try {
-      await signup(emailRef.currentUser.value, passwordRef.current.value);
-      HODData();
-      alert("Registered Succesfully");
+      await signup(emailRef.current.value, passwordRef.current.value);
       navigate("/admindashboard");
     } catch (error) {
       alert(error.meassage);
     }
+    adminData();
   };
 
   return (
@@ -40,12 +41,12 @@ function AdminRegistration() {
       <div className="container2">
         <div className="forms">
           <div className="form-login1">
-            <form action="#">
-              <h2 id="h2">HOD Registration</h2>
+           
+              <h2 id="h2">Admin Registration</h2>
               <p className="hint-text">
                 Create your account. It's free and only takes a minute.
               </p>
-              <div className="form-group1">
+              {/* <div className="form-group1">
                 <TextField
                   fullWidth
                   label="Username"
@@ -102,7 +103,30 @@ function AdminRegistration() {
                   type="department"
                   required
                 />
-              </div>
+              </div> */}
+
+<input type="text"  placeholder="name" defaultValue={name}  onChange={(e) => {
+                    setName(e.target.value);
+                  }}/>
+                  <br />
+              <input type="email" placeholder="email"  ref={emailRef}
+                
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}/>
+                <br />
+              <input type="password" placeholder="password"   ref={passwordRef}
+                 
+                 onChange={(e) => {
+                   setPassword(e.target.value);
+                 }}/>
+                 <br />
+              <input type="text" placeholder="department" defaultValue={department}
+                  onChange={(e) => {
+                    setdepartment(e.target.value);
+                  }}/>
+                  <br />
+            
 
               <div className="btn-group">
                 <div id="left-btn">
@@ -123,7 +147,7 @@ function AdminRegistration() {
                   </button>
                 </div>
               </div>
-            </form>
+            
           </div>
         </div>
       </div>

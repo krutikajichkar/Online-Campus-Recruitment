@@ -54,7 +54,7 @@ function Registration() {
               <p className="hint-text">
                 Create your account. It's free and only takes a minute.
               </p>
-              <div className="form-groups">
+              {/* <div className="form-groups">
                 <input
                  
                   defaultValue={name}
@@ -121,7 +121,33 @@ function Registration() {
                   size="small"
                   required
                 />
-              </div>
+              </div> */}
+
+              <input type="text"  placeholder="name" value={name}  onChange={(e) => {
+                    setName(e.target.value);
+                  }}/>
+                  <br />
+              <input type="email" placeholder="email"  ref={emailRef}
+                
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}/>
+                <br />
+              <input type="password" placeholder="password"   ref={passwordRef}
+                 
+                 onChange={(e) => {
+                   setPassword(e.target.value);
+                 }}/>
+                 <br />
+              <input type="text" placeholder="department" value={department}
+                  onChange={(e) => {
+                    setdepartment(e.target.value);
+                  }}/>
+                  <br />
+              <input type="text" placeholder="session" value={session}
+                  onChange={(e) => {
+                    setsession(e.target.value);
+                  }}/>
 
               <div style={{ display: "flex", justifyContent: "center" }}>
                 <button
