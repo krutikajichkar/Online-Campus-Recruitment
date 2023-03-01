@@ -1,5 +1,4 @@
 import React from 'react'
-import './StudentDashboard.css';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
