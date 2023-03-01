@@ -36,6 +36,7 @@ function Registration() {
       await signup(emailRef.current.value, passwordRef.current.value);
       
       alert("Registered Succesfully!!");
+      navigate("/studentlogin");
       navigate("/studentdashboard");
       
     } catch (error) {
@@ -158,7 +159,7 @@ function Registration() {
                     fontWeight: "400",
                   }}
                   className="btn btn-primary"
-                  onClick={() => navigate(-1)}
+                  onClick={() => navigate('/')}
                 >
                   {" "}
                   Back
