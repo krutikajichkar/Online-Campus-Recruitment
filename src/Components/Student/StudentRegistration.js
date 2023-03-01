@@ -37,8 +37,7 @@ function Registration() {
       
       alert("Registered Succesfully!!");
       navigate("/studentlogin");
-      navigate("/studentdashboard");
-      
+         
     } catch (error) {
       alert(error.message);
     }

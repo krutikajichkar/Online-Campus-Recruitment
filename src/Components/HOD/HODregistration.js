@@ -29,7 +29,7 @@ function HODRegistration(props) {
       await signup(emailRef.current.value, passwordRef.current.value);
       alert("Registered Succesfully");
       navigate("/hodlogin");
-      navigate("/hoddashboard");
+      
     } catch (error) {
       alert(error.meassage);
     }
