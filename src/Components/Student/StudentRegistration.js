@@ -8,182 +8,94 @@ import { db } from "../../Firebase";
 import { collection, addDoc } from "firebase/firestore";
 import Container from "@mui/material/Container";
 
-function Registration() {
-  const navigate = useNavigate();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [name, setName] = useState("");
-  const [department, setdepartment] = useState("");
-  const [session, setsession] = useState("");
-  const currentUser = useAuth();
+function StudentRegistration() {
+    const navigate = useNavigate();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const [name, setName] = useState("");
+    const [department, setdepartment] = useState("");
+    const [session, setsession] = useState("");
+    const currentUser = useAuth();
 
-  const emailRef = useRef();
-  const passwordRef = useRef();
+    const emailRef = useRef();
+    const passwordRef = useRef();
 
-  const StudentData = async () => {
-    await addDoc(collection(db, 'StudentData'), {
-      Name: name,
-      session: session,
-      email: email,
-      password: password,
-      user: "Student",
-      
-    });
-  };
+    const StudentData = async () => {
+        await addDoc(collection(db, 'StudentData'), {
+            Name: name,
+            session: session,
+            email: email,
+            password: password,
+            user: "Student",
 
-  const handleSignup = async () => {
-    try {
-      await signup(emailRef.current.value, passwordRef.current.value);
-      
-      alert("Registered Succesfully!!");
-      navigate("/studentdashboard");
-      
-    } catch (error) {
-      alert(error.message);
-    }
-    StudentData();
-  };
+        });
+    };
 
-  return (
-    <div id="box">
-      <div className="container1">
-        <div className="forms">
-          <div className="form-login2">
-            
-              <h2 className="reg_name">Student Registration</h2>
-              <p className="hint-text">
-                Create your account. It's free and only takes a minute.
-              </p>
-              {/* <div className="form-groups">
-                <input
-                 
-                  defaultValue={name}
-                  onChange={(e) => {
-                    setName(e.target.value);
-                  }}
-                  placeholder="Name"
-                  size="small"
-                  type="text"
-                  required
-                />
-              </div>
-              <div className="form-groups">
-                <input
-                  ref={emailRef}
-                
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                 
-                  placeholder="Email"
-                  id="fullWidth1"
-                  size="small"
-                  type="email"
-                  required
-                />
-              </div>
-              <div className="form-groups">
-                <input
-                  ref={passwordRef}
-                 
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
-                 
-                  placeholder="Password"
-                  
-                  size="small"
-                  type="password"
-                  required
-                />
-              </div>
-              <div className="form-groups">
-                <input
-                  
-                  placeholder="Department"
-                  defaultValue={department}
-                  onChange={(e) => {
-                    setdepartment(e.target.value);
-                  }}
-                  size="small"
-                  type="department"
-                  required
-                />
-              </div>
-              <div className="form-groups">
-                <input
-                 
-                  placeholder="Session"
-                  defaultValue={session}
-                  onChange={(e) => {
-                    setsession(e.target.value);
-                  }}
-                  size="small"
-                  required
-                />
-              </div> */}
+    const handleSignup = async () => {
+        try {
+            await signup(emailRef.current.value, passwordRef.current.value);
 
-              <input type="text"  placeholder="name" value={name}  onChange={(e) => {
-                    setName(e.target.value);
-                  }}/>
-                  <br />
-              <input type="email" placeholder="email"  ref={emailRef}
-                
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}/>
-                <br />
-              <input type="password" placeholder="password"   ref={passwordRef}
-                 
-                 onChange={(e) => {
-                   setPassword(e.target.value);
-                 }}/>
-                 <br />
-              <input type="text" placeholder="department" value={department}
-                  onChange={(e) => {
-                    setdepartment(e.target.value);
-                  }}/>
-                  <br />
-              <input type="text" placeholder="session" value={session}
-                  onChange={(e) => {
-                    setsession(e.target.value);
-                  }}/>
+            alert("Registered Succesfully!!");
+            navigate("/studentdashboard");
 
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <button
-                  style={{
-                    marginRight: "20px",
-                    borderRadius: "20px",
-                    width: "100px",
-                    fontWeight: "400",
-                  }}
-                  className="btn btn-primary"
-                  onClick={() => navigate(-1)}
-                >
-                  {" "}
-                  Back
-                </button>
+        } catch (error) {
+            alert(error.message);
+        }
+        StudentData();
+    };
 
-                <button
-                  onClick={handleSignup}
-                  style={{
-                    marginLeft: "20px",
-                    borderRadius: "20px",
-                    width: "150px",
-                    fontWeight: "400",
-                  }}
-                  type="submit"
-                  className=" btn btn-primary "
-                >
-                  Register Now
-                </button>
-              </div>
-            
-          </div>
+    return (
+        <div id='sr1'>
+            <div id='sr2' class="srfont">
+                <h2 class="srcenter srpd">Student Registration</h2>
+                <p class="srcenter">
+                    Create your account. It's free and only takes a minute.
+                </p>
+                <div class="form_input">
+                    <input type="text" defaultValue={name}
+                        onChange={(e) => {
+                            setName(e.target.value);
+                        }} placeholder="Name"></input>
+                    <span class="bar"></span>
+                </div>
+                <div class="form_input">
+                    <input type="email" ref={emailRef}
+                        onChange={(e) => {
+                            setEmail(e.target.value);
+                        }} placeholder="Email" required></input>
+                    <span class="bar"></span>
+                </div>
+                <div class="form_input">
+                    <input type="text" defaultValue={session}
+                        onChange={(e) => {
+                            setsession(e.target.value);
+                        }} placeholder="Session" required></input>
+                    <span class="bar"></span>
+                </div>
+                <div class="form_input">
+                    <input type="text" defaultValue={department}
+                        onChange={(e) => {
+                            setdepartment(e.target.value);
+                        }} placeholder="Department" required></input>
+                    <span class="bar"></span>
+                </div>
+                <div class="form_input">
+                    <input type="password" ref={passwordRef}
+
+                        onChange={(e) => {
+                            setPassword(e.target.value);
+                        }} placeholder="Password" required></input>
+                    <span class="bar"></span>
+                </div>
+
+                <div id="sridcenter" class="srfont">
+                    <button onClick={() => navigate("/")} class="srbt">Back</button>
+                    <button onClick={handleSignup} type="submit" class="srbt">Register Now</button>
+                </div>
+            </div>
+
         </div>
-      </div>
-    </div>
-  );
+    )
 }
 
-export default Registration;
+export default StudentRegistration
