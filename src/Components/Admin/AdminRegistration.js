@@ -30,7 +30,7 @@ function AdminRegistration() {
     try {
       await signup(emailRef.current.value, passwordRef.current.value);
       alert("Registered Succesfully!!");
-      navigate("/login");
+      navigate("/adminlogin");
      
     } catch (error) {
       alert(error.meassage);

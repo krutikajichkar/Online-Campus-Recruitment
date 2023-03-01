@@ -42,7 +42,7 @@ await addDoc(collection(db,`${props.collection}`),{
       <div className="containers">
         <div id="forms">
           <div class="form-login">
-            <form action="#">
+            
               <h2 id="login_name">{props.person} Login</h2>
               <center><p class="login_para">Please Login into your account!</p></center>
               <hr class="hori-line" />
@@ -84,7 +84,7 @@ await addDoc(collection(db,`${props.collection}`),{
                   Login
                 </button>
               </div>
-            </form>
+            
           </div>
         </div>
       </div>

@@ -158,7 +158,7 @@ function Registration() {
                     fontWeight: "400",
                   }}
                   className="btn btn-primary"
-                  onClick={() => navigate(-1)}
+                  onClick={() => navigate('/')}
                 >
                   {" "}
                   Back

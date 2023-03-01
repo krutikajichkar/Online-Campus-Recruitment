@@ -24,6 +24,7 @@ import ForgetPassword from './Components/Password/ForgetPassword';
 import AdminRegistration from './Components/Admin/AdminRegistration';
 import StudentDrive from './Components/Student/StudentDrive';
 import AddDrive from './Components/AddDrive';
+import AdminLogin from './Components/Admin/AdminLogin';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path='login' element={<Login />} />
           <Route path='hodregister' element={<HODRegistration />} />
           <Route path='hodlogin' element={<HodLogin />} />
+          <Route path='adminlogin' element={<AdminLogin />} />
           <Route path='studentlogin' element={<StudentLogin />} />
           <Route path='adminregister' element={<AdminRegistration />} />
           <Route path='forgetpass' element={<ForgetPassword />} />
