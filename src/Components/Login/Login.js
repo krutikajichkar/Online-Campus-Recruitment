@@ -28,7 +28,7 @@ await addDoc(collection(db,`${props.collection}`),{
       await signIn(emailRef.current.value , passRef.current.value);
       loginData();
       alert('Logged In sucessfully!!');
-      navigate('/studentdashboard');
+      navigate(`/${props.path}`);
      
      
     }

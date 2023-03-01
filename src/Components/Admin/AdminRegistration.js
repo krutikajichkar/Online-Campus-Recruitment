@@ -29,7 +29,9 @@ function AdminRegistration() {
   const handleRegistration = async () => {
     try {
       await signup(emailRef.current.value, passwordRef.current.value);
-      navigate("/admindashboard");
+      alert("Registered Succesfully!!");
+      navigate("/login");
+     
     } catch (error) {
       alert(error.meassage);
     }

@@ -36,8 +36,8 @@ function Registration() {
       await signup(emailRef.current.value, passwordRef.current.value);
       
       alert("Registered Succesfully!!");
-      navigate("/studentdashboard");
-      
+      navigate("/studentlogin");
+         
     } catch (error) {
       alert(error.message);
     }

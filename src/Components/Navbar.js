@@ -44,9 +44,14 @@ function Navbar() {
             {" "}
             <li>AdminDashboard</li>
           </NavLink> */}
-           <NavLink className="link" to='/hoddashboard'>
+           {/* <NavLink className="link" to='/hoddashboard'>
             {" "}
             <li>HodDashboard</li>
+          </NavLink>  */}
+
+          <NavLink className="link" to='/admindashboard'>
+            {" "}
+            <li>AdminDashboard</li>
           </NavLink> 
         </ul>
         <div style={{ display: "flex" }}>

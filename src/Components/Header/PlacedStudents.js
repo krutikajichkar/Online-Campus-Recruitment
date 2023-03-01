@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './PlacedStudents.css';
-import React , {useState} from 'react'
 import { db } from '../../Firebase';
 import { getDocs, collection } from 'firebase/firestore';
 
