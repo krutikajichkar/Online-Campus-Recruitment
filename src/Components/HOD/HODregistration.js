@@ -16,7 +16,7 @@ function HODRegistration(props) {
   const passwordRef = useRef();
   const navigate = useNavigate();
   const HODData = async () => {
-    await addDoc(collection(db,'HODdata'), {
+    await addDoc(collection(db, 'HODdata'), {
       Name: name,
       email: email,
       user: "HOD",
@@ -47,61 +47,61 @@ function HODRegistration(props) {
               Create your account. It's free and only takes a minute.
             </p>
             <div className="form-group1">
-            <input
-                 
-                 defaultValue={name}
-                 onChange={(e) => {
-                   setName(e.target.value);
-                 }}
-                 placeholder="Name"
-                 size="small"
-                 type="text"
-                 required
-               />
-             </div>
-             <div className="form-groups">
-               <input
-                 ref={emailRef}
-               
-                 onChange={(e) => {
-                   setEmail(e.target.value);
-                 }}
-                
-                 placeholder="Email"
-                 id="fullWidth1"
-                 size="small"
-                 type="email"
-                 required
-               />
-             </div>
-             <div className="form-groups">
-               <input
-                 ref={passwordRef}
-                
-                 onChange={(e) => {
-                   setPassword(e.target.value);
-                 }}
-                
-                 placeholder="Password"
-                 
-                 size="small"
-                 type="password"
-                 required
-               />
-             </div> 
-             <div className="form-groups">
-               <input
-                 
-                 placeholder="Department"
-                 defaultValue={department}
-                 onChange={(e) => {
-                   setdepartment(e.target.value);
-                 }}
-                 size="small"
-                 type="department"
-                 required
-               />
-             </div>
+              <input
+
+                defaultValue={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
+                placeholder="Name"
+                size="small"
+                type="text"
+                required
+              />
+            </div>
+            <div className="form-groups">
+              <input
+                ref={emailRef}
+
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+
+                placeholder="Email"
+                id="fullWidth1"
+                size="small"
+                type="email"
+                required
+              />
+            </div>
+            <div className="form-groups">
+              <input
+                ref={passwordRef}
+
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
+
+                placeholder="Password"
+
+                size="small"
+                type="password"
+                required
+              />
+            </div>
+            <div className="form-groups">
+              <input
+
+                placeholder="Department"
+                defaultValue={department}
+                onChange={(e) => {
+                  setdepartment(e.target.value);
+                }}
+                size="small"
+                type="department"
+                required
+              />
+            </div>
 
             <div className="btn-group">
               <div id="left-btn">
