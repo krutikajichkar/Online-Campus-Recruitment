@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 #sr1{
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
+   
     background-color: aliceblue;
 }
 #sr2{
@@ -26,8 +25,10 @@
     padding: 0 10px;
     margin-right: 12px;
 }
+
 .form_input input{
     position: relative;
+  
     width: 100%;
     font: inherit;
     padding: 1rem 0;
@@ -53,6 +54,7 @@
     transform-origin: left;
     transition: transform .5s;
 }
+
 .form_input>input:focus+.bar::before{
     transform: scaleX(1);
 }
@@ -69,10 +71,12 @@
     cursor: pointer;
     border-radius: 3rem;
 }
+
 .srcenter{
-   text-align: center;
-}
-.srpd{
+    text-align: center;
+ }
+
+ .srpd{
     padding: 5px 0;
 }
 .srfont{
