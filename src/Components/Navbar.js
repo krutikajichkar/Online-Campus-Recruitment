@@ -123,7 +123,7 @@ function Navbar() {
               Login
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <Link to='/login' className="link">
+              <Link to='/adminlogin' className="link">
                 <li>
                   <button className="dropdown-item" type="button" >
                     Admin Login
