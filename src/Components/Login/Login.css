@@ -5,6 +5,7 @@
 .form-group{
     width: 346px;
     margin-bottom: 15px;
+    justify-content: center;
 }
 .form-login #login_name{    
     margin-top: 150px;
@@ -14,7 +15,7 @@
 }
 .hori-line{
     max-width:100%;
-    margin-left: -6px;
+
 }
 .forget{
     margin-bottom: 30px;
@@ -43,10 +44,7 @@ form{
     text-align: center;
     font-size: 18px;
     width:100%;
-<<<<<<< HEAD:src/Components/Login.css
     margin-left: 15px;
-=======
->>>>>>> c36b981522f6d99867c0b555e353fa8696212d41:src/Components/Login/Login.css
 } */
 #box{
     height: 100vh;
@@ -70,8 +68,9 @@ form{
 #forms{
     display: flex;
     align-items: center;
+    justify-content:center ;
     height: 280px;
-    width: 200%;
+    width: 100%;
     transition: height 0.2s ease;
 }
 
