@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { db, signup } from "../../Firebase";
 import { collection, addDoc } from "firebase/firestore";
 
-import TextField from "@mui/material/TextField";
-
 function HODRegistration(props) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -29,7 +27,7 @@ function HODRegistration(props) {
       await signup(emailRef.current.value, passwordRef.current.value);
       alert("Registered Succesfully");
       navigate("/hodlogin");
-      
+
     } catch (error) {
       alert(error.meassage);
     }
@@ -38,96 +36,48 @@ function HODRegistration(props) {
   };
 
   return (
-    <div id="box">
-      <div className="container2">
-        <div className="forms">
-          <div className="form-login1">
-
-            <h2 id="h2">HOD Registration</h2>
-            <p className="hint-text">
-              Create your account. It's free and only takes a minute.
-            </p>
-            <div className="form-group1">
-              <input
-
-                defaultValue={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-                placeholder="Name"
-                size="small"
-                type="text"
-                required
-              />
-            </div>
-            <div className="form-groups">
-              <input
-                ref={emailRef}
-
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-
-                placeholder="Email"
-                id="fullWidth1"
-                size="small"
-                type="email"
-                required
-              />
-            </div>
-            <div className="form-groups">
-              <input
-                ref={passwordRef}
-
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-
-                placeholder="Password"
-
-                size="small"
-                type="password"
-                required
-              />
-            </div>
-            <div className="form-groups">
-              <input
-
-                placeholder="Department"
-                defaultValue={department}
-                onChange={(e) => {
-                  setdepartment(e.target.value);
-                }}
-                size="small"
-                type="department"
-                required
-              />
-            </div>
-
-            <div className="btn-group">
-              <div id="left-btn">
-                <button
-                  className="btn2 btn btn-primary btn-sm"
-                  onClick={() => navigate(-1)}
-                >
-                  Go Back
-                </button>
-              </div>
-              <div id="right-btn">
-                <button
-                  type="submit"
-                  className="btn2 btn btn-primary btn-sm"
-                  onClick={handleRegistration}
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-
-          </div>
+    <div id='sr1'>
+      <div id='sr2' class="srfont">
+        <h2 class="srcenter srpd">HOD Registration</h2>
+        <p class="srcenter">
+          Create your account. It's free and only takes a minute.
+        </p>
+        <div class="form_input">
+          <input type="text" defaultValue={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }} placeholder="Name"></input>
+          <span class="bar"></span>
+        </div>
+        <div class="form_input">
+          <input type="email" ref={emailRef}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }} placeholder="Email" required></input>
+          <span class="bar"></span>
+        </div>
+        <div class="form_input">
+          <input type="password" ref={passwordRef}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }} placeholder="Password" required></input>
+          <span class="bar"></span>
+        </div>
+        <div class="form_input">
+          <input type="text" defaultValue={department}
+            onChange={(e) => {
+              setdepartment(e.target.value);
+            }} placeholder="Department" required></input>
+          <span class="bar"></span>
+        </div>
+        <div id="sridcenter" class="srfont">
+          <button onClick={() => navigate("/")} class="srbt">Back</button>
+          <button onClick={handleRegistration} type="submit" class="srbt">Register Now</button>
         </div>
       </div>
     </div>
+
+
   );
 }
 
