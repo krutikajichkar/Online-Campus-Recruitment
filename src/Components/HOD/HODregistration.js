@@ -42,8 +42,7 @@ function HODRegistration(props) {
       <div className="container2">
         <div className="forms">
           <div className="form-login1">
-
-            <h2 id="h2">HOD Registration</h2>
+           <h2 id="h2">HOD Registration</h2>
             <p className="hint-text">
               Create your account. It's free and only takes a minute.
             </p>
