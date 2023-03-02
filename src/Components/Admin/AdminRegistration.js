@@ -3,7 +3,6 @@ import "../HOD/HODRegistration.css";
 import { useNavigate } from "react-router-dom";
 import { db, signup, useAuth } from "../../Firebase";
 import { collection, addDoc } from "firebase/firestore";
-import TextField from "@mui/material/TextField";
 
 function AdminRegistration() {
   const [email, setEmail] = useState();
@@ -22,7 +21,7 @@ function AdminRegistration() {
       email: email,
       user: "Admin",
       password: password,
-    
+
     });
   };
 
@@ -31,7 +30,7 @@ function AdminRegistration() {
       await signup(emailRef.current.value, passwordRef.current.value);
       alert("Registered Succesfully!!");
       navigate("/adminlogin");
-     
+
     } catch (error) {
       alert(error.meassage);
     }
@@ -39,118 +38,46 @@ function AdminRegistration() {
   };
 
   return (
-    <div id="box">
-      <div className="container2">
-        <div className="forms">
-          <div className="form-login1">
-           
-              <h2 id="h2">Admin Registration</h2>
-              <p className="hint-text">
-                Create your account. It's free and only takes a minute.
-              </p>
-              {/* <div className="form-group1">
-                <TextField
-                  fullWidth
-                  label="Username"
-                  inputProps={name}
-                  onChange={(e) => {
-                    setName(e.target.value);
-                  }}
-                  
-                  size="small"
-                  type="text"
-                  required
-                />
-              </div>
-              <div className="form-group1">
-                <TextField
-                  fullWidth
-                  label="Email"
-                  inputRef={emailRef}
-                  inputProps={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                  
-                  size="small"
-                  type="email"
-                  required
-                />
-              </div>
-              <div className="form-group1">
-                <TextField
-                  fullWidth
-                  label="Password"
-                  inputRef={passwordRef}
-                  inputProps={password}
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
-                  
-                  size="small"
-                  type="password"
-                  required
-                />
-              </div>
-              <div className="form-group1">
-                <TextField
-                  fullWidth
-                  label="Department"
-                  inputProps={department}
-                  onChange={(e) => {
-                    setdepartment(e.target.value);
-                  }}
-                  
-                  size="small"
-                  type="department"
-                  required
-                />
-              </div> */}
+    <div id='sr1'>
+      <div id='sr2' class="srfont">
+        <h2 class="srcenter srpd">Admin Registration</h2>
+        <p class="srcenter">
+          Create your account. It's free and only takes a minute.
+        </p>
+        <div class="form_input">
+          <input type="text" defaultValue={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }} placeholder="Name"></input>
+          <span class="bar"></span>
+        </div>
+        <div class="form_input">
+          <input type="email" ref={emailRef}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }} placeholder="Email" required></input>
+          <span class="bar"></span>
+        </div>
 
-<input type="text"  placeholder="name" defaultValue={name}  onChange={(e) => {
-                    setName(e.target.value);
-                  }}/>
-                  <br />
-              <input type="email" placeholder="email"  ref={emailRef}
-                
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}/>
-                <br />
-              <input type="password" placeholder="password"   ref={passwordRef}
-                 
-                 onChange={(e) => {
-                   setPassword(e.target.value);
-                 }}/>
-                 <br />
-              <input type="text" placeholder="department" defaultValue={department}
-                  onChange={(e) => {
-                    setdepartment(e.target.value);
-                  }}/>
-                  <br />
-            
+        <div class="form_input">
+          <input type="password" ref={passwordRef}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }} placeholder="Password" required></input>
+          <span class="bar"></span>
+        </div>
+        <div class="form_input">
+          <input type="text" defaultValue={department}
+            onChange={(e) => {
+              setdepartment(e.target.value);
+            }} placeholder="Department" required></input>
+          <span class="bar"></span>
+        </div>
 
-              <div className="btn-group">
-                <div id="left-btn">
-                  <button
-                    className="btn2 btn btn-primary btn-sm"
-                    onClick={() => navigate(-1)}
-                  >
-                    Go Back
-                  </button>
-                </div>
-                <div id="right-btn">
-                  <button
-                    type="submit"
-                    className="btn2 btn btn-primary btn-sm"
-                    onClick={handleRegistration}
-                  >
-                    Register Now
-                  </button>
-                </div>
-              </div>
-            
-          </div>
+
+        <div id="sridcenter" class="srfont">
+          <button onClick={() => navigate("/")} class="srbt">Back</button>
+          <button onClick={handleRegistration} type="submit" class="srbt">Register Now</button>
         </div>
       </div>
     </div>

@@ -50,7 +50,7 @@ function PlacedStudents() {
                             <td>{e.Department}</td>
                             <td>{e.Company}</td>
                             <td>{e.Package}</td>
-                            <td><a href={`https://${e.LinkedinProfile}`}>View Profile</a></td>
+                            <td><a href={e.LinkedinProfile}>View Profile</a></td>
                         </tr>
                         )
                     })
