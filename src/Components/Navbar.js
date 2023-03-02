@@ -36,10 +36,10 @@ function Navbar() {
             {" "}
             <li>PlacedStudents</li>
           </NavLink>
-          <NavLink className="link" to='/studentdashboard'>
+          {/* <NavLink className="link" to='/studentdashboard'>
             {" "}
             <li>StudentDashboard</li>
-          </NavLink>
+          </NavLink> */}
           {/* <NavLink className="link" to='/admindashboard'>
             {" "}
             <li>AdminDashboard</li>
@@ -49,10 +49,10 @@ function Navbar() {
             <li>HodDashboard</li>
           </NavLink>  */}
 
-          <NavLink className="link" to='/admindashboard'>
+          {/* <NavLink className="link" to='/admindashboard'>
             {" "}
             <li>AdminDashboard</li>
-          </NavLink> 
+          </NavLink>  */}
         </ul>
         <div style={{ display: "flex" }}>
           <div className="dropdown" style={{ paddingRight: "20px" }}>
@@ -150,13 +150,6 @@ function Navbar() {
                 </button>
               </li>
              </Link>
-              <Link to='alumnilogin' className="link">
-              <li>
-                <button className="dropdown-item" type="button" >
-                  Alumni Login
-                </button>
-              </li>
-              </Link>
             </ul>
           </div>
         </div>
