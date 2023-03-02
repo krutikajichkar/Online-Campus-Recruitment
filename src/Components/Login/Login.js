@@ -41,14 +41,14 @@ await addDoc(collection(db,`${props.collection}`),{
     <div id="box">
       <div className="containers">
         <div id="forms">
-          <div class="form-login">
+          <div className="form-login">
             
               <h2 id="login_name">{props.person} Login</h2>
-              <center><p class="login_para">Please Login into your account!</p></center>
-              <hr class="hori-line" />
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
+              <center><p className="login_para">Please Login into your account!</p></center>
+              <hr className="hori-line" />
+              <div className="form-group">
+                <div className="input-group">
+                  <div className="input-group-prepend">
                   </div>
                   <Box sx={{ '& > :not(style)': { m: 1 } }} >
 
@@ -74,13 +74,13 @@ await addDoc(collection(db,`${props.collection}`),{
                 </div>
               </div>
 
-              <div class="forget">
+              <div className="forget">
                 <Link to='/forgetpass'>Forgot Password?</Link>
               </div>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <button style={{ marginRight: '20px', borderRadius: '20px', width: '100px', fontWeight: '400' }} class="btn btn-primary" onClick={() => navigate(-1)}> Back</button>
+                <button style={{ marginRight: '20px', borderRadius: '20px', width: '100px', fontWeight: '400' }} className="btn btn-primary" onClick={() => navigate(-1)}> Back</button>
 
-                <button onClick={handleLogIn} style={{ marginLeft: '20px', borderRadius: '20px', width: '100px', fontWeight: '400' }} type="submit" class=" btn btn-primary ">
+                <button onClick={handleLogIn} style={{ marginLeft: '20px', borderRadius: '20px', width: '100px', fontWeight: '400' }} type="submit" className=" btn btn-primary ">
                   Login
                 </button>
               </div>

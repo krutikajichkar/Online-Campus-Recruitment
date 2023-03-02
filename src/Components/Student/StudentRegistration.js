@@ -44,51 +44,52 @@ function StudentRegistration() {
 
     return (
         <div id='sr1'>
-            <div id='sr2' class="srfont">
-                <h2 class="srcenter srpd">Student Registration</h2>
-                <p class="srcenter">
+            <div id='sr2' className="srfont">
+                <h2 className="srcenter srpd">Student Registration</h2>
+                <p className="srcenter">
                     Create your account. It's free and only takes a minute.
                 </p>
-                <div class="form_input">
+                <div className="form_input">
                     <input type="text" defaultValue={name}
                         onChange={(e) => {
                             setName(e.target.value);
                         }} placeholder="Name"></input>
-                    <span class="bar"></span>
+                    <span className="bar"></span>
                 </div>
-                <div class="form_input">
+                <div className="form_input">
                     <input type="email" ref={emailRef}
                         onChange={(e) => {
                             setEmail(e.target.value);
                         }} placeholder="Email" required></input>
-                    <span class="bar"></span>
+                    <span className="bar"></span>
                 </div>
-                <div class="form_input">
-                    <input type="text" defaultValue={session}
-                        onChange={(e) => {
-                            setsession(e.target.value);
-                        }} placeholder="Session" required></input>
-                    <span class="bar"></span>
-                </div>
-                <div class="form_input">
-                    <input type="text" defaultValue={department}
-                        onChange={(e) => {
-                            setdepartment(e.target.value);
-                        }} placeholder="Department" required></input>
-                    <span class="bar"></span>
-                </div>
-                <div class="form_input">
+                <div className="form_input">
                     <input type="password" ref={passwordRef}
 
                         onChange={(e) => {
                             setPassword(e.target.value);
                         }} placeholder="Password" required></input>
-                    <span class="bar"></span>
+                    <span className="bar"></span>
                 </div>
+                <div className="form_input">
+                    <input type="text" defaultValue={session}
+                        onChange={(e) => {
+                            setsession(e.target.value);
+                        }} placeholder="Session" required></input>
+                    <span className="bar"></span>
+                </div>
+                <div className="form_input">
+                    <input type="text" defaultValue={department}
+                        onChange={(e) => {
+                            setdepartment(e.target.value);
+                        }} placeholder="Department" required></input>
+                    <span className="bar"></span>
+                </div>
+              
 
-                <div id="sridcenter" class="srfont">
-                    <button onClick={() => navigate("/")} class="srbt">Back</button>
-                    <button onClick={handleSignup} type="submit" class="srbt">Register Now</button>
+                <div id="sridcenter" className="srfont">
+                    <button onClick={() => navigate("/")} className="srbt">Back</button>
+                    <button onClick={handleSignup} type="submit" className="srbt">Register Now</button>
                 </div>
             </div>
         </div>
