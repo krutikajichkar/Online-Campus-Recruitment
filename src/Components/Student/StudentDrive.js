@@ -45,7 +45,7 @@ function StudentDrive() {
                     <div className='stdrive-card'>
                         <Card sx={{ maxWidth: 432, margin: '0px 13px 0px 0px', boxShadow: '0px 2px 2px 2px gainsboro' }}>
                             <button className='active-btn'>Active</button>
-
+                            <button className='active-btn'>Register</button>
                             <CardContent>
                                 <Typography variant="h6" style={{ margin: '8px 0px', fontWeight: 'bold' }}>
                                     Tata Consultancy Service
@@ -80,7 +80,7 @@ function StudentDrive() {
 
                         <Card sx={{ maxWidth: 432, margin: '0px 0px 0px 13px', boxShadow: '0px 2px 2px 2px gainsboro' }}>
                             <button className='active-btn'>Active</button>
-
+                            <button className='active-btn'>Register</button>
                             <CardContent>
                                 <Typography variant="h6" style={{ margin: '8px 0px', fontWeight: 'bold'}}>
                                     Infosys

@@ -32,24 +32,7 @@
       height: 80%;
       margin-top: 45px;
   }
-  
-  .profile {
-      display: flex;
-      justify-content:center;
-      
-  }
-  
-  .profile-head {
-      font-weight: 600;
-  }
-  
-  .profile-btn {
-      width: 170px;
-      padding:7px 2px;
-      border-radius: 25px;
-      font-size: 15px;
-      margin: 0px 60px;
-  }
+   
   .photo-detail {
       display: flex;
       padding: 44px;
@@ -66,9 +49,11 @@
   }
   .student-heading{
       font-weight: 600;
-      width: 100px;
+      font-size: 22px;
+      width: 132px;
   }
   .student-sub-heading{
       padding-left: 44px;
+      font-size: 20px;
   }
   

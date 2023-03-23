@@ -9,9 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AlumniActivities from './Components/Header/AlumniActivities';
 import PlacedStudents from './Components/Header/PlacedStudents';
 import StudentDashboard from './Components/Student/StudentDashboard';
-import FullCalender from './Components/HOD/FullCalender';
-import Exams from './Components/HOD/Exams';
-import Drives from './Components/HOD/Drives';
+import Drives from './Components/Admin/Drives';
 import Test from './Components/HOD/Test';
 import Registration from './Components/Student/StudentRegistration';
 import Login from './Components/Login/Login'
@@ -42,8 +40,6 @@ function App() {
           <Route path='studentdashboard' element={<StudentDashboard />} />
           <Route path='admindashboard' element={<AdminDashboard />} />
           <Route path='hoddashboard' element={<HodDashboard />} />
-          <Route path='fullcalender' element={<FullCalender />} />
-          <Route path='exams' element={<Exams />} />
           <Route path='drives' element={<Drives />} />
           <Route path='studentdrive' element={<StudentDrive/>}/>
           <Route path='adddrive' element={<AddDrive/>}/>

@@ -4,9 +4,19 @@ import { db } from '../../Firebase';
 import { getDocs, collection } from 'firebase/firestore';
 import Navbar from '../Navbar';
 import Header from './Header';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+// import Search from 'antd/lib/transfer/search';
 
 function PlacedStudents() {
     const [data ,setdata] = useState([]);
+    const [ text, setText] = useState(" ");
+
+
+    const handleChange = (e)=>{
+        e.preventDefault()
+      setText(e.target.value)
+    }
+
 
     const getData = async() => {
         const collectionRef = collection(db,'PlacedStudents');
@@ -25,32 +35,53 @@ function PlacedStudents() {
        <>
        <Header/>
        <Navbar/>
-      
+       <div className='placed-search' >
+       <SearchOutlinedIcon></SearchOutlinedIcon>
+       <span> 
+        <input className='search-input' 
+        type="text" 
+        value={text}       
+        placeholder="Search"
+       onChange={handleChange}
+       ></input></span>
+      </div>
+    
 
-        <div className="placedStudent">
-             
+        <div className="placedStudent">             
             <table className="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Sr. No.</th>
                         <th scope="col">Student Name</th>
                         <th scope="col">Department</th>
+                         <th scope="col">Session</th>
                         <th scope="col">Company Name</th>
+                        <th scope="col">Designation</th>
                         <th scope="col">Package</th>
                         <th scope="col">LinkedIn Profile</th>
                     </tr>
                 </thead>
                 <tbody>
                    {
-                    data.map((e,i) => {
+                    data.filter(
+                    (e)=> e.Name.toLowerCase().includes(text.toLowerCase())
+                    ||
+                    e.Department.toLowerCase().includes(text.toLowerCase())
+                    ||
+                    e.Company.toLowerCase().includes(text.toLowerCase())
+                    ||
+                    e.Package.toString().includes(text.toLowerCase())
+                   ).map((e,i) => {
                         return(
                             <tr key={e.id}>
                             <td scope="row">{i+1}</td>
                             <td>{e.Name}</td>
                             <td>{e.Department}</td>
+                            <td>{e.Session}</td>
                             <td>{e.Company}</td>
+                            <td>{e.Designation}</td>
                             <td>{e.Package}</td>
-                            <td><a href={`https://${e.LinkedinProfile}`}>View Profile</a></td>
+                            <td><a href={`https://${e.LinkedInProfile}`}>View Profile</a></td>
                         </tr>
                         )
                     })

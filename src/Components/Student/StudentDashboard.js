@@ -1,12 +1,12 @@
 import React from 'react'
 import './StudentDashboard.css'
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import ContentPasteIcon from '@mui/icons-material/ContentPaste';
-// import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import EqualizerOutlinedIcon from '@mui/icons-material/EqualizerOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { logOut } from '../../Firebase';
 
@@ -25,9 +25,9 @@ function StudentDashboard() {
   }
   return (
     <div>
-      {/* <div className='bar'>
+      <div className='bar'>
       <Link to='/'> <ArrowBackIcon /></Link>
-      </div> */}
+      </div>
       <div className='student'>
         <div className='sidebar'>
           <h4 style={{color:'darkcyan'}}>DashBoard</h4>
@@ -35,10 +35,7 @@ function StudentDashboard() {
            <NavLink className='link' to=''> < PermIdentityIcon /> &nbsp; &nbsp;&nbsp;Student Details </NavLink>
           </div>
           <div>
-          <NavLink className='link' to='/fullCalender'><CalendarMonthIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Full Calendar</NavLink> 
-          </div>
-          <div>
-           <NavLink  className='link' to='/exams'> <ContentPasteIcon/> &nbsp; &nbsp;&nbsp;Exams </NavLink>
+          <NavLink className='link' to='/'><EditOutlinedIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Edit Profile</NavLink> 
           </div>
           <div>
            <NavLink className='link' to='/studentdrive'><HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives </NavLink> 
@@ -49,6 +46,9 @@ function StudentDashboard() {
           <div>
             <NavLink className='link' to='/test'><EqualizerOutlinedIcon/> &nbsp; &nbsp;&nbsp;Progress </NavLink> 
           </div>
+          <div>
+           <NavLink  className='link' to='/' onClick={handleLogout}> <ExitToAppOutlinedIcon/> &nbsp; &nbsp;&nbsp;Logout </NavLink>
+          </div>
         </div>
 
         <div className=' detail-card'>
@@ -58,8 +58,8 @@ function StudentDashboard() {
               <img className='photo' src="https://i.pinimg.com/236x/c5/3a/a6/c53aa684465bc61455fd0d21537752fb.jpg" alt='student' />
               </div>
               <div className='detail'>
-                <h3 style={{ fontWeight: '600' }}>AJAY  SHRIVASTAV</h3>
-                <p>student</p>
+                <h3 style={{ fontWeight: '600' }}>AJAY  SHRIVASTAV <span style={{fontSize:"15px",fontWeight:'400' , marginLeft:'10px'}}>(Student)</span></h3>
+              <br></br>
                 <div className='main-content'>
                   <p className='student-heading'>Department</p>
                   <p className='student-sub-heading'>Information Technology</p>
@@ -82,11 +82,7 @@ function StudentDashboard() {
                 </div>
               </div>
             </div>
-            < div className='profile'>
-              <button className='btn-primary  profile-btn'>Edit Profile</button>
-              <button className='btn-primary  profile-btn'>Complete your Profile</button>
-              <button className='btn-primary  profile-btn' onClick={handleLogout}>Logout</button>
-            </div>
+          
           </div>
         </div>
 
