@@ -3,6 +3,7 @@ import "../HOD/HODRegistration.css";
 import { useNavigate } from "react-router-dom";
 import { db, signup, useAuth } from "../../Firebase";
 import { collection, addDoc } from "firebase/firestore";
+import { createUserWithEmailAndPassword ,getAuth} from "firebase/auth";
 
 function AdminRegistration() {
   const [email, setEmail] = useState();
@@ -13,28 +14,42 @@ function AdminRegistration() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
+  const auth = getAuth();
 
-
-  const adminData = async () => {
-    await addDoc(collection(db, "AdminData"), {
-      Name: name,
-      email: email,
-      user: "Admin",
-      password: password,
-
-    });
-  };
+  // const adminData = async () => {
+  //   await addDoc(collection(db, "AdminData"), {
+  //     Name: name,
+  //     email: email,
+  //     user: "Admin",
+  //     password: password,
+  //     userId:resposne.user.uid,
+  //   });
+  // };
 
   const handleRegistration = async () => {
-    try {
-      await signup(emailRef.current.value, passwordRef.current.value);
+    // try {
+    //   await signup(emailRef.current.value, passwordRef.current.value);
+    //   alert("Registered Succesfully!!");
+    //   navigate("/adminlogin");
+
+    // } catch (error) {
+    //   alert(error.meassage);
+    // }
+    // adminData();
+
+    createUserWithEmailAndPassword(auth , emailRef.current.value,passwordRef.current.value).then((response) => {
+      addDoc(collection(db, "AdminData"), {
+        Name: name,
+        email: email,
+        user: "Admin",
+        password: password,
+        userId:response.user.uid,
+      });
       alert("Registered Succesfully!!");
       navigate("/adminlogin");
-
-    } catch (error) {
-      alert(error.meassage);
-    }
-    adminData();
+    }).catch((err) => {
+      alert(err.message)
+    })
   };
 
   return (

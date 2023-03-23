@@ -25,6 +25,11 @@ const auth = getAuth(app);
 
 export function signup(email,password){
     return createUserWithEmailAndPassword(auth,email,password)
+    //.then((response) => {
+    //   console.log(response);
+    //  }).catch((err) => {
+    //   console.log(err.message);
+    //  })
   }
   
   export function useAuth() {
@@ -33,7 +38,7 @@ export function signup(email,password){
      useEffect(() => {
        const unsub = onAuthStateChanged(auth , user => setcurrentUser(user) );
        return unsub;
-     })
+     },[currentUser])
   
      return currentUser ;
   }

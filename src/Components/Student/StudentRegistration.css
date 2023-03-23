@@ -7,13 +7,13 @@
     background-color: aliceblue;
 }
 #sr2{
-    padding: 15px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 32%;
     align-self: center;
-    margin-top: 4%;
+    margin-top: 1%;
     border-radius: 4px;
     background-color: white;
     box-shadow: 0 5px 10px gray;
@@ -22,7 +22,7 @@
     position:relative;
     display: flex;
     align-items: baseline;
-    padding: 0 10px;
+    padding: 0 7px;
     margin-right: 12px;
 }
 
