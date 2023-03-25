@@ -80,6 +80,10 @@ function Feedback() {
 
   const feedbackHandler = () => {
     addFeedback();
+    setContent("");
+    setName("");
+    setDepartment("");
+    setSession("")
     closeModal();
   };
 

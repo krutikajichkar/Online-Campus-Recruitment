@@ -7,13 +7,13 @@
     background-color: aliceblue;
 }
 #sr2{
-    padding: 10px;
+    padding: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 32%;
     align-self: center;
-    margin-top: 1%;
+    margin-top: 20px;
     border-radius: 4px;
     background-color: white;
     box-shadow: 0 5px 10px gray;
@@ -22,13 +22,12 @@
     position:relative;
     display: flex;
     align-items: baseline;
-    padding: 0 7px;
+    padding: 0 6px;
     margin-right: 12px;
 }
 
 .form_input input{
     position: relative;
-  
     width: 100%;
     font: inherit;
     padding: 1rem 0;
