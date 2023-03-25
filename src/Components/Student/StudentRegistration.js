@@ -47,7 +47,7 @@ function StudentRegistration() {
       passwordRef.current.value
     )
       .then((response) => {
-        console.log(response.user);
+       // console.log(response.user);
         addDoc(collection(db, "StudentData"), {
           Name: name,
           session: session,
@@ -55,6 +55,10 @@ function StudentRegistration() {
           password: password,
           userId: response.user.uid,
           user: "Student",
+          roll_no : rollNo,
+          phone : phoneNumber,
+          address:address,
+          deaprtment:department
         });
 
         alert("Registered Successfully");

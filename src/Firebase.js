@@ -36,7 +36,7 @@ export function signup(email,password){
      const [currentUser, setcurrentUser] = useState();
   
      useEffect(() => {
-       const unsub = onAuthStateChanged(auth , user => setcurrentUser(user) );
+       const unsub = onAuthStateChanged(auth , user => setcurrentUser(user.uid) );
        return unsub;
      },[currentUser])
   

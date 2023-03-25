@@ -47,68 +47,36 @@ function PlacedStudents() {
             <Header />
             <Navbar />
 
-            <div className='placed-search' >
-                <SearchOutlinedIcon></SearchOutlinedIcon>
-                <span>
-                    <input className='search-input'
-                        type="text"
-                        value={text}
-                        placeholder="Search"
-                        onChange={(e) => setText(e.target.value)}
-                    ></input></span>
-            </div>
-
-            <div className="placedStudent">
-
-                <table className="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Sr. No.</th>
-                            <th scope="col">Student Name</th>
-                            <th scope="col">Department</th>
-                            <th scope="col">Company Name</th>
-                            <th scope="col">Package</th>
-                            <th scope="col">LinkedIn Profile</th>
+        <div className="placedStudent">
+             
+            <table className="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Sr. No.</th>
+                        <th scope="col">Student Name</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">Company Name</th>
+                        <th scope="col">Designation</th>
+                        <th scope="col">Package</th>
+                        <th scope="col">LinkedIn Profile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   {
+                    data.map((e,i) => {
+                        return(
+                            <tr key={e.id}>
+                            <td >{i+1}</td>
+                            <td>{e.Name}</td>
+                            <td>{e.Department}</td>
+                            <td>{e.Company}</td>
+                            <td>{e.Designation}</td>
+                            <td>{e.Package}</td>
+                            {e.LinkedInProfile ? <td><a href={`https://${e.LinkedInProfile}`} target="_blank" rel="noreferrer" >View Profile</a></td> : <td>-</td>}
                         </tr>
-                    </thead>
-                    <tbody>
-                        <thead>
-                            {
-                                data.map((e, i) => {
-                                    return (
-                                        <tr key={e.id}>
-                                            <td >{i + 1}</td>
-                                            <td>{e.Name}</td>
-                                            <td>{e.Department}</td>
-                                            <td>{e.Company}</td>
-                                            <td>{e.Package}</td>
-                                            {e.LinkedInProfile ? <td><a href={`https://${e.LinkedInProfile}`} target="_blank" rel="noreferrer" >View Profile</a></td> : <td>-</td>}
-                                        </tr>
-                                    )
-                                }
-                                )
-                            }
-                        </thead>
-                        <tbody>
-                            {
-                                handleChange()
-                                    .map((e, i) => {
-                                        return (
-                                            <tr key={e.id}>
-                                                <td scope="row">{i + 1}</td>
-                                                <td>{e.Name}</td>
-                                                <td>{e.Department}</td>
-                                                <td>{e.Session}</td>
-                                                <td>{e.Company}</td>
-                                                <td>{e.Designation}</td>
-                                                <td>{e.Package}</td>
-                                                <td><a href={`https://${e.LinkedInProfile}`}>View Profile</a></td>
-                                            </tr>
-                                        )
-                                    })
-                            }
-
-                        </tbody>
+                        )
+                    })
+                   }                    
                     </tbody>
                 </table>
             </div>
