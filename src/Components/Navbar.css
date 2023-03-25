@@ -53,6 +53,7 @@ nav ul li{
 #menuicon{
     color:white;
     cursor: pointer;
+    margin-left: 10px;
 }
  
 .offcanvas-body ul li {
@@ -61,7 +62,7 @@ nav ul li{
     
 }
 
-@media(max-width:1023px) {
+@media(max-width:800px) {
     nav{
         display: none;
     }
@@ -69,47 +70,72 @@ nav ul li{
         height: 110px;
         display: block;
        display: flex;
+       width: 100%;
       
-       width: 100vw;
-        padding-left: 30px;
-        padding-right: 30px;
         
     }
     #screen-visible-div img {
        
-        width: 380px;
+        width: 90%;
         height: 70px ;
         text-align: center;  
         margin-top: 20px;
         vertical-align: middle;
-        margin-left: 150px;
-        margin-right: auto; 
+        margin-left: 1%;
+      
        
         
     }
 }
-@media(max-width:767px){
+
+@media(max-width:700px) {
+    nav{
+        display: none;
+    }
     #screen-visible-div{
-        display: flex;
-       
-        align-items: center;
-        padding: 10px;
+        height: 110px;
+        display: block;
+       display: flex;
+       width: 100%;
+      
         
     }
     #screen-visible-div img {
-        max-width: 800px;
-        width: 300px;
-        height: 80px ;
-        margin-left: 15px;
-        padding-right: 15px;
-        padding: 10px;
-        margin-top: 8px;
+       
+        width: 90%;
+        height: 70px ;
+        text-align: center;  
+        margin-top: 20px;
+        vertical-align: middle;
+        margin-left: 1%;
+      
+       
+        
     }
-    #menuicon{
-        color:white;
-        margin-top:15px;
-        margin-left: 10px;
-    }
-   
 }
- 
+
+@media(max-width:1000px) {
+    nav{
+        display: none;
+    }
+    #screen-visible-div{
+        height: 110px;
+        display: block;
+       display: flex;
+       width: 100%;
+      
+        
+    }
+    #screen-visible-div img {
+       
+        width: 90%;
+        height: 70px ;
+        text-align: center;  
+        margin-top: 20px;
+        vertical-align: middle;
+        margin-left: 45%;
+      
+       
+        
+    }
+}

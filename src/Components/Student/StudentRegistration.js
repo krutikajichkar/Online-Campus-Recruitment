@@ -1,6 +1,8 @@
-import React, { useState } from "react";
 import "./StudentRegistration.css";
-import {  useAuth } from "../../Firebase";
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
+
+import { useAuth } from "../../Firebase";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 //import input from "@mui/material/input";
@@ -16,9 +18,9 @@ function StudentRegistration() {
   const [name, setName] = useState("");
   const [department, setdepartment] = useState("");
   const [session, setsession] = useState("");
-  const [rollNo, setRollNo] = useState()
-  const [address, setAddress] = useState()
-  const [phoneNumber, setPhoneNumber] = useState()
+  const [rollNo, setRollNo] = useState();
+  const [address, setAddress] = useState();
+  const [phoneNumber, setPhoneNumber] = useState();
   const currentUser = useAuth();
   const auth = getAuth();
   const emailRef = useRef();
@@ -47,7 +49,7 @@ function StudentRegistration() {
       passwordRef.current.value
     )
       .then((response) => {
-       // console.log(response.user);
+        // console.log(response.user);
         addDoc(collection(db, "StudentData"), {
           Name: name,
           session: session,
@@ -55,10 +57,10 @@ function StudentRegistration() {
           password: password,
           userId: response.user.uid,
           user: "Student",
-          roll_no : rollNo,
-          phone : phoneNumber,
-          address:address,
-          deaprtment:department
+          roll_no: rollNo,
+          phone: phoneNumber,
+          address: address,
+          deaprtment: department,
         });
 
         alert("Registered Successfully");
@@ -68,64 +70,71 @@ function StudentRegistration() {
         alert(err.message);
       });
   };
-
   return (
-    <div id="sr1">
-      <div id="sr2" className="srfont">
-        <h2 className="srcenter srpd">Student Registration</h2>
-        <p className="srcenter">
-          Create your account. It's free and only takes a minute.
-        </p>
-        <div className="form_input">
+    <div className="main-wrapper">
+      <div className="registration_form_wrapper container">
+        <center>
+          <h2>Student Registration</h2>
+        </center>
+        <center>
+          <h4>Create your account here . It's Free</h4>
+        </center>
+        <hr />
+        <div className="mb-3" style={{ paddingTop: "10px" }}>
           <input
             type="text"
+            className="form-control"
+            id="exampleFormControlInput1"
             defaultValue={name}
             onChange={(e) => {
               setName(e.target.value);
             }}
             placeholder="Name"
-          ></input>
-          <span className="bar"></span>
+          />
         </div>
-        <div className="form_input">
+
+        <div className="mb-3">
           <input
-            type="email"
+            className="form-control"
+            id="exampleFormControlInput1"
             ref={emailRef}
             onChange={(e) => {
               setEmail(e.target.value);
             }}
             placeholder="Email"
-            required
-          ></input>
-          <span className="bar"></span>
+          />
         </div>
-        <div className="form_input">
+
+        <div className="mb-3">
           <input
+            className="form-control"
+            id="exampleFormControlInput1"
             type="password"
             ref={passwordRef}
             onChange={(e) => {
               setPassword(e.target.value);
             }}
             placeholder="Password"
-            required
-          ></input>
-          
-          <span className="bar"></span>
+          />
         </div>
-        <div className="form_input">
+
+        <div className="mb-3">
           <input
+            className="form-control"
+            id="exampleFormControlInput1"
             type="text"
             defaultValue={session}
             onChange={(e) => {
               setsession(e.target.value);
             }}
             placeholder="Session"
-            required
-          ></input>
-          <span className="bar"></span>
+          />
         </div>
-        <div className="form_input">
+
+        <div className="mb-3">
           <input
+            className="form-control"
+            id="exampleFormControlInput1"
             type="text"
             defaultValue={department}
             onChange={(e) => {
@@ -133,54 +142,62 @@ function StudentRegistration() {
             }}
             placeholder="Department"
             required
-          ></input>
-          <span className="bar"></span>
+          />
         </div>
-        <div className="form_input">
+
+        <div className="mb-3">
           <input
+            className="form-control"
+            id="exampleFormControlInput1"
             type="text"
             defaultValue={rollNo}
             onChange={(e) => {
               setRollNo(e.target.value);
             }}
             placeholder="Roll No"
-            required
-          ></input>
-          <span className="bar"></span>
+          />
         </div>
-        <div className="form_input">
+
+        <div className="mb-3">
           <input
+            className="form-control"
+            id="exampleFormControlInput1"
             type="text"
             defaultValue={address}
             onChange={(e) => {
               setAddress(e.target.value);
             }}
             placeholder="Address"
-            required
-          ></input>
-          <span className="bar"></span>
+          />
         </div>
-        <div className="form_input">
+
+        <div className="mb-3">
           <input
+            className="form-control"
+            id="exampleFormControlInput1"
             type="text"
             defaultValue={phoneNumber}
             onChange={(e) => {
               setPhoneNumber(e.target.value);
             }}
             placeholder="Phone Number"
-            required
-          ></input>
-          <span className="bar"></span>
+          />
         </div>
 
-        <div id="sridcenter" className="srfont">
-          <button onClick={() => navigate("/")} className="srbt">
-            Back
-          </button>
-          <button onClick={handleSignup} type="submit" className="srbt">
-            Register Now
-          </button>
-        </div>
+        <center>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <button
+              style={{ marginTop: "10px" }}
+              onClick={handleSignup}
+              className="btn btn-primary"
+            >
+              Register
+            </button>
+            <Link to="/" style={{ paddingTop: "10px" }}>
+              Back
+            </Link>
+          </div>
+        </center>
       </div>
     </div>
   );
