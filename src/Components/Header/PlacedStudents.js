@@ -12,7 +12,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 function PlacedStudents() {
     const [data, setdata] = useState([]);
     const [text, setText] = useState(" ");
-   
+
 
 
     const handleChange = () => {
@@ -46,7 +46,7 @@ function PlacedStudents() {
         <>
             <Header />
             <Navbar />
-            
+
             <div className='placed-search' >
                 <SearchOutlinedIcon></SearchOutlinedIcon>
                 <span>
@@ -58,40 +58,57 @@ function PlacedStudents() {
                     ></input></span>
             </div>
 
-
             <div className="placedStudent">
+
                 <table className="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">Sr. No.</th>
                             <th scope="col">Student Name</th>
                             <th scope="col">Department</th>
-                            <th scope="col">Session</th>
                             <th scope="col">Company Name</th>
-                            <th scope="col">Designation</th>
                             <th scope="col">Package</th>
                             <th scope="col">LinkedIn Profile</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            handleChange()
-                                .map((e, i) => {
+                        <thead>
+                            {
+                                data.map((e, i) => {
                                     return (
                                         <tr key={e.id}>
-                                            <td scope="row">{i + 1}</td>
+                                            <td >{i + 1}</td>
                                             <td>{e.Name}</td>
                                             <td>{e.Department}</td>
-                                            <td>{e.Session}</td>
                                             <td>{e.Company}</td>
-                                            <td>{e.Designation}</td>
                                             <td>{e.Package}</td>
-                                            <td><a href={`https://${e.LinkedInProfile}`}>View Profile</a></td>
+                                            {e.LinkedInProfile ? <td><a href={`https://${e.LinkedInProfile}`} target="_blank" rel="noreferrer" >View Profile</a></td> : <td>-</td>}
                                         </tr>
                                     )
-                                })
-                        }
-                        
+                                }
+                                )
+                            }
+                        </thead>
+                        <tbody>
+                            {
+                                handleChange()
+                                    .map((e, i) => {
+                                        return (
+                                            <tr key={e.id}>
+                                                <td scope="row">{i + 1}</td>
+                                                <td>{e.Name}</td>
+                                                <td>{e.Department}</td>
+                                                <td>{e.Session}</td>
+                                                <td>{e.Company}</td>
+                                                <td>{e.Designation}</td>
+                                                <td>{e.Package}</td>
+                                                <td><a href={`https://${e.LinkedInProfile}`}>View Profile</a></td>
+                                            </tr>
+                                        )
+                                    })
+                            }
+
+                        </tbody>
                     </tbody>
                 </table>
             </div>

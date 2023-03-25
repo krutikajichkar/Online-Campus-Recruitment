@@ -15,7 +15,7 @@ function Navbar() {
   return (
     <div>
       <nav>
-        <ul type="none">
+        <ul type="none" className="navlist">
           <NavLink className='link' to="/">
             <li>Home</li>
           </NavLink>
@@ -83,7 +83,7 @@ function Navbar() {
                   </button>
                 </li>
               </Link>
-              <Link to='hodregister' className="link">
+              <Link to='/hodregister' className="link">
                 <li>
                   <button
                     className="dropdown-item"
@@ -94,7 +94,7 @@ function Navbar() {
                   </button>
                 </li>
               </Link>
-              <Link to='adminregister' className="link">
+              <Link to='/adminregister' className="link">
                 <li>
                   <button
                     className="dropdown-item"
@@ -135,7 +135,7 @@ function Navbar() {
                   </button>
                 </li>
               </Link>
-              <Link to="hodlogin" className="link">
+              <Link to="/hodlogin" className="link">
                 <li>
                   <button className="dropdown-item" type="button" >
                     HOD Login
@@ -143,7 +143,7 @@ function Navbar() {
                 </li>
               </Link>
 
-             <Link to='studentlogin' className="link">
+             <Link to='/studentlogin' className="link">
              <li>
                 <button className="dropdown-item" type="button" >
                   Student Login
