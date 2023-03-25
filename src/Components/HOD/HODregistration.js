@@ -10,6 +10,8 @@ function HODRegistration(props) {
   const [password, setPassword] = useState();
   const [name, setName] = useState("");
   const [department, setdepartment] = useState("");
+  const [phone, setphone] = useState()
+  const [address, setaddress] = useState()
   const auth = getAuth();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -47,7 +49,10 @@ function HODRegistration(props) {
           email: email,
           user: "HOD",
           password: password,
-          userId:response.user.id,
+          department:department,
+          phone:phone,
+          address:address,
+          userId:response.user.uid,
         });
         alert("Registered Succesfully");
         navigate("/hodlogin");
@@ -107,6 +112,30 @@ function HODRegistration(props) {
               setdepartment(e.target.value);
             }}
             placeholder="Department"
+            required
+          ></input>
+          <span class="bar"></span>
+        </div>
+        <div class="form_input">
+          <input
+            type="text"
+            defaultValue={phone}
+            onChange={(e) => {
+              setphone(e.target.value);
+            }}
+            placeholder="Phone Number"
+            required
+          ></input>
+          <span class="bar"></span>
+        </div>
+        <div class="form_input">
+          <input
+            type="text"
+            defaultValue={address}
+            onChange={(e) => {
+              setaddress(e.target.value);
+            }}
+            placeholder="Address"
             required
           ></input>
           <span class="bar"></span>
