@@ -7,6 +7,7 @@ import Modal from 'react-modal';
 import CloseIcon from "@mui/icons-material/Close";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
+// import Carousal from './Carousal';
 const customStyles = {
     content: {
         top: '50%',
@@ -67,6 +68,7 @@ function Feedback() {
                             <p>Information Technology, 2021-2022 Batch</p></center>
                     </div>
                 </div>
+        
             </div></center>
             <center> <h3 className='headline2'> Want to write something about College ?</h3>
                 <p className='underline'></p></center>
