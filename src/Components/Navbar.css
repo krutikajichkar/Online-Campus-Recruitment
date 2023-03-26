@@ -62,59 +62,57 @@ nav ul li{
     
 }
 
-@media(max-width:800px) {
-    nav{
-        display: none;
-    }
-    #screen-visible-div{
-        height: 110px;
-        display: block;
-       display: flex;
-       width: 100%;
-      
-        
-    }
-    #screen-visible-div img {
-       
-        width: 90%;
-        height: 70px ;
-        text-align: center;  
-        margin-top: 20px;
-        vertical-align: middle;
-        margin-left: 1%;
-      
-       
-        
-    }
-}
-
-@media(max-width:700px) {
-    nav{
-        display: none;
-    }
-    #screen-visible-div{
-        height: 110px;
-        display: block;
-       display: flex;
-       width: 100%;
-      
-        
-    }
-    #screen-visible-div img {
-       
-        width: 90%;
-        height: 70px ;
-        text-align: center;  
-        margin-top: 20px;
-        vertical-align: middle;
-        margin-left: 1%;
-      
-       
-        
-    }
-}
-
 @media(max-width:1000px) {
+    nav{
+        display: none;
+    }
+    #screen-visible-div{
+        height: 110px;
+        display: flex;
+       justify-content: center;
+       width: 100%;
+      
+        
+    }
+    #screen-visible-div img {
+       
+        width: 90%;
+        height: 70px ;
+        text-align: center;  
+        margin-top: 20px;
+        vertical-align: middle;
+        /* margin-left: 1%; */
+      
+       
+        
+    }
+}
+
+/* @media(max-width:700px) {
+    nav{
+        display: none;
+    }
+    #screen-visible-div{
+        height: 110px;
+        display: block;
+       display: flex;
+       width: 100%;
+      
+        
+    }
+    #screen-visible-div img {
+       
+        width: 90%;
+        height: 70px ;
+        text-align: center;  
+        margin-top: 20px;
+        vertical-align: middle;
+        margin-left: 1%;
+
+    }
+} */
+
+/* @media(min-width:700px) {
     nav{
         display: none;
     }
@@ -134,8 +132,6 @@ nav ul li{
         margin-top: 20px;
         vertical-align: middle;
         margin-left: 45%;
-      
-       
-        
+
     }
-}
+} */

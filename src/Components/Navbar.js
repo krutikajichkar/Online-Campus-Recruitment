@@ -10,8 +10,7 @@ import { NavLink , Link} from "react-router-dom";
 
 
 function Navbar() {
-  
-  
+
   return (
     <div>
       <nav>
@@ -271,12 +270,12 @@ function Navbar() {
             </ul>
           </div>
         </div>
-        <span>
+        <div>
           <center>
             {" "}
             <img src={fullSizeLogo} alt="tgpcetlogo" />
           </center>
-        </span>
+        </div>
       </div>
 
 
