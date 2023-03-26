@@ -1,8 +1,11 @@
 
 .container{
-    margin: 4% auto;
+    /* margin: 4% auto;
     justify-content: center;
-    display: flex;
+    display: flex; */
+    background-size: cover;
+    background-position: center;
+    height: 200px;
 }
 .headline{
     margin-top: 230px;

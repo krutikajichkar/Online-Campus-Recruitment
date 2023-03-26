@@ -10,6 +10,9 @@ function AdminRegistration() {
   const [password, setPassword] = useState();
   const [name, setName] = useState('');
   const [department, setdepartment] = useState('');
+  const [phone, setphone] = useState()
+  const [address, setaddress] = useState()
+  
   const currentUser = useAuth();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -43,6 +46,9 @@ function AdminRegistration() {
         email: email,
         user: "Admin",
         password: password,
+        address:address,
+        phone:phone,
+        department:department,
         userId:response.user.uid,
       });
       alert("Registered Succesfully!!");
@@ -86,6 +92,20 @@ function AdminRegistration() {
             onChange={(e) => {
               setdepartment(e.target.value);
             }} placeholder="Department" required></input>
+          <span class="bar"></span>
+        </div>
+        <div class="form_input">
+          <input type="text" defaultValue={phone}
+            onChange={(e) => {
+              setphone(e.target.value);
+            }} placeholder="Phone" required></input>
+          <span class="bar"></span>
+        </div>
+        <div class="form_input">
+          <input type="text" defaultValue={address}
+            onChange={(e) => {
+              setaddress(e.target.value);
+            }} placeholder="Address" required></input>
           <span class="bar"></span>
         </div>
 

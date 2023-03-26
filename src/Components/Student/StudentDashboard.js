@@ -103,7 +103,9 @@ function StudentDashboard() {
            <NavLink  className='link' to='/' onClick={handleLogout}> < ExitToAppOutlinedIcon/> &nbsp; &nbsp;&nbsp;Logout </NavLink>
           </div>
         </div>
-
+ <div className="mobile">
+  
+ </div>
         <div className=" detail-card">
           <div className="student-box">
             <div className="photo-detail">
