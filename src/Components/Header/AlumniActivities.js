@@ -171,7 +171,7 @@ function AlumniActivities() {
         <h2 className="alumni-header">Alumni Meet 2017</h2>
         <p className="underline"></p>
 
-        <div className=" wrapper-19 ">
+        <div className=" wrapper-19 container ">
           <div className="alumni-card">
            <center> <img
               id="Alumni_2017_img_1"
@@ -237,6 +237,7 @@ function AlumniActivities() {
             </p>
           </div>
         </div>
+        <Footer/>
       </div>
     </>
   );

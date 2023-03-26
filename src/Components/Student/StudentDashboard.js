@@ -48,8 +48,7 @@ function StudentDashboard() {
     });
   }, []);
 
-  console.log(getuid);
-
+ 
   const handleLogout = async () => {
     try {
       await logOut();
