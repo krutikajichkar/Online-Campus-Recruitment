@@ -84,7 +84,7 @@ function Admindashboard() {
         </div>
 
 <div className='mobile'>
- <MenuIcon />
+ <MenuIcon  className='menuicon'/>
 </div>
         <div className=' detail-card'>
           <div className='student-box' >
