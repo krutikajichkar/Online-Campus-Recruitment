@@ -61,7 +61,11 @@ function Admindashboard() {
         <Link to='/'> <ArrowBackIcon /></Link>
       </div> */}
       <div className='student'>
+      <div className='mobile'>
+            <MenuIcon className='menuicon' />
+          </div>
         <div className='sidebar'>
+        
           <h4 style={{ color: 'darkcyan' }}>DashBoard</h4>
           <div>
             <NavLink className='link' to=''> < PermIdentityIcon /> &nbsp; &nbsp;&nbsp;Admin Details </NavLink>
@@ -81,11 +85,10 @@ function Admindashboard() {
           <div>
             <NavLink className='link' to='/' onClick={handleLogout}> <ExitToAppOutlinedIcon /> &nbsp; &nbsp;&nbsp;Logout</NavLink>
           </div>
+         
         </div>
 
-<div className='mobile'>
- <MenuIcon  className='menuicon'/>
-</div>
+
         <div className=' detail-card'>
           <div className='student-box' >
             {
