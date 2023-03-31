@@ -1,89 +1,28 @@
-#sr1{
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: aliceblue;
-}
-#sr2{
-    padding: 15px;
+
+
+.registration_form_wrapper{
+    width: 35%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 32%;
-    align-self: center;
-    margin-top: 4%;
-    border-radius: 4px;
-    background-color: white;
-    box-shadow: 0 5px 10px gray;
-}
-.form_input{
-    position:relative;
-    display: flex;
-    align-items: baseline;
-    padding: 0 10px;
-    margin-right: 12px;
+     background-color: aliceblue; 
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    scroll-behavior: none;
+    box-shadow: 0px 0px 4px 5px grey;
 }
 
-.form_input input{
-    position: relative;
-  
-    width: 100%;
-    font: inherit;
-    padding: 1rem 0;
-    margin-top: .5rem;
-    border: none;
-    outline: none;
-}
-.form_input .bar{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,.1);
-    width: 100%;
-    height: 1px;
-}
-.form_input .bar::before{
-    content: "";
-    position: absolute;
-    background-color: #265df2;
-    width: 100%;
-    height: 2px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .5s;
+@media(max-width:500px){
+    .registration_form_wrapper{
+        width: 70%;
+        margin-top: 20%;
+    }
 }
 
-.form_input>input:focus+.bar::before{
-    transform: scaleX(1);
+@media(min-width:700px){
+.registration_form_wrapper{
+    width: 50%;
+    margin-top: 20%;
 }
-
-.srbt{
-    margin: auto;
-    margin-top: 1rem;
-    padding: .5rem 2.5rem;
-    background-color: #265df2;
-    color: #fff;
-    font: inherit;
-    border: .5rem solid #fff;
-    outline: none;
-    cursor: pointer;
-    border-radius: 3rem;
-}
-
-.srcenter{
-    text-align: center;
- }
-
- .srpd{
-    padding: 5px 0;
-}
-.srfont{
-    font-size: 18px;
-}
-#sridcenter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

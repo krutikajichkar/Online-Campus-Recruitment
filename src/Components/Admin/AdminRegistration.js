@@ -3,38 +3,59 @@ import "../HOD/HODRegistration.css";
 import { useNavigate } from "react-router-dom";
 import { db, signup, useAuth } from "../../Firebase";
 import { collection, addDoc } from "firebase/firestore";
+import { createUserWithEmailAndPassword ,getAuth} from "firebase/auth";
 
 function AdminRegistration() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [name, setName] = useState('');
   const [department, setdepartment] = useState('');
+  const [phone, setphone] = useState()
+  const [address, setaddress] = useState()
+  
   const currentUser = useAuth();
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
+  const auth = getAuth();
 
-
-  const adminData = async () => {
-    await addDoc(collection(db, "AdminData"), {
-      Name: name,
-      email: email,
-      user: "Admin",
-      password: password,
-
-    });
-  };
+  // const adminData = async () => {
+  //   await addDoc(collection(db, "AdminData"), {
+  //     Name: name,
+  //     email: email,
+  //     user: "Admin",
+  //     password: password,
+  //     userId:resposne.user.uid,
+  //   });
+  // };
 
   const handleRegistration = async () => {
-    try {
-      await signup(emailRef.current.value, passwordRef.current.value);
+    // try {
+    //   await signup(emailRef.current.value, passwordRef.current.value);
+    //   alert("Registered Succesfully!!");
+    //   navigate("/adminlogin");
+
+    // } catch (error) {
+    //   alert(error.meassage);
+    // }
+    // adminData();
+
+    createUserWithEmailAndPassword(auth , emailRef.current.value,passwordRef.current.value).then((response) => {
+      addDoc(collection(db, "AdminData"), {
+        Name: name,
+        email: email,
+        user: "Admin",
+        password: password,
+        address:address,
+        phone:phone,
+        department:department,
+        userId:response.user.uid,
+      });
       alert("Registered Succesfully!!");
       navigate("/adminlogin");
-
-    } catch (error) {
-      alert(error.meassage);
-    }
-    adminData();
+    }).catch((err) => {
+      alert(err.message)
+    })
   };
 
   return (
@@ -71,6 +92,20 @@ function AdminRegistration() {
             onChange={(e) => {
               setdepartment(e.target.value);
             }} placeholder="Department" required></input>
+          <span class="bar"></span>
+        </div>
+        <div class="form_input">
+          <input type="text" defaultValue={phone}
+            onChange={(e) => {
+              setphone(e.target.value);
+            }} placeholder="Phone" required></input>
+          <span class="bar"></span>
+        </div>
+        <div class="form_input">
+          <input type="text" defaultValue={address}
+            onChange={(e) => {
+              setaddress(e.target.value);
+            }} placeholder="Address" required></input>
           <span class="bar"></span>
         </div>
 

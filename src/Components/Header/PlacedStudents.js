@@ -36,6 +36,7 @@ function PlacedStudents() {
                         <th scope="col">Student Name</th>
                         <th scope="col">Department</th>
                         <th scope="col">Company Name</th>
+                        <th scope="col">Designation</th>
                         <th scope="col">Package</th>
                         <th scope="col">LinkedIn Profile</th>
                     </tr>
@@ -45,12 +46,13 @@ function PlacedStudents() {
                     data.map((e,i) => {
                         return(
                             <tr key={e.id}>
-                            <td scope="row">{i+1}</td>
+                            <td >{i+1}</td>
                             <td>{e.Name}</td>
                             <td>{e.Department}</td>
                             <td>{e.Company}</td>
+                            <td>{e.Designation}</td>
                             <td>{e.Package}</td>
-                            <td><a href={e.LinkedinProfile}>View Profile</a></td>
+                            {e.LinkedInProfile ? <td><a href={`https://${e.LinkedInProfile}`} target="_blank" rel="noreferrer" >View Profile</a></td> : <td>-</td>}
                         </tr>
                         )
                     })

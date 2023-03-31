@@ -25,15 +25,20 @@ const auth = getAuth(app);
 
 export function signup(email,password){
     return createUserWithEmailAndPassword(auth,email,password)
+    //.then((response) => {
+    //   console.log(response);
+    //  }).catch((err) => {
+    //   console.log(err.message);
+    //  })
   }
   
   export function useAuth() {
      const [currentUser, setcurrentUser] = useState();
   
      useEffect(() => {
-       const unsub = onAuthStateChanged(auth , user => setcurrentUser(user) );
+       const unsub = onAuthStateChanged(auth , user => setcurrentUser(user.uid) );
        return unsub;
-     })
+     },[currentUser])
   
      return currentUser ;
   }

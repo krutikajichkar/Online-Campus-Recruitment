@@ -10,8 +10,7 @@ import { NavLink , Link} from "react-router-dom";
 
 
 function Navbar() {
-  
-  
+
   return (
     <div>
       <nav>
@@ -83,7 +82,7 @@ function Navbar() {
                   </button>
                 </li>
               </Link>
-              <Link to='hodregister' className="link">
+              <Link to='/hodregister' className="link">
                 <li>
                   <button
                     className="dropdown-item"
@@ -94,7 +93,7 @@ function Navbar() {
                   </button>
                 </li>
               </Link>
-              <Link to='adminregister' className="link">
+              <Link to='/adminregister' className="link">
                 <li>
                   <button
                     className="dropdown-item"
@@ -135,7 +134,7 @@ function Navbar() {
                   </button>
                 </li>
               </Link>
-              <Link to="hodlogin" className="link">
+              <Link to="/hodlogin" className="link">
                 <li>
                   <button className="dropdown-item" type="button" >
                     HOD Login
@@ -143,7 +142,7 @@ function Navbar() {
                 </li>
               </Link>
 
-             <Link to='studentlogin' className="link">
+             <Link to='/studentlogin' className="link">
              <li>
                 <button className="dropdown-item" type="button" >
                   Student Login
@@ -271,12 +270,12 @@ function Navbar() {
             </ul>
           </div>
         </div>
-        <span>
+        <div>
           <center>
             {" "}
             <img src={fullSizeLogo} alt="tgpcetlogo" />
           </center>
-        </span>
+        </div>
       </div>
 
 
