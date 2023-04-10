@@ -39,10 +39,10 @@ function Navbar() {
             {" "}
             <li>StudentDashboard</li>
           </NavLink> */}
-          {/* <NavLink className="link" to='/admindashboard'>
+          <NavLink className="link" to='/admindashboard'>
             {" "}
             <li>AdminDashboard</li>
-          </NavLink> */}
+          </NavLink>
            {/* <NavLink className="link" to='/hoddashboard'>
             {" "}
             <li>HodDashboard</li>
@@ -163,7 +163,7 @@ function Navbar() {
           aria-controls="offcanvasWithBackdrop"
         >
           {" "}
-          <MenuIcon id="menuicon" />
+          <MenuIcon className="menu" />
         </button>
         <div
           className="offcanvas offcanvas-start"

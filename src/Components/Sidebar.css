@@ -1,0 +1,53 @@
+.sidebar-div{
+    height: 100vh;
+    width: 100vw;  
+}
+.sidebar{
+    height: 100vh;
+    width: 16%;
+    padding-top: 50px;
+    background-color:#2F4050;
+    position: fixed;
+}
+.sidebarList {
+    height:auto;
+    padding: 0px;
+    width: 100%;
+}
+.sidebarList .sidebar-row{
+ width: 100%;
+ height:50px;
+ list-style-type: none;
+ margin: 0%;
+ display: flex;
+ flex-direction: row;
+ color: white;
+ justify-content: center;
+ align-items: center;
+}
+.sidebar-row:hover{
+    cursor: pointer;
+    background-color: #293846;
+}
+ #active{
+    /* background-color: #293846;  */
+    background-color: #0000ff;
+}
+#icon{
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+#title{
+    flex: 70%;
+}
+
+@media (max-width:900px) {
+    .navCollapse{
+        width: 80px;
+        }
+    .sidebarList #title {
+        display: none;
+    }
+
+}

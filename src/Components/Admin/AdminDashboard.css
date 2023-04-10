@@ -1,26 +1,4 @@
-.bar {
-    margin: 10px;
-  
-  }
-  
-  .student {
-      display: flex;
-      background-color:#f4E8c1;
-      height: 100vh;
-  }
-  
-  .sidebar {
-      padding: 50px 79px;
-      font-size: 18px;
-      font-weight:700;
-      width: 24%;
-      cursor: pointer;
-  }
-  
-  .sidebar div {
-      padding-top: 15px;
-  }
-  
+
   .detail-card {
       width:80%;
   }
@@ -65,10 +43,12 @@
   }
   .student-heading{
       font-weight: 600;
-      width: 100px;
+      font-size: 20px;
+      width: 118px;
   }
   .student-sub-heading{
       padding-left: 44px;
+      font-size: 20px;
   }
   .mcq-test{
       color: blue;
@@ -103,7 +83,7 @@
       border-radius: 5px;
       font-size: 15px;
   }
-  .drive-card{
+  /* .drive-card{
       width: 68%;
       height:90%;
       display: flex;
@@ -111,7 +91,7 @@
       margin-top: 50px ;
       border-radius: 10px;
       padding: 20px;
-  }
+  } */
   .radio{
       display: flex;
   }
@@ -174,3 +154,10 @@
       padding:20px 0px ;
       background-color: rgb(244, 243, 243);
   }
+
+.menuicon{
+    color:blue;
+    cursor: pointer;
+    margin-left: 10px;
+}
+   

@@ -1,21 +1,24 @@
 
 .container{
-    margin: 4% auto;
-    justify-content: center;
-    display: flex;
+    /* margin:auto 2%; */
+    /* justify-content: center;
+    display: flex; 
+    background-size: cover; */
+    background-position: center;
+    height: 200px;
 }
 .headline{
     margin-top: 230px;
     font-weight: bold;
     text-align: center;
-    /* font-family: cursive; */
+    font-family: cursive;
     color: rgb(8, 8, 116);
 }
 .headline2{
     margin-top: 20px;
     font-weight: bold;
     text-align: center;
-    /* font-family: cursive; */
+    font-family: cursive;
     color:rgb(8, 8, 116);
 }
 .underline{

@@ -1,5 +1,21 @@
 .placedStudent{
     background-color: aliceblue;
-    margin-top: 200px;
+    margin-top: 20px;
     padding: 40px;
+}
+.placed-search{
+    width: 90%;
+    margin:230px auto 0 auto;
+    padding: 5px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+   box-shadow: 2px 2px 3px 1px rgb(190, 189, 189);
+}
+.search-input{
+    border:none;
+    width: 80%;
+    padding-left: 10px;
+}
+input:focus{
+outline: none;
 }
