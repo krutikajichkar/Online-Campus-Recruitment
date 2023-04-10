@@ -115,10 +115,45 @@ function StudentDashboard() {
             </div>
           </div>
         </div>
-      </div>
     </div>
+       {/* <div className="sidebar">
+          <h4 style={{ color: "darkcyan" }}>DashBoard</h4>
+          <div>
+            <NavLink className="link" to="">
+              {" "}
+              <PermIdentityIcon /> &nbsp; &nbsp;&nbsp;Student Details{" "}
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="link" to="/fullCalender">
+              <CalendarMonthIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Full Calendar
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="link" to="/exams">
+              {" "}
+              <ContentPasteIcon /> &nbsp; &nbsp;&nbsp;Exams{" "}
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="link" to="/studentdrive">
+              <HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives{" "}
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="link" to="/test">
+              <ContentPasteSearchIcon /> &nbsp; &nbsp;&nbsp;Test{" "}
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="link" to="/test">
+              <EqualizerOutlinedIcon /> &nbsp; &nbsp;&nbsp;Progress{" "}
+            </NavLink>
+          </div>
+        </div> */}
 
-
+      </div>
+    
   );
 }
 

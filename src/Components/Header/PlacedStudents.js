@@ -4,14 +4,11 @@ import { db } from '../../Firebase';
 import { getDocs, collection } from 'firebase/firestore';
 import Navbar from '../Navbar';
 import Header from './Header';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-
-
-
+import Loader from '../Loader';
 
 function PlacedStudents() {
-    const [data, setdata] = useState([]);
-    const [text, setText] = useState(" ");
+    const [data ,setdata] = useState([]);
+    const [loading, setloading] = useState(true)
 
 
 
@@ -35,21 +32,25 @@ function PlacedStudents() {
         setdata(user.docs.map((doc) => ({
             ...doc.data(), id: doc.id
         })))
+        setloading(false)
 
     }
 
     useEffect(() => {
         getData();
-    }, []);
+       
+    },[]);
 
     return (
-        <>
-            <Header />
-            <Navbar />
+       <>
+       <Header/>
+       <Navbar/>
+      
+     {loading && <Loader/>}
 
-        <div className="placedStudent">
-             
-            <table className="table table-striped">
+      { !loading &&  <div className="placedStudent">
+           
+        <table className="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Sr. No.</th>
@@ -76,10 +77,10 @@ function PlacedStudents() {
                         </tr>
                         )
                     })
-                   }                    
-                    </tbody>
-                </table>
-            </div>
+                   }
+                </tbody>
+            </table>
+        </div>}
         </>
     )
 }
