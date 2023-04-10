@@ -1,4 +1,4 @@
-.bar {
+/* .bar {
   margin: 10px;
 
 }
@@ -49,7 +49,7 @@
     border-radius: 25px;
     font-size: 15px;
 } */
-.photo-detail {
+/* .photo-detail {
     display: flex;
     padding: 44px;
 }
@@ -173,4 +173,16 @@
     text-align: center;
     padding:20px 0px ;
     background-color: rgb(244, 243, 243);
+} */ 
+
+.sidebar-wrapper{
+    display: flex;
+    height: 100vh;
+}
+.sidebar{
+    height: 100vh;
+}
+.menu{
+    display: flex;
+    
 }

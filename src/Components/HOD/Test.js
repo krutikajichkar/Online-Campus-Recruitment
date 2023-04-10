@@ -1,13 +1,30 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import './Test.css'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
+import { db } from '../../Firebase';
+import { collection , getDocs } from 'firebase/firestore';
 import { NavLink } from 'react-router-dom';
 
 function Test() {
+  const [mcq, setmcq] = useState([])
+  const collectionRef = collection(db,'AmptitudeTest');
+  const getData = async() => {
+    await getDocs(collectionRef).then((response) => {
+      
+       setmcq(response.docs.map((item) => ({
+        
+          ...item.data(),id:item.id
+        
+       })))
+    })
+  }
+  useEffect(() => {
+    getData();
+  },[])
   return (
     <div>
       <div className=' test-box'>
@@ -32,23 +49,29 @@ function Test() {
 
         <div className='detail-card'>
           <h1 className='mcq-test'>Multiple Choice Questions (MCQ) </h1>
-          <div className='que-box'>
-            1) Which methodology is used to performed Maintenance testing?
-            <br></br><br></br>
+          {
+            mcq.map((ele , i) => {
+              return(
+                <div className='que-box' key={ele.id}>
+            <p>{`Que(${i+1})  ${ele.que}`}</p>
+            
             < div className='radio'>
-              <input type='radio'/>&nbsp;&nbsp;Breadth test and depth test
+              <input id='1' name='group' type='radio'/>&nbsp;&nbsp;{ele.A}
               </div><br></br> 
               < div className='radio'>
-              <input type='radio'/>&nbsp;&nbsp;Confirmation testing
+              <input id='2' name='group' type='radio'/>&nbsp;&nbsp;{ele.B}
               </div> <br></br>
               < div className='radio'>
-              <input type='radio'/>&nbsp;&nbsp;Retesting
+              <input id='3' name='group' type='radio'/>&nbsp;&nbsp;{ele.C}
               </div> <br></br>
               < div className='radio'>
-              <input type='radio'/>&nbsp;&nbsp;Sanity testing
+              <input id='4' name='group' type='radio'/>&nbsp;&nbsp;{ele.D}
               </div> 
               <hr className='que-row'></hr>
           </div>
+              )
+            })
+          }
          <div style={{textAlign:'right', width:'80%'}}><button className=' next-btn '>Next</button></div> 
         </div>
 

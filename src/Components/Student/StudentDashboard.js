@@ -11,6 +11,16 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { db, logOut, useAuth } from "../../Firebase";
 import { getDocs, collection } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {
+  Sidebar,
+  Menu,
+  MenuItem,
+  useProSidebar,
+} from "react-pro-sidebar"
+import { MenuOutlined } from "@mui/icons-material";
+
+
+
 
 function StudentDashboard() {
   const collectionRef = collection(db, "StudentData");
@@ -18,7 +28,7 @@ function StudentDashboard() {
   const [student, setStudent] = useState([]);
   const [getuid, setgetuid] = useState();
   const auth = getAuth();
-  
+  const {collapseSidebar} = useProSidebar()
 
   const getData = async (uid) => {
     await getDocs(collectionRef)
@@ -58,48 +68,25 @@ function StudentDashboard() {
     }
   };
   return (
-    <div>
-      {/* <div className='bar'>
-      <Link to='/'> <ArrowBackIcon /></Link>
-      </div> */}
-      <div className="student">
-        <div className="sidebar">
-          <h4 style={{ color: "darkcyan" }}>DashBoard</h4>
-          <div>
-            <NavLink className="link" to="">
-              {" "}
-              <PermIdentityIcon /> &nbsp; &nbsp;&nbsp;Student Details{" "}
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/fullCalender">
-              <CalendarMonthIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Full Calendar
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/exams">
-              {" "}
-              <ContentPasteIcon /> &nbsp; &nbsp;&nbsp;Exams{" "}
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/studentdrive">
-              <HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives{" "}
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/test">
-              <ContentPasteSearchIcon /> &nbsp; &nbsp;&nbsp;Test{" "}
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/test">
-              <EqualizerOutlinedIcon /> &nbsp; &nbsp;&nbsp;Progress{" "}
-            </NavLink>
-          </div>
-        </div>
-
-        <div className=" detail-card">
+    <div >
+      
+      <div className="sidebar-wrapper">
+      <Sidebar className="sidebar">
+      <Menu>
+          <MenuItem
+            icon={<MenuOutlined />}
+            onClick={() => {
+              collapseSidebar();
+            }}
+            style={{ textAlign: "center" }}
+          >
+            {" "}
+            <h4>Admin</h4>
+          </MenuItem>
+        </Menu>
+      </Sidebar>
+      
+      <div className=" detail-card" style={{display:"block"}}>
           <div className="student-box">
             <div className="photo-detail">
               {student.map((item) => {
@@ -154,8 +141,45 @@ function StudentDashboard() {
             </div>
           </div>
         </div>
-      </div>
     </div>
+       {/* <div className="sidebar">
+          <h4 style={{ color: "darkcyan" }}>DashBoard</h4>
+          <div>
+            <NavLink className="link" to="">
+              {" "}
+              <PermIdentityIcon /> &nbsp; &nbsp;&nbsp;Student Details{" "}
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="link" to="/fullCalender">
+              <CalendarMonthIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Full Calendar
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="link" to="/exams">
+              {" "}
+              <ContentPasteIcon /> &nbsp; &nbsp;&nbsp;Exams{" "}
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="link" to="/studentdrive">
+              <HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives{" "}
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="link" to="/test">
+              <ContentPasteSearchIcon /> &nbsp; &nbsp;&nbsp;Test{" "}
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="link" to="/test">
+              <EqualizerOutlinedIcon /> &nbsp; &nbsp;&nbsp;Progress{" "}
+            </NavLink>
+          </div>
+        </div> */}
+
+      </div>
+    
   );
 }
 
