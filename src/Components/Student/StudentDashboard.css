@@ -1,21 +1,3 @@
-.bar {
-  margin: 10px;
-
-}
-
-.student {
-    display: flex;
-    background-color:#f4E8c1;
-    height: 100vh;
-}
-
-.sidebar {
-    padding: 50px 79px;
-    font-size: 18px;
-    font-weight:700;
-    width: 24%;
-    cursor: pointer;
-}
 
 
 .detail-card {
