@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./StudentDashboard.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { db, logOut, useAuth } from "../../Firebase";
 import { getDocs, collection } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-
+import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
+import "../Sidebar.css";
+import { SidebarData } from "../SidebarData";
 
 function StudentDashboard() {
   const collectionRef = collection(db, "StudentData");
@@ -12,7 +14,6 @@ function StudentDashboard() {
   const [student, setStudent] = useState([]);
   const [getuid, setgetuid] = useState();
   const auth = getAuth();
-
 
   const getData = async (uid) => {
     await getDocs(collectionRef)
@@ -41,27 +42,48 @@ function StudentDashboard() {
     });
   }, []);
 
- 
   const handleLogout = async () => {
     try {
-     
-      if( window.confirm("Do you really want to Log Out?")===true){
+      if (window.confirm("Do you really want to Log Out?") === true) {
         await logOut();
         alert("Logged Out Successfully");
         navigate("/");
+      } else {
+        navigate("/studentdashboard");
       }
-      else{
-        navigate('/studentdashboard')
-      }
-     
     } catch (error) {
       alert(error.message);
     }
   };
   return (
-    <div >
-      
-      <div className=" detail-card" style={{display:"block"}}>
+    <div>
+      <div className="sidebar">
+        <ul className="sidebarList">
+          {SidebarData.map((val, key) => {
+            return (
+              <li
+                key={key}
+                id={window.location.pathname == val.link ? "active" : ""}
+                className="sidebar-row"
+                onClick={() => {
+                  window.location.pathname = val.link;
+                }}
+              >
+                <div id="icon">{val.icon}</div>
+                <div id="title">{val.title}</div>
+              </li>
+            );
+          })}
+          <li className="sidebar-row" to="/" onClick={handleLogout}>
+            <div id="icon">
+              {" "}
+              <ExitToAppOutlinedIcon />{" "}
+            </div>
+            <div id="title"> Logout</div>
+          </li>
+        </ul>
+
+        <div className=" detail-card">
           <div className="student-box">
             <div className="photo-detail">
               {student.map((item) => {
@@ -102,24 +124,10 @@ function StudentDashboard() {
                 );
               })}
             </div>
-            <div className="profile">
-              <button className="btn-primary  profile-btn">Edit Profile</button>
-              <button className="btn-primary  profile-btn">
-                Complete your Profile
-              </button>
-              <button
-                className="btn-primary  profile-btn"
-                onClick={handleLogout}
-              >
-                Logout
-              </button>
-            </div>
           </div>
         </div>
+      </div>
     </div>
-      
-     
-    
   );
 }
 

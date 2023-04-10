@@ -12,6 +12,7 @@ nav{
     top: 150px;
      background-color: white; 
      font-family: 'Merriweather', serif ;
+     z-index: 1;
 }
 nav ul{
     display: flex;

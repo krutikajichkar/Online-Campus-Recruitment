@@ -1,28 +1,7 @@
-/* .bar {
-  margin: 10px;
 
-}
-
-.student {
-    display: flex;
-    background-color:#f4E8c1;
-    height: 100vh;
-}
-
-.sidebar {
-    padding: 50px 79px;
-    font-size: 18px;
-    font-weight:700;
-    width: 24%;
-    cursor: pointer;
-}
-
-.sidebar div {
-    padding-top: 15px;
-}
 
 .detail-card {
-    width:80%;
+    width:78%;
 }
 
 .student-box {
@@ -49,7 +28,7 @@
     border-radius: 25px;
     font-size: 15px;
 } */
-/* .photo-detail {
+.photo-detail {
     display: flex;
     padding: 44px;
 }
@@ -65,10 +44,12 @@
 }
 .student-heading{
     font-weight: 600;
-    width: 100px;
+    font-size:25px ;
+    width: 118px;
 }
 .student-sub-heading{
     padding-left: 44px;
+    font-size: 20px;
 }
 .mcq-test{
     color: blue;
@@ -167,6 +148,7 @@
     font-weight: bold;
    margin: 15px;
 }
+
 .dtv-btn{
     display: flex;
     justify-content: space-around;
