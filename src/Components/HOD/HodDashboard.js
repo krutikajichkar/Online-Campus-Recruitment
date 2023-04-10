@@ -1,14 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import './HodDashboard.css';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
-import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { logOut ,db} from '../../Firebase';
 import { getDocs , collection } from 'firebase/firestore';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
+import Sidebar from "../Sidebar";
+import { AdminSidebar } from '../SidebarData';
 
 function HodDashboard() {
   const navigate = useNavigate();
@@ -56,27 +54,23 @@ function HodDashboard() {
 
   return (
     <div>
-      <div className='bar'>
-        <Link to='/'> <ArrowBackIcon /></Link>
-      </div>
+
       <div className='student'>
         <div className='sidebar'>
-          <h4 style={{ color: 'darkcyan' }}>DashBoard</h4>
-          <div>
-            <NavLink className='link' to=''> < PermIdentityIcon /> &nbsp; &nbsp;&nbsp;HOD Details </NavLink>
-          </div>
-          <div>
-            <NavLink className='link' to='/hod'> <EditOutlinedIcon /> &nbsp; &nbsp;&nbsp;Edit Profile</NavLink>
-          </div>
-          <div>
-            <NavLink className='link' to='/studentdrive'><HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives </NavLink>
-          </div>
-          {/* <div>
-            <NavLink className='link' to='/test'><ContentPasteSearchIcon /> &nbsp; &nbsp;&nbsp;Test </NavLink>
-          </div> */}
-          <div>
-            <NavLink className='link' to='/' onClick={handleLogout}><ExitToAppOutlinedIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Logout</NavLink>
-          </div>
+        <ul className="sidebarList">
+          {AdminSidebar.map((val, key) => {
+            return (
+              <li key={key} id={window.location.pathname == val.link ? "active" : ""} className='sidebar-row' onClick={() => { window.location.pathname = val.link }}>
+                <div id="icon">{val.icon}</div>
+                <div id="title">{val.title}</div>
+              </li>
+            )
+          })}
+          <li className='sidebar-row' to='/' onClick={handleLogout}>
+            <div id="icon"> <ExitToAppOutlinedIcon /> </div>
+            <div id="title">   Logout</div>
+          </li>
+        </ul>
         </div>
 
         <div className=' detail-card'>
