@@ -16,6 +16,7 @@ function Admindashboard() {
   const auth = getAuth();
   const [admin, setadmin] = useState([])
   const collectionRef = collection(db, "AdminData");
+
   const handleLogout = async () => {
 
     try {
@@ -34,7 +35,7 @@ function Admindashboard() {
         setadmin(
           response.docs
             .filter((item) => {
-              return item.data().userId === uid;
+              return item.data().userId === uid ;
             })
             .map((item) => {
               return { ...item.data(), id: item.id };
