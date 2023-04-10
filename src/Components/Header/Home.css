@@ -1,6 +1,4 @@
-body {
- font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+
 
 .heading{
     margin-top: 3%;
@@ -56,7 +54,6 @@ body {
 }
 
 .management-container{
-   
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

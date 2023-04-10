@@ -3,7 +3,7 @@ import './Footer.css'
 
 function Footer() {
     return (
-        <div>
+       
             <footer>
                 <div id='contact'>
                     <h4><b>Quick Contact </b></h4>
@@ -14,7 +14,7 @@ function Footer() {
                     <p><b>CONTACT</b> <br />+91 - 9922966176 </p>
                 </div>
             </footer>
-        </div>
+       
     )
 }
 
