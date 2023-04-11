@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import './AdminDashboard.css';
+import '../Student/StudentDashboard.css';
 import { NavLink, useNavigate } from "react-router-dom";
 import { logOut, db } from '../../Firebase';
 import { getDocs, collection } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
-import Sidebar from "../Sidebar";
+import  "../Sidebar.css";
 import { AdminSidebar } from '../SidebarData';
 
 
@@ -14,6 +14,7 @@ function Admindashboard() {
   const auth = getAuth();
   const [admin, setadmin] = useState([])
   const collectionRef = collection(db, "AdminData");
+  
 
   const handleLogout = async () => {
 
@@ -33,7 +34,7 @@ function Admindashboard() {
         setadmin(
           response.docs
             .filter((item) => {
-              return item.data().userId === uid;
+              return item.data().userId === uid ;
             })
             .map((item) => {
               return { ...item.data(), id: item.id };
@@ -54,8 +55,9 @@ function Admindashboard() {
     });
   }, []);
 
+
   return (
-    <div className='student'>
+    <div className='dashboard'>
       <div className="sidebar">
         <ul className="sidebarList">
           {AdminSidebar.map((val, key) => {

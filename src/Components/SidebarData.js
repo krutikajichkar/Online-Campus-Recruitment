@@ -7,6 +7,7 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import AccountTreeOutlinedIcon from "@mui/icons-material/AccountTreeOutlined";
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import PersonSearchOutlinedIcon from '@mui/icons-material/PersonSearchOutlined';
+import FolderSharedOutlinedIcon from '@mui/icons-material/FolderSharedOutlined';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
  
@@ -36,7 +37,7 @@ export const SidebarData = [
     {
         title: "Progress",
         icon: <EqualizerOutlinedIcon />,
-        link: "/bargraph"
+        link: "/"
     },
     {
         title: "Departments",
@@ -55,7 +56,7 @@ export const AdminSidebar = [
     {
         title: "Admin Detail",
         icon: <PermIdentityIcon />,
-        link: "/"
+        link: "/admindashboard"
     },
     {
         title: "Edit Profile",
@@ -64,8 +65,13 @@ export const AdminSidebar = [
     },
     {
         title: "Manage Drives",
-        icon: <HourglassEmptyIcon />,
+        icon: <FolderSharedOutlinedIcon />,
         link: "/adddrive"
+    },
+    {
+        title: "Drives",
+        icon: <HourglassEmptyIcon />,
+        link: "/studentdrive"
     },
     {
         title: "Manage Training",

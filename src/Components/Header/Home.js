@@ -143,7 +143,7 @@ function Home() {
 
       {/* Management */}
 
-     
+        
         <center><h3 className='heading'>MANAGEMENT</h3></center>
         <p className='underline'></p>
         <div className='management-container container'>

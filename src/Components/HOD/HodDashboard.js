@@ -1,8 +1,8 @@
-import React,{useState,useEffect} from 'react'
-import './HodDashboard.css';
+import React, { useState, useEffect } from 'react'
+import '../Student/StudentDashboard.css';
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { logOut ,db} from '../../Firebase';
-import { getDocs , collection } from 'firebase/firestore';
+import { logOut, db } from '../../Firebase';
+import { getDocs, collection } from 'firebase/firestore';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import Sidebar from "../Sidebar";
@@ -10,7 +10,7 @@ import { AdminSidebar } from '../SidebarData';
 
 function HodDashboard() {
   const navigate = useNavigate();
-  const collectionRef = collection(db,"HODdata")
+  const collectionRef = collection(db, "HODdata")
   const auth = getAuth()
   const [hod, sethod] = useState([])
   const handleLogout = async () => {
@@ -53,10 +53,8 @@ function HodDashboard() {
   }, []);
 
   return (
-    <div>
-
-      <div className='student'>
-        <div className='sidebar'>
+    <div className="dashboard">
+      <div className='sidebar'>
         <ul className="sidebarList">
           {AdminSidebar.map((val, key) => {
             return (
@@ -71,52 +69,52 @@ function HodDashboard() {
             <div id="title">   Logout</div>
           </li>
         </ul>
-        </div>
+      </div>
 
-        <div className=' detail-card'>
+      <div className=' detail-card'>
         <div className='student-box' >
-           {
+          {
             hod.map((ele) => {
-              return(
+              return (
                 <div className='photo-detail'>
-                <div className='photo'>
-                  <img className='photo' src="https://i.stack.imgur.com/l60Hf.png" alt='admin' />
+                  <div className='photo'>
+                    <img className='photo' src="https://i.stack.imgur.com/l60Hf.png" alt='admin' />
+                  </div>
+                  <div className='detail'>
+                    <h3 style={{ fontWeight: '600' }}>{ele.Name}</h3>
+                    <p>HOD</p>
+                    <div className='main-content'>
+                      <p className='student-heading'>Department</p>
+                      <p className='student-sub-heading'>{ele.department}</p>
+                    </div>
+
+                    <div className='main-content'>
+                      <p className='student-heading'>Address</p>
+                      <p className='student-sub-heading'>{ele.address}</p>
+                    </div>
+                    <div className='main-content'>
+                      <p className='student-heading'>Phone</p>
+                      <p className='student-sub-heading'>{ele.phone}</p>
+                    </div>
+                    <div className='main-content'>
+                      <p className='student-heading'>Email Id</p>
+                      <p className='student-sub-heading'>{ele.email}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className='detail'>
-                  <h3 style={{ fontWeight: '600' }}>{ele.Name}</h3>
-                  <p>HOD</p>
-                  <div className='main-content'>
-                    <p className='student-heading'>Department</p>
-                    <p className='student-sub-heading'>{ele.department}</p>
-                  </div>
-                 
-                  <div className='main-content'>
-                    <p className='student-heading'>Address</p>
-                    <p className='student-sub-heading'>{ele.address}</p>
-                  </div>
-                  <div className='main-content'>
-                    <p className='student-heading'>Phone</p>
-                    <p className='student-sub-heading'>{ele.phone}</p>
-                  </div>
-                  <div className='main-content'>
-                    <p className='student-heading'>Email Id</p>
-                    <p className='student-sub-heading'>{ele.email}</p>
-                  </div>
-                </div>
-              </div>
               )
             })
-           }
-            <div className='profile'>
-              <button className='btn-primary  profile-btn'>Edit Profile</button>
-              <button className='btn-primary profile-btn'>Complete your Profile</button>
-              <button className='btn-primary  profile-btn' onClick={handleLogout}>Logout</button>
-            </div>
+          }
+          <div className='profile'>
+            <button className='btn-primary  profile-btn'>Edit Profile</button>
+            <button className='btn-primary profile-btn'>Complete your Profile</button>
+            <button className='btn-primary  profile-btn' onClick={handleLogout}>Logout</button>
           </div>
         </div>
-
       </div>
+
     </div>
+
   )
 }
 
