@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./StudentDashboard.css";
+ import "../Admin/AdminDashboard.css";
 import { useNavigate } from "react-router-dom";
 import { db, logOut, useAuth } from "../../Firebase";
 import { getDocs, collection } from "firebase/firestore";
@@ -57,7 +57,7 @@ function StudentDashboard() {
     }
   };
   return (
-    <div>
+    <div style={{ display: "flex", height: "100vh", backgroundColor: "cyan" }}>
       <div className="sidebar">
         <ul className="sidebarList">
           {SidebarData.map((val, key) => {

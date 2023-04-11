@@ -7,13 +7,14 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import "../Sidebar.css";
 import { AdminSidebar } from "../SidebarData";
+import Loader from "../Loader";
 
 function Admindashboard() {
   const navigate = useNavigate();
   const auth = getAuth();
   const [admin, setadmin] = useState([]);
   const collectionRef = collection(db, "AdminData");
-
+const [loading, setloading] = useState(true)
   const handleLogout = async () => {
     try {
       await logOut();
@@ -36,6 +37,7 @@ function Admindashboard() {
               return { ...item.data(), id: item.id };
             })
         );
+        setloading(false)
       })
       .catch((err) => {
         console.log(err.message);
@@ -49,6 +51,7 @@ function Admindashboard() {
         getData(user.uid);
       }
     });
+    
   }, []);
 
   return (
@@ -80,7 +83,9 @@ function Admindashboard() {
         </ul>
       </div>
 
-      <div className=" detail-card">
+      {loading && <Loader/>}
+
+     { !loading && <div className=" detail-card">
         {admin.map((ele) => {
           return (
             <div className="student-box">
@@ -117,7 +122,7 @@ function Admindashboard() {
             </div>
           );
         })}
-      </div>
+      </div>}
     </div>
   );
 }
