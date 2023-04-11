@@ -5,6 +5,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import { SidebarData } from "../SidebarData";
+import ContentModal from "../ContentModal";
 
 function Test() {
   const [mcq, setmcq] = useState([]);
@@ -136,6 +137,7 @@ function Test() {
             </div>
           );
         })}
+        <ContentModal score={score}>
         <div style={{ textAlign: "center", width: "80%" }}>
           <button
             className="test-submit "
@@ -153,6 +155,7 @@ function Test() {
             Submit
           </button>
         </div>
+        </ContentModal>
       </div>
     </div>
   );

@@ -3,9 +3,8 @@
       /* margin-left: 20%; */
       margin-top: 5%;
       margin-left: 20%;
-      
-     
-      
+      margin-top: 3%;
+      width: 80%;
   }
   
   .student-box {
@@ -16,17 +15,12 @@
       background-color: white;
       border-radius:10px;
      padding: 30px 30px;
-    
-      
+     border-radius:10px;
+     width: 90%;
+     height: 80%;
+     margin-top: 45px;    
   }
   
-  .profile-btn {
-      width: 170px;
-      padding:7px 2px;
-      border-radius: 25px;
-      font-size: 15px;
-  }
-
   .photo {
       width: 150px;
       height: 150px;
