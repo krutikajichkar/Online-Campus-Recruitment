@@ -88,6 +88,7 @@ function StudentRegistration() {
             defaultValue={name}
             onChange={(e) => {
               setName(e.target.value);
+            
             }}
             placeholder="Name"
           />

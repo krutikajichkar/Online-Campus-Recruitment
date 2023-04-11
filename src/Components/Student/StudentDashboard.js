@@ -27,6 +27,7 @@ function StudentDashboard() {
               return { ...item.data(), id: item.id };
             })
         );
+        
       })
       .catch((err) => {
         console.log(err.message);
@@ -63,7 +64,7 @@ function StudentDashboard() {
             return (
               <li
                 key={key}
-                id={window.location.pathname == val.link ? "active" : ""}
+                id={window.location.pathname === val.link ? "active" : ""}
                 className="sidebar-row"
                 onClick={() => {
                   window.location.pathname = val.link;
