@@ -12,18 +12,18 @@ function PlacedStudents() {
 
 
 
-    const handleChange = () => {
-        return data.filter(
-            (e) =>
-                e.Name.toLowerCase().includes(text.toLowerCase())
-                ||
-                e.Department.toLowerCase().includes(text.toLowerCase())
-                ||
-                e.Company.toLowerCase().includes(text.toLowerCase())
-                ||
-                e.Package.toString().includes(text.toLowerCase())
-        )
-    }
+    // const handleChange = () => {
+    //     return data.filter(
+    //         (e) =>
+    //             e.Name.toLowerCase().includes(text.toLowerCase())
+    //             ||
+    //             e.Department.toLowerCase().includes(text.toLowerCase())
+    //             ||
+    //             e.Company.toLowerCase().includes(text.toLowerCase())
+    //             ||
+    //             e.Package.toString().includes(text.toLowerCase())
+    //     )
+    // }
 
 
     const getData = async () => {

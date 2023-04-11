@@ -13,6 +13,7 @@ function Admindashboard() {
   const auth = getAuth();
   const [admin, setadmin] = useState([]);
   const collectionRef = collection(db, "AdminData");
+  
 
   const handleLogout = async () => {
     try {
@@ -50,6 +51,7 @@ function Admindashboard() {
       }
     });
   }, []);
+
 
   return (
     <div style={{ display: "flex", height: "100vh", backgroundColor: "cyan" }}>

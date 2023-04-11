@@ -1,0 +1,44 @@
+
+  .mcq-test{
+      color: blue;
+      margin: 30px 0px;
+  }
+  .que-box{
+      width: 80%;
+     background-color: rgb(198, 236, 219);
+     padding: 10px 20px;
+     border-radius: 10px;
+     margin-top: 10px;
+     font-weight: bold;
+  }
+  .test-box{
+      display: flex;
+      background-color:  rgb(233, 247, 195);
+      height: 100vh;
+  }
+  .next-btn{
+    margin-top: 10px;
+    width: 100px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: rgb(120, 241, 160);
+  }
+  .show-btn{
+    width: 170px;
+      padding: 2px;
+      border-radius: 5px;
+      font-size: 15px;
+  }
+  .radio{
+      display: flex;
+  }
+  .que-row{
+      color:rgb(14, 22, 0);
+      padding: 2px;
+      border-radius: 20px;
+  }
+ 
+      
