@@ -3,7 +3,7 @@
       justify-content: center;
       margin-left: 20%;
       margin-top: 3%;
-      
+      width: 80%;
   }
   
   .student-box {
@@ -12,8 +12,10 @@
       border-radius:10px;
       justify-content: space-between;
      padding: 30px 30px;
-    
-      
+     border-radius:10px;
+     width: 90%;
+     height: 80%;
+     margin-top: 45px;    
   }
   
   .photo {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./StudentDashboard.css";
+import "../Admin/Drives.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -74,7 +74,7 @@ function StudentDrive() {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="detail-card">
         <div className="stdrive-bar">
           <h5 className="stdrive-head">Active upcoming placement drives</h5>
         </div>
