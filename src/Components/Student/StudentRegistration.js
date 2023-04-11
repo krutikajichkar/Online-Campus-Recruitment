@@ -60,7 +60,7 @@ function StudentRegistration() {
           roll_no: rollNo,
           phone: phoneNumber,
           address: address,
-          deaprtment: department,
+          department: department,
         });
 
         alert("Registered Successfully");
