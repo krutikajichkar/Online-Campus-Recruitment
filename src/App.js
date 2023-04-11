@@ -10,14 +10,11 @@ import AlumniActivities from './Components/Header/AlumniActivities';
 import PlacedStudents from './Components/Header/PlacedStudents';
 import StudentDashboard from './Components/Student/StudentDashboard';
 import Drives from './Components/Admin/Drives';
-import Test from './Components/HOD/Test';
+import Test from './Components/Student/Test';
 import Registration from './Components/Student/StudentRegistration';
 import Login from './Components/Login/Login'
-import HODRegistration from './Components/HOD/HODregistration';
-import HodLogin from './Components/HOD/HodLogin';
 import StudentLogin from './Components/Student/StudentLogin';
 import AdminDashboard from './Components/Admin/AdminDashboard';
-import HodDashboard from './Components/HOD/HodDashboard';
 import ForgetPassword from './Components/Password/ForgetPassword';
 import AdminRegistration from './Components/Admin/AdminRegistration';
 import StudentDrive from './Components/Student/StudentDrive';
@@ -39,15 +36,12 @@ function App() {
           <Route path='placedstudents' element={<PlacedStudents />} />
           <Route path='studentdashboard' element={<StudentDashboard />} />
           <Route path='admindashboard' element={<AdminDashboard />} />
-          <Route path='hoddashboard' element={<HodDashboard />} />
           <Route path='drives' element={<Drives />} />
           <Route path='studentdrive' element={<StudentDrive/>}/>
           <Route path='adddrive' element={<AddDrive/>}/>
            <Route path='test' element={<Test />} />
           <Route path='register' element={<Registration />} />
           <Route path='login' element={<Login />} />
-          <Route path='hodregister' element={<HODRegistration />} />
-          <Route path='hodlogin' element={<HodLogin />} />
           <Route path='adminlogin' element={<AdminLogin />} />
           <Route path='studentlogin' element={<StudentLogin />} />
           <Route path='adminregister' element={<AdminRegistration />} />

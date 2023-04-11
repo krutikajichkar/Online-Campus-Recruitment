@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './Test.css'
+import "./Test.css"
 import { db , logOut} from '../../Firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
@@ -39,7 +39,7 @@ function Test() {
   };
 
   return (
-    <div className='dashboard'>
+    <div>
       <div className='sidebar'>
         <ul className="sidebarList">
           {SidebarData.map((val, key) => {
@@ -92,7 +92,7 @@ function Test() {
             )
           })
         }
-        <div style={{ textAlign: 'right', width: '80%' }}><button className=' next-btn '>Next</button></div>
+        <div style={{ textAlign: 'center', width: '80%' }}><button className='test-submit '>Submit</button></div>
       </div>
 
     </div>

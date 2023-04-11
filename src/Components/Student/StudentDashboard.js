@@ -90,7 +90,7 @@ function StudentDashboard() {
           <div className="photo-detail">
             {student.map((item) => {
               return (
-                <div key={item.id}>
+                <div key={item.id} style={{display:'flex'}}>
                   <div>
                     <img
                       className="photo"

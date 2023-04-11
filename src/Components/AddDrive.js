@@ -1,16 +1,13 @@
 import React ,{useState}from "react";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import PersonSearchOutlinedIcon from "@mui/icons-material/PersonSearchOutlined";
-import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
-import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
-import AccountTreeOutlinedIcon from "@mui/icons-material/AccountTreeOutlined";
-import BadgeOutlinedIcon from "@mui/icons-material/BadgeOutlined";
 import TextField from "@mui/material/TextField";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {addDoc,collection} from "firebase/firestore"
-import {db} from "../../src/Firebase"
+import {db, logOut} from "../../src/Firebase"
+import Modal from "react-modal";
+import CloseIcon from "@mui/icons-material/Close";
+import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
+import './Sidebar.css';
+import { AdminSidebar } from "./SidebarData";
 
 
 function AddDrive() {
@@ -21,6 +18,7 @@ function AddDrive() {
   const [venue, setVenue] = useState("")
   const [link, setLink] = useState("")
   const [time, settime] = useState()
+  const navigate= useNavigate();
 
   const collectionRef = collection(db,"Drives")
   const dateref = new Date(date);
@@ -54,54 +52,43 @@ function AddDrive() {
   addData();
  }
 
+ const handleLogout = async () => {
+  try {
+    await logOut();
+    alert("Logged Out Successfully");
+    navigate("/");
+  } catch (error) {
+    alert(error.message);
+  }
+};
 
   return (
     <div>
-      <div className="student">
         <div className="sidebar">
-          <h4 style={{ color: "darkcyan" }}>DashBoard</h4>
-          <div>
-            <NavLink className="link" to="/adddrive">
+        <ul className="sidebarList">
+          {AdminSidebar.map((val, key) => {
+            return (
+              <li
+                key={key}
+                id={window.location.pathname == val.link ? "active" : ""}
+                className="sidebar-row"
+                onClick={() => {
+                  window.location.pathname = val.link;
+                }}
+              >
+                <div id="icon">{val.icon}</div>
+                <div id="title">{val.title}</div>
+              </li>
+            );
+          })}
+          <li className="sidebar-row" to="/" onClick={handleLogout}>
+            <div id="icon">
               {" "}
-              <HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Manage Drives{" "}
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/test">
-              <PersonSearchOutlinedIcon /> &nbsp; &nbsp;&nbsp;Search Students
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/exams">
-              {" "}
-              <BadgeOutlinedIcon /> &nbsp; &nbsp;&nbsp;Batches
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/drives">
-              <AccountTreeOutlinedIcon /> &nbsp; &nbsp;&nbsp;Departments{" "}
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/test">
-              <AssignmentOutlinedIcon /> &nbsp; &nbsp;&nbsp;Manage Exams
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/test">
-              <AccessTimeOutlinedIcon /> &nbsp; &nbsp;&nbsp;Manage Trainings
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/fullCalender">
-              <CalendarMonthIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Full Calender
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/test">
-              <SettingsOutlinedIcon /> &nbsp; &nbsp;&nbsp;Settings
-            </NavLink>
-          </div>
+              <ExitToAppOutlinedIcon />{" "}
+            </div>
+            <div id="title"> Logout</div>
+          </li>
+        </ul>
         </div>
 
         <div className="drive-card">
@@ -197,7 +184,7 @@ function AddDrive() {
           </div>
         </div>
       </div>
-    </div>
+ 
   );
 }
 

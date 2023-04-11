@@ -47,7 +47,7 @@ function StudentDrive() {
   };
 
   return (
-    <div className="dashboard">
+    <div >
       <div className="sidebar">
         <ul className="sidebarList">
           {SidebarData.map((val, key) => {
