@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../HOD/HODRegistration.css";
+import "./AdminRegistration.css";
 import { useNavigate } from "react-router-dom";
 import { db, signup, useAuth } from "../../Firebase";
 import { collection, addDoc } from "firebase/firestore";
