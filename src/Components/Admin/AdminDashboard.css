@@ -1,16 +1,19 @@
 
   .detail-card {
-      justify-content: center;
+      /* margin-left: 20%; */
+      margin-top: 5%;
       margin-left: 20%;
       margin-top: 3%;
       width: 80%;
   }
   
   .student-box {
+    width: 90%;
+    height: 80%;
     display: flex;
+    flex-direction: row;
       background-color: white;
       border-radius:10px;
-      justify-content: space-between;
      padding: 30px 30px;
      border-radius:10px;
      width: 90%;
@@ -19,8 +22,8 @@
   }
   
   .photo {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
   }
   .detail{
       padding-left: 60px;

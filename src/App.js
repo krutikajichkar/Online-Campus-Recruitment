@@ -1,6 +1,6 @@
-import './App.css'
-import About from './Components/Header/About';
-import React from 'react';
+import "./App.css";
+import About from "./Components/Header/About";
+import React from "react";
 // import Header from './Components/Header'
 // import Navbar from './Components/Navbar'
 import Home from './Components/Header/Home'
@@ -23,10 +23,8 @@ import AdminLogin from './Components/Admin/AdminLogin';
 
 function App() {
   return (
-    <div >
-
+    <div>
       <BrowserRouter>
-
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='about' element={<About />} />
@@ -48,7 +46,6 @@ function App() {
           <Route path='forgetpass' element={<ForgetPassword />} />
         </Routes>
       </BrowserRouter>
-
     </div>
   );
 }

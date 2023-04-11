@@ -7,6 +7,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import "../Sidebar.css";
 import { SidebarData } from "../SidebarData";
+import Loader from "../Loader";
 
 function StudentDashboard() {
   const collectionRef = collection(db, "StudentData");
@@ -14,6 +15,7 @@ function StudentDashboard() {
   const [student, setStudent] = useState([]);
   const [getuid, setgetuid] = useState();
   const auth = getAuth();
+  const [loading, setloading] = useState(true)
 
   const getData = async (uid) => {
     await getDocs(collectionRef)
@@ -27,6 +29,8 @@ function StudentDashboard() {
               return { ...item.data(), id: item.id };
             })
         );
+
+        setloading(false)
         
       })
       .catch((err) => {
@@ -58,7 +62,7 @@ function StudentDashboard() {
   };
   
   return (
-    <div>
+    <div style={{ display: "flex", height: "100vh", backgroundColor: "cyan" }}>
       <div className="sidebar">
         <ul className="sidebarList">
           {SidebarData.map((val, key) => {
@@ -85,7 +89,9 @@ function StudentDashboard() {
           </li>
         </ul>
       </div>
-      <div className=" detail-card">
+      {loading && <Loader/>}
+
+      {!loading && <div className=" detail-card">
         <div className="student-box">
           <div className="photo-detail">
             {student.map((item) => {
@@ -127,7 +133,7 @@ function StudentDashboard() {
             })}
           </div>
         </div>
-      </div>
+      </div>}
     </div>
 
   );

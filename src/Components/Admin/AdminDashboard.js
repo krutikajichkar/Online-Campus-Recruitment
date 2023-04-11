@@ -7,23 +7,29 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import "../Sidebar.css";
 import { AdminSidebar } from "../SidebarData";
+import Loader from "../Loader";
 
 function Admindashboard() {
   const navigate = useNavigate();
   const auth = getAuth();
   const [admin, setadmin] = useState([]);
   const collectionRef = collection(db, "AdminData");
+const [loading, setloading] = useState(true)
+  
 
-
-  const handleLogout = async () => {
-    try {
+const handleLogout = async () => {
+  try {
+    if (window.confirm("Do you really want to Log Out?") === true) {
       await logOut();
       alert("Logged Out Successfully");
       navigate("/");
-    } catch (error) {
-      alert(error.message);
+    } else {
+      navigate("/studentdashboard");
     }
-  };
+  } catch (error) {
+    alert(error.message);
+  }
+};
 
   const getData = async (uid) => {
     await getDocs(collectionRef)
@@ -37,6 +43,7 @@ function Admindashboard() {
               return { ...item.data(), id: item.id };
             })
         );
+        setloading(false)
       })
       .catch((err) => {
         console.log(err.message);
@@ -50,6 +57,7 @@ function Admindashboard() {
         getData(user.uid);
       }
     });
+    
   }, []);
 
 
@@ -81,8 +89,8 @@ function Admindashboard() {
           </li>
         </ul>
       </div>
-
-      <div className=" detail-card">
+{loading && <Loader/>}
+      {!loading && <div className=" detail-card container">
         <div className="student-box">
           <div className="photo-detail">
             {admin.map((ele) => {
@@ -121,7 +129,7 @@ function Admindashboard() {
             })}
           </div>
          </div>
-        </div>
+        </div>}
       </div>
       );
 }
