@@ -7,7 +7,7 @@ import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../Firebase";
 import "./Feedback.css";
 
-function Carousel() {
+function Carousel({setloading,loading}) {
     const [feedback, setFeedback] = useState([]);
     const collectionRef = collection(db, "feedback");
 
@@ -50,6 +50,7 @@ function Carousel() {
                 id: item.id,
               }))
             );
+            setloading(false)
           })
           .catch((err) => {
             console.log(err.message);
@@ -65,7 +66,7 @@ function Carousel() {
       
     return (
         <div>
-            <AliceCarousel mouseTracking infinite  disableDotsControls disableButtonsControls responsive={responsive}  items={items} autoPlay/>
+            {!loading && <AliceCarousel mouseTracking infinite  disableDotsControls disableButtonsControls responsive={responsive}  items={items} autoPlay/>}
         </div>
     )
 }
