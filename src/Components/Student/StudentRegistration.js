@@ -71,55 +71,184 @@ function StudentRegistration() {
       });
   };
   return (
-    <div className="main-wrapper">
-      <div className="registration_form_wrapper container">
-        <center>
-          <h2>Student Registration</h2>
-        </center>
-        <center>
-          <h4>Create your account here . It's Free</h4>
-        </center>
-        <hr />
-        <div className="mb-3" style={{ paddingTop: "10px" }}>
+    // <div className="main-wrapper">
+    //   <div className="registration_form_wrapper container">
+    //     <center>
+    //       <h2>Student Registration</h2>
+    //     </center>
+    //     <center>
+    //       <h4>Create your account here . It's Free</h4>
+    //     </center>
+    //     <hr />
+    //     <div className="mb-3" style={{ paddingTop: "10px" }}>
+    //       <input
+    //         type="text"
+    //         className="form-control"
+    //         id="exampleFormControlInput1"
+    //         defaultValue={name}
+    //         onChange={(e) => {
+    //           setName(e.target.value);
+
+    //         }}
+    //         placeholder="Name"
+    //       />
+    //     </div>
+
+    //     <div className="mb-3">
+    //       <input
+    //         className="form-control"
+    //         id="exampleFormControlInput1"
+    //         ref={emailRef}
+    //         onChange={(e) => {
+    //           setEmail(e.target.value);
+    //         }}
+    //         placeholder="Email"
+    //       />
+    //     </div>
+
+    //     <div className="mb-3">
+    //       <input
+    //         className="form-control"
+    //         id="exampleFormControlInput1"
+    //         type="password"
+    //         ref={passwordRef}
+    //         onChange={(e) => {
+    //           setPassword(e.target.value);
+    //         }}
+    //         placeholder="Password"
+    //       />
+    //     </div>
+
+    //     <div className="mb-3">
+    //       <input
+    //         className="form-control"
+    //         id="exampleFormControlInput1"
+    //         type="text"
+    //         defaultValue={session}
+    //         onChange={(e) => {
+    //           setsession(e.target.value);
+    //         }}
+    //         placeholder="Session"
+    //       />
+    //     </div>
+
+    //     <div className="mb-3">
+    //       <input
+    //         className="form-control"
+    //         id="exampleFormControlInput1"
+    //         type="text"
+    //         defaultValue={department}
+    //         onChange={(e) => {
+    //           setdepartment(e.target.value);
+    //         }}
+    //         placeholder="Department"
+    //         required
+    //       />
+    //     </div>
+
+    // <div className="mb-3">
+    //   <input
+    //     className="form-control"
+    //     id="exampleFormControlInput1"
+    //     type="text"
+    //     defaultValue={rollNo}
+    //     onChange={(e) => {
+    //       setRollNo(e.target.value);
+    //     }}
+    //     placeholder="Roll No"
+    //   />
+    // </div>
+
+    //     <div className="mb-3">
+    //       <input
+    //         className="form-control"
+    //         id="exampleFormControlInput1"
+    //         type="text"
+    //         defaultValue={address}
+    //         onChange={(e) => {
+    //           setAddress(e.target.value);
+    //         }}
+    //         placeholder="Address"
+    //       />
+    //     </div>
+
+    //     <div className="mb-3">
+    //       <input
+    //         className="form-control"
+    //         id="exampleFormControlInput1"
+    //         type="text"
+    //         defaultValue={phoneNumber}
+    //         onChange={(e) => {
+    //           setPhoneNumber(e.target.value);
+    //         }}
+    //         placeholder="Phone Number"
+    //       />
+    //     </div>
+
+    //     <center>
+    //       <div style={{ display: "flex", flexDirection: "column" }}>
+    //         <button
+    //           style={{ marginTop: "10px" }}
+    //           onClick={handleSignup}
+    //           className="btn btn-primary"
+    //         >
+    //           Register
+    //         </button>
+    //         <Link to="/" style={{ paddingTop: "10px" }}>
+    //           Back
+    //         </Link>
+    //       </div>
+    //     </center>
+    //   </div>
+    // </div>
+
+
+    <div id="sr1">
+      <div id="sr2" class="srfont">
+        <h2 class="srcenter srpd">Student Registration</h2>
+        <p class="srcenter">
+          Create your account. It's free and only takes a minute.
+        </p>
+        <div class="form_input">
           <input
-            type="text"
             className="form-control"
-            id="exampleFormControlInput1"
+            type="text"
             defaultValue={name}
             onChange={(e) => {
               setName(e.target.value);
-            
             }}
             placeholder="Name"
-          />
+          ></input>
+          <span class="bar"></span>
         </div>
-
-        <div className="mb-3">
+        <div class="form_input">
           <input
             className="form-control"
-            id="exampleFormControlInput1"
+            type="email"
             ref={emailRef}
             onChange={(e) => {
               setEmail(e.target.value);
             }}
             placeholder="Email"
-          />
+            required
+          ></input>
+          <span class="bar"></span>
         </div>
 
-        <div className="mb-3">
+        <div class="form_input">
           <input
             className="form-control"
-            id="exampleFormControlInput1"
             type="password"
             ref={passwordRef}
             onChange={(e) => {
               setPassword(e.target.value);
             }}
             placeholder="Password"
-          />
+            required
+          ></input>
+          <span class="bar"></span>
         </div>
-
-        <div className="mb-3">
+        <div className="form_input">
           <input
             className="form-control"
             id="exampleFormControlInput1"
@@ -130,12 +259,11 @@ function StudentRegistration() {
             }}
             placeholder="Session"
           />
+          <span class="bar"></span>
         </div>
-
-        <div className="mb-3">
+        <div class="form_input">
           <input
             className="form-control"
-            id="exampleFormControlInput1"
             type="text"
             defaultValue={department}
             onChange={(e) => {
@@ -143,10 +271,10 @@ function StudentRegistration() {
             }}
             placeholder="Department"
             required
-          />
+          ></input>
+          <span class="bar"></span>
         </div>
-
-        <div className="mb-3">
+        <div className="form_input">
           <input
             className="form-control"
             id="exampleFormControlInput1"
@@ -157,50 +285,47 @@ function StudentRegistration() {
             }}
             placeholder="Roll No"
           />
+          <span class="bar"></span>
         </div>
-
-        <div className="mb-3">
+        <div class="form_input">
           <input
             className="form-control"
-            id="exampleFormControlInput1"
-            type="text"
-            defaultValue={address}
-            onChange={(e) => {
-              setAddress(e.target.value);
-            }}
-            placeholder="Address"
-          />
-        </div>
-
-        <div className="mb-3">
-          <input
-            className="form-control"
-            id="exampleFormControlInput1"
             type="text"
             defaultValue={phoneNumber}
             onChange={(e) => {
               setPhoneNumber(e.target.value);
             }}
             placeholder="Phone Number"
-          />
+            required
+          ></input>
+          <span class="bar"></span>
         </div>
-
-        <center>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <button
-              style={{ marginTop: "10px" }}
-              onClick={handleSignup}
-              className="btn btn-primary"
-            >
-              Register
-            </button>
-            <Link to="/" style={{ paddingTop: "10px" }}>
-              Back
-            </Link>
-          </div>
-        </center>
+        <div class="form_input">
+          <input
+            className="form-control"
+            type="text"
+            defaultValue={address}
+            onChange={(e) => {
+              setAddress(e.target.value);
+            }}
+            placeholder="Address"
+            required
+          ></input>
+          <span class="bar"></span>
+        </div>
+        <div id="sridcenter" class="srfont">
+          <button onClick={() => navigate("/")} class="srbt">
+            Back
+          </button>
+          <button onClick={handleSignup} type="submit" class="srbt">
+            Sign Up
+          </button>
+        </div>
       </div>
     </div>
+
+
+
   );
 }
 

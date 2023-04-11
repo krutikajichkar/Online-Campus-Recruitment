@@ -117,25 +117,25 @@ function AlumniActivities() {
       </div>
 
       <div className="Alumni-18">
-        <h2 className="alumni-header">Alumni Meet at Pune (Nostalgia 2018)</h2>
+        <h2 className="alumni-header1">Alumni Meet at Pune (Nostalgia 2018)</h2>
         <p className="underline"></p>
 
         <div className=" wrapper-19 container">
           <div className="alumni-card">
-           <center> <img id="Pune_img_2" src={Pune_img_2} alt="Pune_img_2" /></center>
+            <center> <img id="Pune_img_2" src={Pune_img_2} alt="Pune_img_2" /></center>
             <p className="caption">
               Hon'ble Principal Dr.G.K. Awari addressing to alumni
             </p>
           </div>
           <div className="alumni-card">
-           <center> <img id="Pune_img_1" src={Pune_img_1} alt="Pune_img_1" /></center>
+            <center> <img id="Pune_img_1" src={Pune_img_1} alt="Pune_img_1" /></center>
             <p className="caption">
               Lighting of Ceremonial Lamp with the hands of Hon'ble Principal
               Dr.G.K. Awari
             </p>
           </div>
           <div className="alumni-card">
-           <center> <img id="Pune_img_3" src={Pune_img_3} alt="Pune_img_3" /></center>
+            <center> <img id="Pune_img_3" src={Pune_img_3} alt="Pune_img_3" /></center>
             <p className="caption">
               Hon'ble Prof. Sandeep Gaikwad, Treasurer, GPGI Felicitating Mr.
               Rahul Naidu as Alumni Coordinator of TGPCET in Pune & Mumbai
@@ -144,7 +144,7 @@ function AlumniActivities() {
           </div>
 
           <div className="alumni-card">
-           <center> <img id="Pune_img_4" src={Pune_img_4} alt="Pune_img_4" /></center>
+            <center> <img id="Pune_img_4" src={Pune_img_4} alt="Pune_img_4" /></center>
             <p className="caption">
               Dr.G.K. Awari, Principal, TGPCET Felicitating Ms. Ashwini Kulkarni
               as Alumni Coordinator of TGPCET in Pune & Mumbai Region.
@@ -152,7 +152,7 @@ function AlumniActivities() {
           </div>
 
           <div className="alumni-card">
-           <center> <img id="Pune_img_5" src={Pune_img_5} alt="Pune_img_5" /></center>
+            <center> <img id="Pune_img_5" src={Pune_img_5} alt="Pune_img_5" /></center>
             <p className="caption">
               Alumni share their views about the achievement of TGPCET
             </p>
@@ -168,12 +168,12 @@ function AlumniActivities() {
       </div>
 
       <div className="Alumni-17">
-        <h2 className="alumni-header">Alumni Meet 2017</h2>
+        <h2 className="alumni-header2">Alumni Meet 2017</h2>
         <p className="underline"></p>
 
-        <div className=" wrapper-19 container ">
+        <div className=" wrapper-19 container">
           <div className="alumni-card">
-           <center> <img
+            <center> <img
               id="Alumni_2017_img_1"
               src={Alumni_2017_img_1}
               alt="Alumni_2017_img_1"
@@ -191,53 +191,53 @@ function AlumniActivities() {
             <p className="caption">Inauguration of Alumni Meet</p>
           </div>
           <div className="alumni-card">
-          <center>
-          <img
-              id="Alumni_2017_img_3"
-              src={Alumni_2017_img_3}
-              alt="Alumni_2017_img_3"
-            />
-          </center>
+            <center>
+              <img
+                id="Alumni_2017_img_3"
+                src={Alumni_2017_img_3}
+                alt="Alumni_2017_img_3"
+              />
+            </center>
             <p className="caption">
               Welcome of Chief Guest by Prof. Sandeep Gaikwad, Treasurer, GPGI
             </p>
           </div>
           <div className="alumni-card">
             <center>
-            <img
-              id="Alumni_2017_img_4"
-              src={Alumni_2017_img_4}
-              alt="Alumni_2017_img_4"
-            />
+              <img
+                id="Alumni_2017_img_4"
+                src={Alumni_2017_img_4}
+                alt="Alumni_2017_img_4"
+              />
             </center>
             <p className="caption">
               Chief Guest addressing Alumni of Institute
             </p>
           </div>
           <div className="alumni-card">
-           <center>
-           <img
-              id="Alumni_2017_img_5"
-              src={Alumni_2017_img_5}
-              alt="Alumni_2017_img_5"
-            />
-           </center>
+            <center>
+              <img
+                id="Alumni_2017_img_5"
+                src={Alumni_2017_img_5}
+                alt="Alumni_2017_img_5"
+              />
+            </center>
             <p className="caption">Department of Mechanical Engineering</p>
           </div>
           <div className="alumni-card">
-           <center>
-           <img
-              id="Alumni_2017_img_9"
-              src={Alumni_2017_img_9}
-              alt="Alumni_2017_img_9"
-            />
-           </center>
+            <center>
+              <img
+                id="Alumni_2017_img_9"
+                src={Alumni_2017_img_9}
+                alt="Alumni_2017_img_9"
+              />
+            </center>
             <p className="caption">
               Department of Computer Science & Engineering
             </p>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

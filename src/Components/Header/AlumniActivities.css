@@ -75,7 +75,24 @@
     .wrapper-19{
         display: flex;
         justify-content: space-around;
-        flex-wrap: wrap;
+        flex-wrap:wrap;
+    }
+    .container{
+       height: 280px ;
+    }
+    .alumni-header1{
+        margin-top: 150px;
+        text-align: center;
+        color: rgb(16, 16, 91);
+        font-weight: 600;
+        font-size: 39px; 
+    }
+    .alumni-header2{
+        margin-top: 500px;
+        text-align: center;
+        color: rgb(16, 16, 91);
+        font-weight: 600;
+        font-size: 39px; 
     }
     .alumni-card{
         display: flex;
