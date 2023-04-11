@@ -62,7 +62,7 @@ const handleLogout = async () => {
 
 
   return (
-    <div style={{ display: "flex", height: "100vh", backgroundColor: "cyan" }}>
+    <div style={{ display: "flex", height: "100vh", backgroundColor: "#f2f7e6"  }}>
       <div className="sidebar">
         <ul className="sidebarList">
           {AdminSidebar.map((val, key) => {
@@ -90,7 +90,7 @@ const handleLogout = async () => {
         </ul>
       </div>
 {loading && <Loader/>}
-      {!loading && <div className=" detail-card container">
+      {!loading && <div className=" detail-card">
         <div className="student-box">
           <div className="photo-detail">
             {admin.map((ele) => {

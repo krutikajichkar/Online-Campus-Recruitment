@@ -62,7 +62,7 @@ function StudentDashboard() {
   };
   
   return (
-    <div style={{ display: "flex", height: "100vh", backgroundColor: "cyan" }}>
+    <div style={{ display: "flex", height: "100vh", backgroundColor: "#f2f7e6" }}>
       <div className="sidebar">
         <ul className="sidebarList">
           {SidebarData.map((val, key) => {
