@@ -6,17 +6,15 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-   height: 100vh;
     background-color: aliceblue;
 }
 #sr2{
-    padding: 15px;
+    padding:0px 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 32%;
     align-self: center;
-    margin-top: 3%;
     border-radius: 4px;
     background-color: white;
     box-shadow: 0 5px 10px gray;
@@ -25,16 +23,13 @@
     position:relative;
     display: flex;
     align-items: baseline;
-    padding: 0 10px;
     margin-right: 12px;
 }
 .form_input input{
     position: relative;
-  
     width: 100%;
     font: inherit;
-    /* padding: 3px 0; */
-    margin-top: .5rem;
+    padding: 0.6px 0;
     border: none;
     outline: none;
 }
