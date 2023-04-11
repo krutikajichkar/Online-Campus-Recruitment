@@ -16,12 +16,12 @@
       background-color:  rgb(233, 247, 195);
       height: 100vh;
   }
-  .next-btn{
-    margin-top: 10px;
+  .test-submit{
+    margin: 10px 0px;
     width: 100px;
     border: none;
     outline: none;
-    border-radius: 20px;
+    border-radius: 6px;
     padding: 5px;
     font-weight: bold;
     background-color: rgb(120, 241, 160);

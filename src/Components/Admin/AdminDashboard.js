@@ -89,49 +89,49 @@ const handleLogout = async () => {
           </li>
         </ul>
       </div>
+{loading && <Loader/>}
+      {!loading && <div className=" detail-card container">
+        <div className="student-box">
+          <div className="photo-detail">
+            {admin.map((ele) => {
+              return (
+                <div key={ele.id} style={{ display: 'flex' }}>
+                  <div>
+                    <img
+                      className="photo"
+                      src="https://i.stack.imgur.com/l60Hf.png"
+                      alt="admin"
+                    />
+                  </div>
+                  <div className="detail">
+                    <h3 style={{ fontWeight: "600" }}>{ele.Name}</h3>
+                    <p>Admin</p>
+                    <div className="main-content">
+                      <h4 style={{ fontWeight: "600" }}>Department</h4>
+                      <p className="student-sub-heading">{ele.department}</p>
+                    </div>
 
-      {loading && <Loader/>}
-
-     { !loading && <div className=" detail-card">
-        {admin.map((ele) => {
-          return (
-            <div className="student-box">
-              <div className="photo-detail">
-                <div>
-                  <img
-                    className="photo"
-                    src="https://i.stack.imgur.com/l60Hf.png"
-                    alt="admin"
-                  />
+                    <div className="main-content">
+                      <h4 style={{ fontWeight: "600" }}>Address</h4>
+                      <p className="student-sub-heading">{ele.address}</p>
+                    </div>
+                    <div className="main-content">
+                      <h4 style={{ fontWeight: "600" }}>Phone</h4>
+                      <p className="student-sub-heading">{ele.phone}</p>
+                    </div>
+                    <div className="main-content">
+                      <h4 style={{ fontWeight: "600" }}>Email Id</h4>
+                      <p className="student-sub-heading">{ele.email}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="detail">
-                  <h3 style={{ fontWeight: "600" }}>{ele.Name}</h3>
-                  <p>Admin</p>
-                  <div className="main-content">
-                    <h4 style={{fontWeight:"600"}}>Department</h4>
-                    <p className="student-sub-heading">{ele.department}</p>
-                  </div>
-
-                  <div className="main-content">
-                    <h4 style={{fontWeight:"600"}}>Address</h4>
-                    <p className="student-sub-heading">{ele.address}</p>
-                  </div>
-                  <div className="main-content">
-                    <h4 style={{fontWeight:"600"}}>Phone</h4>
-                    <p className="student-sub-heading">{ele.phone}</p>
-                  </div>
-                  <div className="main-content">
-                    <h4 style={{fontWeight:"600"}}>Email Id</h4>
-                    <p className="student-sub-heading">{ele.email}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>}
-    </div>
-  );
+              );
+            })}
+          </div>
+         </div>
+        </div>}
+      </div>
+      );
 }
 
-export default Admindashboard;
+      export default Admindashboard;
