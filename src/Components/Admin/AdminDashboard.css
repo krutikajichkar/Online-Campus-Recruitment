@@ -1,0 +1,167 @@
+
+  .detail-card {
+    
+      display: flex;
+      justify-content: center;
+      margin-left: 20%;
+      margin-top: 3%;
+      
+  }
+  
+  .student-box {
+    display: flex;
+      background-color: white;
+      border-radius:10px;
+      justify-content: space-between;
+     padding: 30px 30px;
+    
+      
+  }
+  
+  /* .profile {
+      display: flex;
+      justify-content:center;
+      padding: 0px 10px 10px 20px;
+  }
+  
+  .profile-head {
+      font-weight: 600;
+  }
+   */
+  .profile-btn {
+      width: 170px;
+      padding:7px 2px;
+      border-radius: 25px;
+      font-size: 15px;
+  }
+
+  .photo {
+      width: 200px;
+      height: 200px;
+  }
+  .detail{
+      padding-left: 60px;
+  }
+  .main-content{
+      display: flex;
+  }
+  .student-heading{
+      font-weight: 600;
+      font-size: 20px;
+      width: 118px;
+  }
+  .student-sub-heading{
+      padding-left: 44px;
+      font-size: 20px;
+  }
+  .mcq-test{
+      color: blue;
+      margin: 30px 0px;
+  }
+  .que-box{
+      width: 80%;
+     background-color: rgb(198, 236, 219);
+     padding: 10px 20px;
+     border-radius: 10px;
+     margin-top: 10px;
+     font-weight: bold;
+  }
+  .test-box{
+      display: flex;
+      background-color:  rgb(233, 247, 195);
+      height: 100vh;
+  }
+  .next-btn{
+    margin-top: 10px;
+    width: 100px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: rgb(120, 241, 160);
+  }
+  .show-btn{
+    width: 170px;
+      padding: 2px;
+      border-radius: 5px;
+      font-size: 15px;
+  }
+  /* .drive-card{
+      width: 68%;
+      height:90%;
+      display: flex;
+      background-color:white;
+      margin-top: 50px ;
+      border-radius: 10px;
+      padding: 20px;
+  } */
+  .radio{
+      display: flex;
+  }
+  .que-row{
+      color:rgb(14, 22, 0);
+      padding: 2px;
+      border-radius: 20px;
+  }
+  .drive-row{
+      width: 920px;
+      padding: 1px;
+      border-radius: 20px;
+      color: black;
+      text-align: center;
+  }
+  .create-drive{
+      padding-top:10px;
+      color: rgb(79, 79, 79);
+  }
+  .date-row{
+      display: flex;
+  }
+  .dt{
+      margin-left: 20px;
+  }
+  .drive-btn{
+      margin-top: 20px;
+      padding: 8px 20px;
+      border-radius: 5px;
+  }
+  .stdrive-bar{
+      background-color:white;
+      width: 900px;
+      height: 50px;
+      margin: 40px 0px;
+      border-radius: 5px;
+      box-shadow:0px 2px 2px 2px gainsboro;
+  }
+  .stdrive-head{
+      padding: 13px;
+      font-weight: 600;
+  }
+  .stdrive-card{
+      display: flex;
+  
+  }
+  .active-btn{
+      background-color: hsl(98, 97%, 41%);
+      border-radius: 6px;
+      padding: 3px 15px;
+      border: none;
+      color: white;
+      font-weight: bold;
+     margin: 15px;
+  }
+  .dtv-btn{
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      padding:20px 0px ;
+      background-color: rgb(244, 243, 243);
+  }
+
+.menuicon{
+    color:blue;
+    cursor: pointer;
+    margin-left: 10px;
+}
+   

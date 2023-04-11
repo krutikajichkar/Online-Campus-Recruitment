@@ -1,29 +1,20 @@
-import React from "react";
-
-import "./Home.css";
-import Header from "./Header";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import Programs from "./Programs";
-import Management from "./Management";
-
-function Home() {
+import React from 'react'
+import './Home.css'
+import WifiIcon from '@mui/icons-material/Wifi';
+import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices';
+import ApartmentIcon from '@mui/icons-material/Apartment';
+import AdbIcon from '@mui/icons-material/Adb';
+import EngineeringIcon from '@mui/icons-material/Engineering';
+import CellTowerIcon from '@mui/icons-material/CellTower';
+import ViewDayIcon from '@mui/icons-material/ViewDay';
+import WbIncandescentIcon from '@mui/icons-material/WbIncandescent';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
+import HourglassFullIcon from '@mui/icons-material/HourglassFull';
+function Programs() {
   return (
-    <div id="main-div">
-      <Header />
-      <Navbar />
-
-      <img
-        style={{ height: "560px", width: "100%", marginTop: "150px" }}
-        src="http://tgpcet.com/assets/img/banner/19.jpg"
-        alt="..."
-      />
-      <Programs />
-      <Management />
-
-<<<<<<< HEAD
-      <div>
-        <center>  <h3 className='heading'> PROGRAMS @ TGPCET</h3>
+    <div>
+          <center>  <h3 className='heading'> PROGRAMS @ TGPCET</h3>
           <p className='underline'></p>
 
           <div className='row container'>
@@ -132,45 +123,8 @@ function Home() {
             </div>
             </div>
         </center>
-      </div >
-
-      {/* Management */}
-
-
-      {/* Management */}
-
-        
-        <center><h3 className='heading'>MANAGEMENT</h3></center>
-        <p className='underline'></p>
-        <div className='management-container container'>
-          <div className="management-card" >
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRguzK4-v3tucd7TCgsbnFxaYaYx4A7aho5XQ&usqp=CAU" className="card-img-top" alt="Chairman" />
-            <div className="card-body" >
-              <p className="card-text">CHAIRMAN, GPG</p>
-              <h4 className='management-name'>Dr. Mohan Gaikwad-Patil</h4>
-            </div>
-          </div>
-          <div className="management-card" >
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN5k6wryvQnguQYbXREOCcJ1FItbeNndxIGhK5zy6hsDbjIWN1NZR4HqSDqYBEoXi8PDU&usqp=CAU" className="card-img-top" alt="President" />
-            <div className="card-body" >
-              <p className="card-text">PRESIDENT, GPGI</p>
-              <h4 className='management-name'>Dr. Anjali Patil-Gaikwad</h4>
-            </div>
-          </div>
-          <div className="management-card" >
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSurMaUofzj6WFPlGcdH-9bEhhI0xpj3kBrGg&usqp=CAU" className="card-img-top" alt="Treasurer" />
-            <div className="card-body" >
-              <p className="card-text">TREASURER, GPGI</p>
-              <h4 className='management-name'>Prof. Sandeep Gaikwad</h4>
-            </div>
-          </div>
-        </div>
-      
-=======
->>>>>>> a4a99a1a98baac33760d4773479eb023968855ce
-      <Footer />
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Programs
