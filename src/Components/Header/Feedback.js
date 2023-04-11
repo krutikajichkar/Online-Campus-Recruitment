@@ -8,10 +8,11 @@ import CloseIcon from "@mui/icons-material/Close";
 import { getDocs, addDoc, collection } from "firebase/firestore";
 import { db } from "../../Firebase";
 import Carousel from "../Header/Carousel";
+import Loader from "../Loader";
 
 const customStyles = {
   content: {
-    top: "50%",
+    top: "60%",
     left: "50%",
     right: "auto",
     bottom: "auto",
@@ -28,6 +29,7 @@ function Feedback() {
   const [session, setSession] = useState();
   const [content, setContent] = useState();
   const collectionRef = collection(db, "feedback");
+  const [loading, setloading] = useState(true)
 
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -71,19 +73,23 @@ function Feedback() {
 
 
     return (
-      <div >
+      < >
         <Header />
         <Navbar />
+        {loading && <Loader/>}
+      
         <h3 className="headline">What students said about college !</h3>
         <p className="underline"></p>
-     <center> <Carousel/></center>
-        <center>
+        
+     <center> <Carousel setloading={setloading} loading={loading}/></center>
+        {!loading && <div>
+       <center>
           {" "}
           <h3 className="headline2"> Want to write something about College ?</h3>
           <p className="underline"></p>
         </center>
         <center>
-          <div>
+           <div>
             <button
               style={{ marginTop: "-30px" }}
               onClick={openModal}
@@ -166,7 +172,9 @@ function Feedback() {
           </Modal>
         </center>
         <Footer />
-      </div>
+        
+        </div>}
+      </>
       
     );
     
