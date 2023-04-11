@@ -15,15 +15,21 @@ function Admindashboard() {
   const [admin, setadmin] = useState([]);
   const collectionRef = collection(db, "AdminData");
 const [loading, setloading] = useState(true)
-  const handleLogout = async () => {
-    try {
+  
+
+const handleLogout = async () => {
+  try {
+    if (window.confirm("Do you really want to Log Out?") === true) {
       await logOut();
       alert("Logged Out Successfully");
       navigate("/");
-    } catch (error) {
-      alert(error.message);
+    } else {
+      navigate("/studentdashboard");
     }
-  };
+  } catch (error) {
+    alert(error.message);
+  }
+};
 
   const getData = async (uid) => {
     await getDocs(collectionRef)
@@ -53,6 +59,7 @@ const [loading, setloading] = useState(true)
     });
     
   }, []);
+
 
   return (
     <div style={{ display: "flex", height: "100vh", backgroundColor: "cyan" }}>

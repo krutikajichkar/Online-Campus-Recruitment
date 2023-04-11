@@ -9,10 +9,12 @@
   }
   
   .student-box {
+    width: 1000px;
     display: flex;
+    flex-direction: row;
       background-color: white;
       border-radius:10px;
-      justify-content: space-between;
+     
      padding: 30px 30px;
     
       

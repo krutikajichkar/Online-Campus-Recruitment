@@ -4,7 +4,7 @@
 }
 .sidebar{
     height: 100vh;
-    width: 18%;
+    width: 15%;
     padding-top: 50px;
     background-color:#2F4050;
     position: fixed;
@@ -46,8 +46,8 @@
 }
 
 @media (max-width:900px) {
-    .navCollapse{
-        width: 80px;
+    .sidebar{
+        width: 15%;
         }
     .sidebarList #title {
         display: none;
