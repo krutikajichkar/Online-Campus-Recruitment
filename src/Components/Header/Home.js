@@ -6,7 +6,6 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import Programs from "./Programs";
 import Management from "./Management";
-// import { color } from '@mui/system';
 
 function Home() {
   return (
@@ -19,10 +18,10 @@ function Home() {
         src="http://tgpcet.com/assets/img/banner/19.jpg"
         alt="..."
       />
-
       <Programs />
       <Management />
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }
