@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./StudentDashboard.css";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import ContentPasteIcon from "@mui/icons-material/ContentPaste";
-// import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
-import PermIdentityIcon from "@mui/icons-material/PermIdentity";
-import ContentPasteSearchIcon from "@mui/icons-material/ContentPasteSearch";
-import EqualizerOutlinedIcon from "@mui/icons-material/EqualizerOutlined";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { db, logOut, useAuth } from "../../Firebase";
 import { getDocs, collection } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
+import "../Sidebar.css";
+import { SidebarData } from "../SidebarData";
 
 function StudentDashboard() {
   const collectionRef = collection(db, "StudentData");
@@ -18,7 +14,6 @@ function StudentDashboard() {
   const [student, setStudent] = useState([]);
   const [getuid, setgetuid] = useState();
   const auth = getAuth();
-  
 
   const getData = async (uid) => {
     await getDocs(collectionRef)
@@ -47,64 +42,53 @@ function StudentDashboard() {
     });
   }, []);
 
- 
   const handleLogout = async () => {
     try {
-      await logOut();
-      alert("Logged Out Successfully");
-      navigate("/");
+      if (window.confirm("Do you really want to Log Out?") === true) {
+        await logOut();
+        alert("Logged Out Successfully");
+        navigate("/");
+      } else {
+        navigate("/studentdashboard");
+      }
     } catch (error) {
       alert(error.message);
     }
   };
   return (
     <div>
-      {/* <div className='bar'>
-      <Link to='/'> <ArrowBackIcon /></Link>
-      </div> */}
-      <div className="student">
-        <div className="sidebar">
-          <h4 style={{ color: "darkcyan" }}>DashBoard</h4>
-          <div>
-            <NavLink className="link" to="">
+      <div className="sidebar">
+        <ul className="sidebarList">
+          {SidebarData.map((val, key) => {
+            return (
+              <li
+                key={key}
+                id={window.location.pathname == val.link ? "active" : ""}
+                className="sidebar-row"
+                onClick={() => {
+                  window.location.pathname = val.link;
+                }}
+              >
+                <div id="icon">{val.icon}</div>
+                <div id="title">{val.title}</div>
+              </li>
+            );
+          })}
+          <li className="sidebar-row" to="/" onClick={handleLogout}>
+            <div id="icon">
               {" "}
-              <PermIdentityIcon /> &nbsp; &nbsp;&nbsp;Student Details{" "}
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/fullCalender">
-              <CalendarMonthIcon /> &nbsp;&nbsp;&nbsp;&nbsp;Full Calendar
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/exams">
-              {" "}
-              <ContentPasteIcon /> &nbsp; &nbsp;&nbsp;Exams{" "}
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/studentdrive">
-              <HourglassEmptyIcon /> &nbsp; &nbsp;&nbsp;Drives{" "}
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/test">
-              <ContentPasteSearchIcon /> &nbsp; &nbsp;&nbsp;Test{" "}
-            </NavLink>
-          </div>
-          <div>
-            <NavLink className="link" to="/test">
-              <EqualizerOutlinedIcon /> &nbsp; &nbsp;&nbsp;Progress{" "}
-            </NavLink>
-          </div>
-        </div>
+              <ExitToAppOutlinedIcon />{" "}
+            </div>
+            <div id="title"> Logout</div>
+          </li>
+        </ul>
 
         <div className=" detail-card">
           <div className="student-box">
             <div className="photo-detail">
               {student.map((item) => {
                 return (
-                  <>
+                  <div key={item.id}>
                     <div>
                       <img
                         className="photo"
@@ -136,21 +120,9 @@ function StudentDashboard() {
                         <p className="student-sub-heading">{item.email}</p>
                       </div>
                     </div>
-                  </>
+                  </div>
                 );
               })}
-            </div>
-            <div className="profile">
-              <button className="btn-primary  profile-btn">Edit Profile</button>
-              <button className="btn-primary  profile-btn">
-                Complete your Profile
-              </button>
-              <button
-                className="btn-primary  profile-btn"
-                onClick={handleLogout}
-              >
-                Logout
-              </button>
             </div>
           </div>
         </div>

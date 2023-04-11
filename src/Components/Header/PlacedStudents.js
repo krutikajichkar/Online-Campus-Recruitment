@@ -4,21 +4,41 @@ import { db } from '../../Firebase';
 import { getDocs, collection } from 'firebase/firestore';
 import Navbar from '../Navbar';
 import Header from './Header';
+import Loader from '../Loader';
 
 function PlacedStudents() {
     const [data ,setdata] = useState([]);
+    const [loading, setloading] = useState(true)
 
-    const getData = async() => {
-        const collectionRef = collection(db,'PlacedStudents');
+
+
+    const handleChange = () => {
+        return data.filter(
+            (e) =>
+                e.Name.toLowerCase().includes(text.toLowerCase())
+                ||
+                e.Department.toLowerCase().includes(text.toLowerCase())
+                ||
+                e.Company.toLowerCase().includes(text.toLowerCase())
+                ||
+                e.Package.toString().includes(text.toLowerCase())
+        )
+    }
+
+
+    const getData = async () => {
+        const collectionRef = collection(db, 'PlacedStudents');
         const user = await getDocs(collectionRef);
         setdata(user.docs.map((doc) => ({
-            ...doc.data(),id: doc.id
+            ...doc.data(), id: doc.id
         })))
+        setloading(false)
 
     }
 
     useEffect(() => {
         getData();
+       
     },[]);
 
     return (
@@ -26,10 +46,11 @@ function PlacedStudents() {
        <Header/>
        <Navbar/>
       
+     {loading && <Loader/>}
 
-        <div className="placedStudent">
-             
-            <table className="table table-striped">
+      { !loading &&  <div className="placedStudent">
+           
+        <table className="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Sr. No.</th>
@@ -59,7 +80,7 @@ function PlacedStudents() {
                    }
                 </tbody>
             </table>
-        </div>
+        </div>}
         </>
     )
 }
