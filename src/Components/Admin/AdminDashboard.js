@@ -62,7 +62,7 @@ const handleLogout = async () => {
 
 
   return (
-    <div style={{ display: "flex", height: "100vh", backgroundColor: "cyan" }}>
+    <div style={{ display: "flex", height: "100vh", backgroundColor: "#f2f7e6"  }}>
       <div className="sidebar">
         <ul className="sidebarList">
           {AdminSidebar.map((val, key) => {
@@ -90,7 +90,7 @@ const handleLogout = async () => {
         </ul>
       </div>
 {loading && <Loader/>}
-      {!loading && <div className=" detail-card container">
+      {!loading && <div className=" detail-card">
         <div className="student-box">
           <div className="photo-detail">
             {admin.map((ele) => {
@@ -104,23 +104,23 @@ const handleLogout = async () => {
                     />
                   </div>
                   <div className="detail">
-                    <h3 style={{ fontWeight: "600" }}>{ele.Name}</h3>
-                    <p>Admin</p>
+                    <h3 style={{ fontWeight: "600" }}>{ele.Name} <span style={{fontSize:'20px', paddingLeft:'10px'}}>(Admin)</span></h3>
+                  
                     <div className="main-content">
-                      <h4 style={{ fontWeight: "600" }}>Department</h4>
+                      <h4 style={{ fontWeight: "600" }}>Department :</h4>
                       <p className="student-sub-heading">{ele.department}</p>
                     </div>
 
                     <div className="main-content">
-                      <h4 style={{ fontWeight: "600" }}>Address</h4>
+                      <h4 style={{ fontWeight: "600" }}>Address :</h4>
                       <p className="student-sub-heading">{ele.address}</p>
                     </div>
                     <div className="main-content">
-                      <h4 style={{ fontWeight: "600" }}>Phone</h4>
+                      <h4 style={{ fontWeight: "600" }}>Phone :</h4>
                       <p className="student-sub-heading">{ele.phone}</p>
                     </div>
                     <div className="main-content">
-                      <h4 style={{ fontWeight: "600" }}>Email Id</h4>
+                      <h4 style={{ fontWeight: "600" }}>Email Id :</h4>
                       <p className="student-sub-heading">{ele.email}</p>
                     </div>
                   </div>
