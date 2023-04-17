@@ -6,12 +6,13 @@ import { useNavigate } from "react-router-dom";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import { SidebarData } from "../SidebarData";
 import ContentModal from "../ContentModal";
+import Loader from '../Loader'
 
 function Test() {
   const [mcq, setmcq] = useState([]);
   const [score, setScore] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState(Array(mcq.length).fill(''))
-
+  const [loading, setloading] = useState(true)
   const navigate = useNavigate();
   const collectionRef = collection(db, "AmptitudeTest");
   const getData = async () => {
@@ -22,6 +23,7 @@ function Test() {
           id: item.id,
         }))
       );
+      setloading(false)
     });
   };
   useEffect(() => {
@@ -70,8 +72,8 @@ function Test() {
           </li>
         </ul>
       </div>
-
-      <div className="detail-card">
+      {loading && <Loader/>}
+      {loading && <div className="detail-card">
         <h1 className="mcq-test">Multiple Choice Questions (MCQ) </h1>
         {mcq.map((ele, i) => {
           return (
@@ -156,7 +158,7 @@ function Test() {
           </button>
         </div>
         </ContentModal>
-      </div>
+      </div>}
     </div>
   );
 }
