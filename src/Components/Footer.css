@@ -10,12 +10,13 @@
    background-color: rgb(8, 8, 81);
    bottom: 0;
    left: 0;
+   right: 0;
    width: 100%;
    display: flex;
    justify-content: space-between;
+   margin-top: 85px; 
+   padding: 30px; 
   
-   /* margin-top: 85px;  */
-   padding: 30px;
  }
  #contact{
    padding-left: 34px;

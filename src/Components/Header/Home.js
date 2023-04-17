@@ -9,7 +9,7 @@ import Management from "./Management";
 
 function Home() {
   return (
-    <div id="main-div">
+    <div id="main-div" style={{position:'absolute', width:'100%'}}>
       <Header />
       <Navbar />
 

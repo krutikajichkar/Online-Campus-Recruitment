@@ -5,7 +5,6 @@ import ContentPasteSearchIcon from "@mui/icons-material/ContentPasteSearch";
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import PersonSearchOutlinedIcon from '@mui/icons-material/PersonSearchOutlined';
 import FolderSharedOutlinedIcon from '@mui/icons-material/FolderSharedOutlined';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
  
 
@@ -50,7 +49,7 @@ export const AdminSidebar = [
     {
         title: "Drives",
         icon: <HourglassEmptyIcon />,
-        link: "/studentdrive"
+        link: "/admindrive"
     },
     {
         title: "Manage Training",

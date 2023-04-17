@@ -237,8 +237,11 @@ function AlumniActivities() {
             </p>
           </div>
         </div>
-       <Footer/>
+      
       </div>
+    
+      <Footer/>
+     
     </>
   );
 }
