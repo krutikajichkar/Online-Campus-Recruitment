@@ -12,6 +12,8 @@ function Test() {
   const [mcq, setmcq] = useState([]);
   const [score, setScore] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState(Array(mcq.length).fill(''))
+  const [correctAnswers, setCorrectAnswers] = useState()
+  const [displayAns, setDisplayAns] = useState(false)
   const [loading, setloading] = useState(true)
   const navigate = useNavigate();
   const collectionRef = collection(db, "AmptitudeTest");
@@ -73,7 +75,7 @@ function Test() {
         </ul>
       </div>
       {loading && <Loader/>}
-      {loading && <div className="detail-card">
+      {!loading &&  <div className="detail-card">
         <h1 className="mcq-test">Multiple Choice Questions (MCQ) </h1>
         {mcq.map((ele, i) => {
           return (
@@ -88,8 +90,15 @@ function Test() {
                     const newSelectedAnswers = [...selectedAnswers];
                     newSelectedAnswers[i] = "A";
                     setSelectedAnswers(newSelectedAnswers);
-                   
+                    if (ele.Correct === "A") {
+                      setCorrectAnswers([...correctAnswers, i]);
+                      setScore(score + 1);
+                    } else {
+                      setCorrectAnswers([...correctAnswers]);
+                    }
                   }}
+                
+
                 />
                 &nbsp;&nbsp;{ele.A}
               </div>
@@ -136,6 +145,7 @@ function Test() {
                 &nbsp;&nbsp;{ele.D}
               </div>
               <hr className="que-row"></hr>
+             {displayAns && <p>Its correct answer is {ele.Correct}</p>}
             </div>
           );
         })}
@@ -148,6 +158,9 @@ function Test() {
               for (let i = 0; i < mcq.length; i++) {
                 if (selectedAnswers[i] === mcq[i].Correct) {
                   newScore++;
+                }
+                else{
+                 setDisplayAns(true)
                 }
               }
               setScore(newScore);

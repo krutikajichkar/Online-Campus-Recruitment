@@ -84,7 +84,7 @@ function StudentDrive() {
           <h5 className="stdrive-head">Active upcoming placement drives</h5>
         </div>
         {loading && <Loader/>}
-       { loading &&  <div className="stdrive-card">
+       { !loading &&  <div className="stdrive-card">
           {drive.map((ele) => {
             return (
               <Card
