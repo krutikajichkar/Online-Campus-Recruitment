@@ -18,6 +18,7 @@ import AdminDashboard from './Components/Admin/AdminDashboard';
 import ForgetPassword from './Components/Password/ForgetPassword';
 import AdminRegistration from './Components/Admin/AdminRegistration';
 import StudentDrive from './Components/Student/StudentDrive';
+import Admindrive from './Components/Admin/Admindrive';
 import AddDrive from './Components/AddDrive';
 import AdminLogin from './Components/Admin/AdminLogin';
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='admindashboard' element={<AdminDashboard />} />
           <Route path='drives' element={<Drives />} />
           <Route path='studentdrive' element={<StudentDrive/>}/>
+          <Route path='admindrive' element={<Admindrive/>}/>
           <Route path='adddrive' element={<AddDrive/>}/>
            <Route path='test' element={<Test />} />
           <Route path='register' element={<Registration />} />
