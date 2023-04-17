@@ -62,7 +62,7 @@ function StudentDashboard() {
   };
   
   return (
-    <div style={{ display: "flex", height: "100vh", backgroundColor: "cyan" }}>
+    <div style={{ display: "flex", height: "100vh", backgroundColor: "#f2f7e6" }}>
       <div className="sidebar">
         <ul className="sidebarList">
           {SidebarData.map((val, key) => {
@@ -105,26 +105,26 @@ function StudentDashboard() {
                     />
                   </div>
                   <div className="detail">
-                    <h3 style={{ fontWeight: "600" }}>{item.Name}</h3>
-                    <p>student</p>
+                    <h3 style={{ fontWeight: "600" }}>{item.Name} <span style={{fontSize:'20px', paddingLeft:'10px'}}>(Student)</span></h3>
+                  
                     <div className="main-content">
-                      <p className="student-heading">Department</p>
+                      <p className="student-heading">Department :</p>
                       <p className="student-sub-heading">{item.department}</p>
                     </div>
                     <div className="main-content">
-                      <p className="student-heading">Roll Number</p>
+                      <p className="student-heading">Roll Number :</p>
                       <p className="student-sub-heading">{item.roll_no}</p>
                     </div>
                     <div className="main-content">
-                      <p className="student-heading">Address</p>
+                      <p className="student-heading">Address :</p>
                       <p className="student-sub-heading">{item.address}</p>
                     </div>
                     <div className="main-content">
-                      <p className="student-heading">Phone</p>
+                      <p className="student-heading">Phone :</p>
                       <p className="student-sub-heading">{item.phone}</p>
                     </div>
                     <div className="main-content">
-                      <p className="student-heading">Email Id</p>
+                      <p className="student-heading">Email Id :</p>
                       <p className="student-sub-heading">{item.email}</p>
                     </div>
                   </div>

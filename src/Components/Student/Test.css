@@ -17,14 +17,15 @@
       height: 100vh;
   }
   .test-submit{
-    margin: 10px 0px;
+    margin: 20px 0px;
     width: 100px;
     border: none;
     outline: none;
-    border-radius: 6px;
-    padding: 5px;
+    border-radius: 8px;
+    padding: 10px;
     font-weight: bold;
-    background-color: rgb(120, 241, 160);
+    background-color: rgb(3, 99, 35);
+    color: white;
   }
   .show-btn{
     width: 170px;
