@@ -31,18 +31,18 @@ function Navbar() {
             {" "}
             <li>Feedback</li>
           </NavLink>
-          <NavLink className="link" to='/placedstudents'>
+          {/* <NavLink className="link" to='/placedstudents'>
             {" "}
             <li>PlacedStudents</li>
-          </NavLink>
+          </NavLink> */}
           {/* <NavLink className="link" to='/studentdashboard'>
             {" "}
             <li>StudentDashboard</li>
           </NavLink> */}
-          <NavLink className="link" to='/admindashboard'>
+          {/* <NavLink className="link" to='/admindashboard'>
             {" "}
             <li>AdminDashboard</li>
-          </NavLink>
+          </NavLink> */}
           
 
           {/* <NavLink className="link" to='/admindashboard'>

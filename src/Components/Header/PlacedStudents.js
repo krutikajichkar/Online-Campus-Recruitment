@@ -44,7 +44,7 @@ function PlacedStudents() {
     return (
         <>
             <Header />
-            <Navbar />
+            {/* <Navbar /> */}
 
             {loading && <Loader />}
 
