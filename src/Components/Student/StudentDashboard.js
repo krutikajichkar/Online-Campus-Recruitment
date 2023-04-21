@@ -100,27 +100,27 @@ function StudentDashboard() {
                   <div>
                     <img
                       className="photo"
-                      src="https://i.pinimg.com/236x/c5/3a/a6/c53aa684465bc61455fd0d21537752fb.jpg"
-                      alt="student"
+                      src="https://cdn.vectorstock.com/i/1000x1000/62/59/default-avatar-photo-placeholder-profile-icon-vector-21666259.webp"
+                      alt="profile photo"
                     />
                   </div>
                   <div className="detail">
                     <h3 style={{ fontWeight: "600" }}>{item.Name} <span style={{fontSize:'20px', paddingLeft:'10px'}}>(Student)</span></h3>
                   
                     <div className="main-content">
-                      <p className="student-heading">Department :</p>
+                      <p className="student-heading">Department:</p>
                       <p className="student-sub-heading">{item.department}</p>
                     </div>
                     <div className="main-content">
-                      <p className="student-heading">Roll Number :</p>
+                      <p className="student-heading">Roll Number:</p>
                       <p className="student-sub-heading">{item.roll_no}</p>
                     </div>
                     <div className="main-content">
-                      <p className="student-heading">Address :</p>
+                      <p className="student-heading">Address:</p>
                       <p className="student-sub-heading">{item.address}</p>
                     </div>
                     <div className="main-content">
-                      <p className="student-heading">Phone :</p>
+                      <p className="student-heading">Phone:</p>
                       <p className="student-sub-heading">{item.phone}</p>
                     </div>
                     <div className="main-content">

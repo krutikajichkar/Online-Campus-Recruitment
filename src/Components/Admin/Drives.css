@@ -44,6 +44,7 @@
   .stdrive-card{
       display: flex;
       flex-wrap:wrap ;
+      width: 80%;
   }
   .active-btn{
       background-color: hsl(98, 97%, 41%);

@@ -41,6 +41,7 @@ function AddDrive() {
       time: time,
     }).then((response) => {
       alert("Submitted successfully")
+      navigate('/admindrive')
 
     }).catch((err) => {
       alert(err.message)
