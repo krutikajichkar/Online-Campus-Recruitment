@@ -87,7 +87,7 @@ function Admindrive() {
               <Card
                 sx={{
                   maxWidth: 432,
-                  margin: "0px 13px 0px 0px",
+                  margin: "0px 13px 25px 0px",
                   boxShadow: "0px 2px 2px 2px gainsboro",
                 }}
                 key={ele.id}

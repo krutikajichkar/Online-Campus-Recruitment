@@ -2,28 +2,17 @@ import React, { useEffect, useState } from 'react'
 import './PlacedStudents.css';
 import { db } from '../../Firebase';
 import { getDocs, collection } from 'firebase/firestore';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Navbar from '../Navbar';
 import Header from './Header';
 import Loader from '../Loader';
+import { Link} from "react-router-dom";
 
 function PlacedStudents() {
     const [data, setdata] = useState([]);
     const [loading, setloading] = useState(true)
 
 
-
-    // const handleChange = () => {
-    //     return data.filter(
-    //         (e) =>
-    //             e.Name.toLowerCase().includes(text.toLowerCase())
-    //             ||
-    //             e.Department.toLowerCase().includes(text.toLowerCase())
-    //             ||
-    //             e.Company.toLowerCase().includes(text.toLowerCase())
-    //             ||
-    //             e.Package.toString().includes(text.toLowerCase())
-    //     )
-    // }
 
 
     const getData = async () => {
@@ -45,10 +34,12 @@ function PlacedStudents() {
         <>
             <Header />
             {/* <Navbar /> */}
+           
 
             {loading && <Loader />}
 
             {!loading && <div className="placedStudent">
+           <Link to="/studentdashboard"> <ArrowBackIcon style={{paddingBottom:'10px', fontSize:'40px'}} /></Link> 
 
                 <table className="table table-striped">
                     <thead>

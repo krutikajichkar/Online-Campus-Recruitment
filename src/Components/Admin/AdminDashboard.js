@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./AdminDashboard.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { logOut, db } from "../../Firebase";
 import { getDocs, collection } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -24,7 +24,7 @@ const handleLogout = async () => {
       alert("Logged Out Successfully");
       navigate("/");
     } else {
-      navigate("/studentdashboard");
+      navigate("/admindashboard");
     }
   } catch (error) {
     alert(error.message);
@@ -99,24 +99,24 @@ const handleLogout = async () => {
                   <div>
                     <img
                       className="photo"
-                      src="https://i.stack.imgur.com/l60Hf.png"
-                      alt="admin"
+                      src="https://cdn.vectorstock.com/i/1000x1000/62/59/default-avatar-photo-placeholder-profile-icon-vector-21666259.webp"
+                      alt="profile photo"
                     />
                   </div>
                   <div className="detail">
                     <h3 style={{ fontWeight: "600" }}>{ele.Name} <span style={{fontSize:'20px', paddingLeft:'10px'}}>(Admin)</span></h3>
                   
                     <div className="main-content">
-                      <h4 style={{ fontWeight: "600" }}>Department :</h4>
+                      <h4 style={{ fontWeight: "600" }}>Department:</h4>
                       <p className="student-sub-heading">{ele.department}</p>
                     </div>
 
                     <div className="main-content">
-                      <h4 style={{ fontWeight: "600" }}>Address :</h4>
+                      <h4 style={{ fontWeight: "600" }}>Address:</h4>
                       <p className="student-sub-heading">{ele.address}</p>
                     </div>
                     <div className="main-content">
-                      <h4 style={{ fontWeight: "600" }}>Phone :</h4>
+                      <h4 style={{ fontWeight: "600" }}>Phone:</h4>
                       <p className="student-sub-heading">{ele.phone}</p>
                     </div>
                     <div className="main-content">

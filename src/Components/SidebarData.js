@@ -51,11 +51,11 @@ export const AdminSidebar = [
         icon: <HourglassEmptyIcon />,
         link: "/admindrive"
     },
-    {
-        title: "Manage Training",
-        icon: <AccessTimeOutlinedIcon />,
-        link: "/"
-    },
+    // {
+    //     title: "Manage Training",
+    //     icon: <AccessTimeOutlinedIcon />,
+    //     link: "/"
+    // },
    
 
 ]
