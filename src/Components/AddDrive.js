@@ -17,6 +17,7 @@ function AddDrive() {
   const [venue, setVenue] = useState("")
   const [link, setLink] = useState("")
   const [time, settime] = useState()
+  const [location,setLocation] = useState()
   const navigate = useNavigate();
 
   const collectionRef = collection(db, "Drives")
@@ -107,6 +108,16 @@ function AddDrive() {
             type="text"
             defaultValue={company}
             onChange={(e) => setCompany(e.target.value)}
+          />
+          <h5 className="create-drive">Company Location</h5>
+          <TextField
+            style={{ width: '80%' }}
+            label="Company Name"
+            id="fullWidth"
+            size="small"
+            type="text"
+            defaultValue={location}
+            onChange={(e) => setLocation(e.target.value)}
           />
           <h5 className="create-drive">Description</h5>
           {/* <TextareaAutosize  style={{width:'920px'}} placeholder="Description" aria-lable='empty textarea' id="fullWidth" size="small" type="text" required="required" /> */}
