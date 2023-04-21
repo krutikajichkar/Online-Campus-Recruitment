@@ -24,7 +24,7 @@ const handleLogout = async () => {
       alert("Logged Out Successfully");
       navigate("/");
     } else {
-      navigate("/studentdashboard");
+      navigate("/admindashboard");
     }
   } catch (error) {
     alert(error.message);
