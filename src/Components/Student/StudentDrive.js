@@ -95,7 +95,10 @@ function StudentDrive() {
                 }}
                 key={ele.id}
               >
+                <div style={{display:'flex',justifyContent:'space-between'}}>
                 <button className="active-btn">Active</button>
+                <a href={ele.link} target="_blank"><button className="active-btn">Register</button></a>
+                </div>
 
                 <CardContent>
                   <Typography
